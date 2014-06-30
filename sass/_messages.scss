@@ -1,0 +1,25 @@
+/*********************************
+MESSAGES
+
+This stylesheet controls how hints
+and messages are displayed before 
+the presentation.
+**********************************/
+
+.fallback-message {
+	text-align: center;
+	margin-top: 15%;
+	font-size: 2em;
+	color: $white;
+	background: $brown;
+	background: rgba($brown, .7);
+	padding: 1em;
+
+	p {
+		padding: .5em 0;
+	}
+}
+
+.impress-supported .fallback-message {
+    display: none;
+}

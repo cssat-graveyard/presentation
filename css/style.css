@@ -1,0 +1,206 @@
+/****************************************
+PRESENTATION STYLESHEET
+This stylesheet will be compiled into 
+CSS for use with the presentation
+*****************************************/
+/*************************************
+RESET 
+
+Reset all of the styles, just in case 
+**************************************/
+/* Using Eric Meyer's reset. See more at 
+http://meyerweb.com/eric/tools/css/reset/ */
+/* line 22, ../sass/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 33, ../sass/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 36, ../sass/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 39, ../sass/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 42, ../sass/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 46, ../sass/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 51, ../sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/***********************************
+VARIABLES
+
+These are the variables used in
+the other stylesheets.
+-- Color
+-- Typography
+***********************************/
+/* COLORS */
+/* TYPOGRAPHY */
+/***************************************
+ELEMENTS
+
+These are the basic HTML elements that 
+are not specific to a single slide
+***************************************/
+/* line 8, ../sass/_elements.scss */
+body {
+  font-family: "Lucida Sans", sans-serif;
+  min-height: 740px;
+  background: white;
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(white), to(#f4f4f4));
+  background: -webkit-radial-gradient(white, #f4f4f4);
+  background: -moz-radial-gradient(white, #f4f4f4);
+  background: -ms-radial-gradient(white, #f4f4f4);
+  background: -o-radial-gradient(white, #f4f4f4);
+  background: radial-gradient(#ffffff, #f4f4f4);
+}
+
+/* line 21, ../sass/_elements.scss */
+b, strong {
+  font-weight: bold;
+}
+
+/* line 22, ../sass/_elements.scss */
+i, em {
+  font-style: italic;
+}
+
+/* line 24, ../sass/_elements.scss */
+a {
+  color: #6db33f;
+}
+
+/* line 28, ../sass/_elements.scss */
+a:focus, a:hover {
+  color: #5b8067;
+}
+
+/* line 32, ../sass/_elements.scss */
+p {
+  line-height: 1.5em;
+}
+
+/* line 36, ../sass/_elements.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Slab", serif;
+  margin-bottom: .5em;
+}
+
+/* line 41, ../sass/_elements.scss */
+.h1 {
+  font-size: 2.5em;
+}
+
+/* line 45, ../sass/_elements.scss */
+.h2 {
+  font-size: 2em;
+}
+
+/*********************************
+MESSAGES
+
+This stylesheet controls how hints
+and messages are displayed before 
+the presentation.
+**********************************/
+/* line 9, ../sass/_messages.scss */
+.fallback-message {
+  text-align: center;
+  margin-top: 15%;
+  font-size: 2em;
+  color: #f4f4f4;
+  background: #98a094;
+  background: rgba(152, 160, 148, 0.7);
+  padding: 1em;
+}
+/* line 18, ../sass/_messages.scss */
+.fallback-message p {
+  padding: .5em 0;
+}
+
+/* line 23, ../sass/_messages.scss */
+.impress-supported .fallback-message {
+  display: none;
+}
+
+/***************************
+SLIDES
+
+This is basic styling for 
+individual steps 
+****************************/
+/* line 8, ../sass/_slides.scss */
+.step {
+  position: relative;
+  width: 1080px;
+  padding: 40px;
+  margin: 20px auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Make inactive slides slightly transparent */
+/* line 23, ../sass/_slides.scss */
+.impress-enabled .step {
+  margin: 0;
+  opacity: 0.3;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+/* line 34, ../sass/_slides.scss */
+.impress-enabled .step.active {
+  opacity: 1;
+}
+
+/* line 36, ../sass/_slides.scss */
+.slide {
+  display: block;
+}

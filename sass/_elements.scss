@@ -1,0 +1,47 @@
+/***************************************
+ELEMENTS
+
+These are the basic HTML elements that 
+are not specific to a single slide
+***************************************/
+
+body {
+	font-family: $sans-serif;
+	min-height: 740px;
+
+	background: rgb(255, 255, 255);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(255, 255, 255)), to(rgb(244, 244, 244)));
+    background: -webkit-radial-gradient(rgb(255, 255, 255), rgb(244, 244, 244));
+    background:    -moz-radial-gradient(rgb(255, 255, 255), rgb(244, 244, 244));
+    background:     -ms-radial-gradient(rgb(255, 255, 255), rgb(244, 244, 244));
+    background:      -o-radial-gradient(rgb(255, 255, 255), rgb(244, 244, 244));
+    background:         radial-gradient(rgb(255, 255, 255), rgb(244, 244, 244));
+}
+
+b, strong { font-weight: bold; }
+i, em { font-style: italic; }
+
+a {
+	color: $med-green;
+}
+
+a:focus, a:hover{
+	color: $dark-green;
+}
+
+p {
+	line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $slab;
+	margin-bottom: .5em;
+}
+
+.h1 {
+	font-size: 2.5em;
+}
+
+.h2 {
+	font-size: 2em;
+}
