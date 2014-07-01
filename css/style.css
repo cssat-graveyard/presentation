@@ -118,23 +118,41 @@ a:focus, a:hover {
 
 /* line 32, ../sass/_elements.scss */
 p {
-  line-height: 1.5em;
+  line-height: 2em;
+  font-size: 1.5em;
+  color: #444444;
 }
 
-/* line 36, ../sass/_elements.scss */
+/* line 38, ../sass/_elements.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto Slab", serif;
   margin-bottom: .5em;
+  color: #3b6e8f;
 }
 
-/* line 41, ../sass/_elements.scss */
+/* line 44, ../sass/_elements.scss */
 .h1 {
-  font-size: 2.5em;
+  font-size: 5em;
 }
 
-/* line 45, ../sass/_elements.scss */
+/* line 48, ../sass/_elements.scss */
 .h2 {
+  font-size: 4em;
+}
+
+/* line 52, ../sass/_elements.scss */
+.h3 {
+  font-size: 3em;
+}
+
+/* line 56, ../sass/_elements.scss */
+.h4 {
   font-size: 2em;
+}
+
+/* line 60, ../sass/_elements.scss */
+.h5 {
+  font-size: 1.5em;
 }
 
 /*********************************
@@ -198,9 +216,4 @@ individual steps
 /* line 34, ../sass/_slides.scss */
 .impress-enabled .step.active {
   opacity: 1;
-}
-
-/* line 36, ../sass/_slides.scss */
-.slide {
-  display: block;
 }
