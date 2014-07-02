@@ -1,93 +1,46 @@
 <!doctype html>
-<html lang="en">
+<html>
 	<head>
-	    <meta charset="utf-8" />
-	    <meta name="viewport" content="width=1024" />
-	    <meta name="apple-mobile-web-app-capable" content="yes" />
-	    <title>Partners for Our Children</title>
-	    
-	    <!--EDIT -->
-	    <meta name="description" content="This text will describe the final presentation" />
-	    <meta name="author" content="Bartek Szopka" />
-
-	    <!-- Fonts and styles -->
-	    <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
-		
-		<link href="D3/county_dashboard/dashboard.css" rel="stylesheet" type="text/css" />
-	    <link href="css/style.css" rel="stylesheet" />
-	    
-	    <link rel="shortcut icon" href="favicon.png" />
-	    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+		<title>County Dashboard</title>
+		<link rel="stylesheet" type="text/css" href="dashboard.css">
 	</head>
-	<body class="impress-not-supported">
-
-	<!-- Fallback message for older browsers -->
-		<div class="fallback-message">
-		    <p>Your browser <b>doesn't support the features required</b> by this presentation, so you are presented with a simplified version.</p>
-	    	<p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.
-	    	</p>
-		</div>
-
-	<!-- Wrapper for Impress presentation -->
-		<div id="impress">
-
-			<div id="introduction" class="step slide" data-x="-1200" data-y="-1500">
-				<h1 class="h1">This is the title slide</h1>
-				<p>This is the first slide.</p>
-				<p>Here is a <a href="#">link to something</a>.</p>
-			</div>
-
-			<div id="dashboard" class="step slide" data-x="0" data-y="-1500">
-				<h1 class="h4">County Dashboard</h1>
-				<table class="county_dashboard">
-					<tbody>
-						<tr>
-							<td>
-								<table>
-									<tbody>
-										<tr>
-											<td id="t_context" valign="top">
-												<h2>&nbsp;</h2>
-												<div id="radios">
-													<div id="radio_state" class="s_r_c">State</div>
-													<div id="radio_region" class="s_r_c">Region</div>
-													<div id="radio_county" class="s_r_c">County</div>
-												</div>
-											</td>
-											<td id="t_trend" valign="top">&nbsp;</td>
-										</tr>
-									</tbody>
-								</table>
-							</td>
-						</tr>
-						<tr>
-							<td id="t_population" style="padding-top: 30px;">&nbsp;</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-
-			<div id="rotate" class="step" data-x="1200" data-y="-1500">
-				<h1 class="h1">This is an SVG</h1>
-				<img src="R/entry-rate-by-age.svg" />
-			</div>
-
-			<div id="scale" class="step" data-x="-300" data-y="800" data-z="-3000" data-rotate="90" data-scale="1">
-				<h1 class="h1">And this is scale</h1>
-			</div>
-		</div>
-
-	<!-- County Dashboard scripts -->
-
-		<script type="text/javascript" src="D3/county_dashboard/data_county.js"></script>
-		<script type="text/javascript" src="D3/county_dashboard/data_region.js"></script>
-		<script type="text/javascript" src="D3/county_dashboard/dict.js"></script>
-		<script type="text/javascript" src="D3/county_dashboard/d3.js"></script>
+	<body>
+		<h1 id="block-title">Dashboard</h1>
+		<table class="county_dashboard">
+			<tbody>
+				<tr>
+					<td>
+						<table>
+							<tbody>
+								<tr>
+									<td id="t_context" valign="top">
+										<h2>&nbsp;</h2>
+										<div id="radios">
+											<div id="radio_state" class="s_r_c">State</div>
+											<div id="radio_region" class="s_r_c">Region</div>
+											<div id="radio_county" class="s_r_c">County</div>
+										</div>
+									</td>
+									<td id="t_trend" valign="top">&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td id="t_population" style="padding-top: 30px;">&nbsp;</td>
+				</tr>
+			</tbody>
+		</table>
+		<script type="text/javascript" src="data_county.js"></script>
+		<script type="text/javascript" src="data_region.js"></script>
+		<script type="text/javascript" src="dict.js"></script>
+		<script type="text/javascript" src="d3.js"></script>
 		<script type="text/javascript" src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-		<script type="text/javascript" src="D3/county_dashboard/population.js"></script>
-		<script type="text/javascript" src="D3/county_dashboard/sparkline.js"></script>
-		<script type="text/javascript" src="D3/county_dashboard/wa_geo_map.js"></script>
-		<script type="text/javascript" src="D3/county_dashboard/wa_geo_map_region.js"></script>
+		<script type="text/javascript" src="population.js"></script>
+		<script type="text/javascript" src="sparkline.js"></script>
+		<script type="text/javascript" src="wa_geo_map.js"></script>
+		<script type="text/javascript" src="wa_geo_map_region.js"></script>
 		<script type="text/javascript">// <![CDATA[
            var context_w = 714,
                context_h = 420,
@@ -835,12 +788,5 @@
                     return counties;
                 }
 // ]]></script>
-
-	<!-- Include impress and initialize -->
-		<script src="js/impress.js"></script>
-		<script>impress().init();</script>
-
-	<!-- Live reload script, remove for production -->
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	</body>
 </html>

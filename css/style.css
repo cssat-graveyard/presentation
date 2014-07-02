@@ -217,3 +217,19 @@ individual steps
 .impress-enabled .step.active {
   opacity: 1;
 }
+
+/* line 37, ../sass/_slides.scss */
+.slide {
+  height: 800px;
+}
+
+/************************
+VISUALIZATIONS
+
+Custom modifications to 
+visualization styling
+************************/
+/* line 8, ../sass/_visualizations.scss */
+.county_dashboard table, td, tr {
+  border: 0;
+}

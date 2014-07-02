@@ -1,0 +1,271 @@
+/*********************
+ County Dashboard
+ *********************/
+    #svg_context{
+         overflow:hidden;     
+		 margin-left: 5px;  		 
+    }
+    
+    #svg_population{
+         overflow:hidden;         
+    }
+    
+    #svg_trend{
+         overflow:hidden;  
+    }
+    
+    #radios{
+       float:right; 
+       margin-right:40px; 
+    }
+    
+	.county_dashboard{
+		border: none;
+	}
+	
+    .county_dashboard table, td, tr{
+        border: 1px solid white;
+        border-collapse:collapse;
+        padding:0px;
+    }
+    
+    .county_dashboard table p{
+        margin: 0;
+    }
+	
+    #chart {
+    }
+    
+    #t_context{
+    }
+    
+    #t_population{
+    }
+    
+    #t_trend{
+        padding-left:7px;
+    }
+    
+   	#radios{
+		float: right;
+		width: 280px;
+	}
+    
+    #radios div {
+        float: right;
+        margin-left: 5px;
+        border: 2px solid; 
+        width:80px;
+        text-align:center;
+        cursor: pointer
+    }
+    
+    .wa_geo_map {
+        fill: rgb(113, 164, 197);
+        stroke: white;
+    }
+    
+    .wa_geo_map:hover {
+        fill: rgb(223, 243, 246);
+    }
+    
+    .wa_geo_map_region {
+        fill: rgb(113, 164, 197);
+        stroke: white;
+    }
+    
+    .wa_geo_map_region:hover {
+        fill: rgb(223, 243, 246);
+    }
+    
+    .trend {
+        cursor: pointer;
+    }
+    
+    .trend_line {
+        stroke: #555;
+        stroke-width: 2;
+        opacity: 0.7;
+        fill:none;
+    }
+    
+    .sparkline_title{
+       font-size:12px; 
+       font-weight: bold;
+       fill:#555;
+    }
+    
+    .sparkline_current{
+       font-size:30px; 
+       fill:#A2B69A;
+    }
+    
+    .sparkline_first{
+       font-size:11px; 
+       fill:#555;
+
+    }
+    
+    .trend_end_point{
+        fill:#A2B69A;
+    }
+    
+    .sparkline_axis path,
+    .sparkline_axis line {
+        fill: none;
+        stroke: #666;
+        stroke-width:2;
+        shape-rendering: crispEdges;
+    }
+    
+    .sparkline_axis path {
+        display: none;
+    }
+    
+    .sparkline_axis text {
+        font-size: 12px;
+        font-weight: bold;
+    }
+    
+    .population_axis path,
+    .population_axis line {
+        fill: none;
+        stroke: #666;
+        stroke-width:2;
+        shape-rendering: crispEdges;
+    } 
+   
+    .text_axis {
+        font-family: sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        fill: #555;       
+    }
+    
+    .text_title {
+        font-family: sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        fill: #555;       
+    }
+    
+    .text_statis {
+        font-family: sans-serif;
+        font-size: 30px;
+        font-weight: normal;
+        fill: #555;       
+    }
+    
+    .circle_population {
+       fill:#A2B69A;
+    }
+    
+    .population_rect {
+        cursor: pointer;
+    }
+    
+    .text_statis {
+       fill:#A2B69A;
+    }
+	
+   #wa_map {
+        cursor: pointer;
+   }
+   
+   #sub_description {
+    
+   }
+   
+   .measure_desc text {
+        font-size: 10px;
+   }
+   
+   #sub_description_title {
+		margin-left: 5px;		
+   }
+   
+   #sub_description_measure {
+        font-size: 15px;
+        font-weight: bold;
+   }
+   
+	.d3-tip {
+      display: block;
+	  width: 150px;
+      padding: 7px;
+      background: #555;
+      color: #fff;
+      border-radius: 2px;
+    } 
+	
+	.d3-tip {
+	  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size:10px; 
+	}
+    
+    .d3-tip span{
+       margin-top: 15px;
+    }
+    
+       /* d3 tip */
+     /* Creates a small triangle extender for the tooltip */
+    .d3-tip:after {
+      box-sizing: border-box;
+      display: inline;
+      font-size: 10px;
+      width: 100%;
+      line-height: 1;
+      color: #555;
+      content: "\25BC";
+      position: absolute;
+      text-align: center;
+    }
+
+
+    /* Style northward tooltips differently of the tooltip*/ 
+    .d3-tip.n:after {
+      margin: -2px 0 0 0;
+      top: 100%;
+      left: 0;
+    }
+    
+   	.d3-tip-county {
+      display: block;
+      padding: 7px;
+      background: #555;
+      color: #fff;
+      border-radius: 2px;
+    } 
+	
+	.d3-tip-county {
+	  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size:18px; 
+	}
+    
+    .d3-tip-county span{
+       margin-top: 15px;
+    }
+    
+         /* d3 tip */
+     /* Creates a small triangle extender for the tooltip */
+    .d3-tip-county:after {
+      box-sizing: border-box;
+      display: inline;
+      font-size: 10px;
+      width: 100%;
+      line-height: 1;
+      color: #555;
+      content: "\25BC";
+      position: absolute;
+      text-align: center;
+    }
+
+
+    /* Style northward tooltips differently of the tooltip*/ 
+    .d3-tip-county.n:after {
+      margin: -2px 0 0 0;
+      top: 100%;
+      left: 0;
+    }
+    
+ /* end: County Dashboard */
