@@ -18,6 +18,9 @@
 	    
 	    <link rel="shortcut icon" href="favicon.png" />
 	    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+	    <!-- Load jQuery -->
+		<script src="js/jquery-2.1.1.min.js"></script>
 	</head>
 	<body class="impress-not-supported">
 
@@ -31,13 +34,12 @@
 	<!-- Wrapper for Impress presentation -->
 		<div id="impress">
 
-			<div id="introduction" class="step slide" data-x="-1200" data-y="-1500">
-				<h1 class="h1">This is the title slide</h1>
-				<p>This is the first slide.</p>
-				<p>Here is a <a href="#">link to something</a>.</p>
+			<div id="introduction" class="step slide" data-x="-1400" data-y="-1500">
+				<h1 class="h2">The State of Our Children in Washington and Beyond</h1>
+				<h3 class="subtitle">A look at the data</h3>
 			</div>
 
-			<div id="dashboard" class="step slide" data-x="0" data-y="-1500">
+			<div id="dashboard" class="step visualization" data-x="0" data-y="-1500">
 				<h1 class="h4">County Dashboard</h1>
 				<table class="county_dashboard">
 					<tbody>
@@ -77,6 +79,18 @@
 			</div>
 		</div>
 
+	<!-- Persistent navigation options -->
+		<button id="prev" class="nav-button"></button>
+		<button id="next" class="nav-button"></button>
+
+		<button class="contents-menu button">Menu <span>&#8801;</span></button>
+		<div class="contents">
+			<ul class="external-links">
+				<li><a href="#">Download PDF</a></li>
+				<li><a href="#">POC Home</a></li>
+			</ul>
+		</div>
+
 	<!-- County Dashboard scripts -->
 
 		<script type="text/javascript" src="D3/county_dashboard/data_county.js"></script>
@@ -109,7 +123,7 @@
             var margin_t = {top: 5, right: 5, bottom: 5, left: 35},  // layout for trends
                 width_t = 350 - margin_t.left - margin_t.right,
                 height_t = 90 - margin_t.top - margin_t.bottom,
-                sparkline_w = 340,
+                sparkline_w = 240,
                 sparkline_h = 90;
                 
             var fast_fact_desc = fast_fact_desc;  // change them once get the real description file
@@ -839,6 +853,58 @@
 	<!-- Include impress and initialize -->
 		<script src="js/impress.js"></script>
 		<script>impress().init();</script>
+
+	<!-- Scripts for navigation -->
+	<script>
+		$("#next").click(function () {
+		   impress().next();
+		});
+
+		$("#prev").click(function () {
+		   impress().prev();
+		});
+	</script>
+
+	<script type="text/javascript">
+		var links = "<nav role='navigation' class='table-of-contents'>" +
+			"<h2 class='h3'>Jump to Slide:</h2>" +
+			"<ul class='navlinks'>";
+
+		var menuItem, el, title, link;
+
+		$(".step").each(function() {
+			el = $(this);
+			title = el.children("h1").text();
+			link = "#" + el.attr("id");
+
+			menuItem = "<li><a href=" + link + "'>" + title + "</a></li>";
+
+			links += menuItem;
+		});
+
+		links += "</ul></nav>";
+
+		$(".contents").prepend(links);
+	</script>
+
+	<script type="text/javascript">
+	$(".contents-menu").click(function() {
+		$('body').toggleClass("menu-active");
+	});
+	</script>
+
+<!-- test if jQuery loaded
+	<script type="text/javascript">
+		if (typeof jQuery != 'undefined') {
+ 
+		    alert("jQuery library is loaded!");
+		 
+		}else{
+		 
+		    alert("jQuery library is not found!");
+		 
+		}
+	</script> -->
 
 	<!-- Live reload script, remove for production -->
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
