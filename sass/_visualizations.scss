@@ -5,6 +5,66 @@ Custom modifications to
 visualization styling
 ************************/
 
+#dashboard h1 {
+	padding-top: .2em;
+	margin-bottom: 0;
+	padding-bottom: .3em;
+	border-bottom: 1px solid $light-gray;
+}
+
 .county_dashboard table, td, tr {
 	border: 0;
+}
+
+#dashboard #sub_description_title {
+	margin-left: 0;
+	position: absolute;
+	margin-top: 1.5em;
+	font-family: $slab;
+	font-size: .8em;
+}
+
+#child-maltreatment {
+	#filters {
+       font-family: $sans-serif;
+       margin-left: 1.5em;
+
+       li {
+            margin: 1.3em 0;
+            display: inline-block;
+       }
+
+       a {
+            font-size: 1em;
+            width: 100%;
+            background: $dark-blue;
+            color: $white;
+            border-radius: 3px;
+
+            &.EAS {
+                background: #E25F82;
+            }
+       }
+    }
+
+    #blurb {
+        margin-top: 5em;
+        padding: 1em;
+        background: $light-gray;
+        height: 120px;
+        position: relative;
+        border-radius: 3px;
+
+        &:after {
+            position: absolute;
+            content: "";
+            top: 50px;
+            right: -49px;
+            width: 0; 
+            height: 0; 
+            border-top: 30px solid transparent;
+            border-bottom: 30px solid transparent;
+            border-left: 50px solid $light-gray;
+        }
+    }
 }
