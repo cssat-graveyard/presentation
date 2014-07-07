@@ -94,7 +94,7 @@ function onmouseover(d, i) {
     var countryVals = startEnd[countryCode];
     var percentChange = 100 * (countryVals['endVal'] - countryVals['startVal']) / countryVals['startVal'];
     var blurb = '<h2>' + countryCodes[countryCode] + '</h2>';
-    blurb += "<p>On averRate: a life expectancy of " + Math.round(countryVals['startVal']) + " years in " + countryVals['startYear'] + " and " + Math.round(countryVals['endVal']) + " years in " + countryVals['endYear'] + ", ";
+    blurb += "<p>" + countryCodes[countryCode] + " had a rate of " + Math.round(countryVals['startVal']) + " cases per 1,000 in " + countryVals['startYear'] + " and " + Math.round(countryVals['endVal']) + " per 1,000 in " + countryVals['endYear'] + ", ";
     if (percentChange >= 0) {
         blurb += "an increase of " + Math.round(percentChange) + " percent."
     } else {

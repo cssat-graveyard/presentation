@@ -58,9 +58,6 @@ path.current, path.highlight.current {
 .GP.highlight {
     stroke: #8e44ad;
 }
-.SE.highlight {
-    stroke: #e67e22;
-}
 .NE.highlight {
 	stroke: #34495e;
 }

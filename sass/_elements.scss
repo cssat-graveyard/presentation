@@ -24,8 +24,8 @@ a:focus, a:hover{
 }
 
 p {
-	line-height: 2em;
-	font-size: 1.5em;
+	line-height: 1.5em;
+	font-size: 18px;
 	color: $dark-gray;
 }
 
@@ -53,6 +53,12 @@ h4, .h4 {
 
 h5, .h5 {
 	font-size: 1.5em;
+}
+
+.slide-title {
+	margin-bottom: 0;
+	padding-bottom: .3em;
+	border-bottom: 1px solid #dedede;
 }
 
 .button {
@@ -180,4 +186,12 @@ h5, .h5 {
 .citation {
 	position: absolute;
 	bottom: 40px;
+}
+
+.image-wrap {
+	width: 100%;
+
+	img {
+		max-height: 600px;
+	}
 }

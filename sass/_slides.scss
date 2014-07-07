@@ -44,14 +44,16 @@ individual steps
 #introduction {
     .subtitle {
         color: darken($light-gray, 30%);
+        text-align: right;
+        padding-top: 1em;
     }
 
     .intro-image {
         text-align: center;
-        padding-top: 2em;
+        padding-top: 1em;
 
         img {
-            width: 60%;
+            width: 100%;
         }
     }
 
@@ -73,12 +75,6 @@ individual steps
 
     h1 {
         margin-bottom: .2em;
-    }
-
-    p {
-        font-size: 1em;
-        line-height: 1.5em;
-        margin-bottom: 1em;
     }
 
     h2 { font-size: 2em;}
