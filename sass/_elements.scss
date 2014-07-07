@@ -98,9 +98,8 @@ h5, .h5 {
 /* Slide-out menu */
 
 .contents-menu {
-	color: $dark-blue;
-	background: $white;
-	border: 2px solid $dark-blue;
+	color: $white;
+	background: $dark-blue;
 	cursor: pointer;
 	font-size: 1.2em;
 	position: absolute;
@@ -180,5 +179,5 @@ h5, .h5 {
 
 .citation {
 	position: absolute;
-	bottom: 30px;
+	bottom: 40px;
 }

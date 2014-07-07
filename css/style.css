@@ -196,21 +196,20 @@ h5, .h5 {
 /* Slide-out menu */
 /* line 100, ../sass/_elements.scss */
 .contents-menu {
-  color: #3b6e8f;
-  background: #f4f4f4;
-  border: 2px solid #3b6e8f;
+  color: #f4f4f4;
+  background: #3b6e8f;
   cursor: pointer;
   font-size: 1.2em;
   position: absolute;
   top: 10px;
   right: 5px;
 }
-/* line 110, ../sass/_elements.scss */
+/* line 109, ../sass/_elements.scss */
 .contents-menu span {
   font-weight: bold;
 }
 
-/* line 115, ../sass/_elements.scss */
+/* line 114, ../sass/_elements.scss */
 .contents {
   background: rgba(244, 244, 244, 0.9);
   line-height: 1.5em;
@@ -227,7 +226,7 @@ h5, .h5 {
   -o-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
-/* line 131, ../sass/_elements.scss */
+/* line 130, ../sass/_elements.scss */
 .contents a {
   color: #3b6e8f;
   text-decoration: none;
@@ -236,7 +235,7 @@ h5, .h5 {
   padding: .5em 1em;
   line-height: 2.5em;
 }
-/* line 140, ../sass/_elements.scss */
+/* line 139, ../sass/_elements.scss */
 .contents .h3 {
   background: #3b6e8f;
   font-size: 1em;
@@ -245,47 +244,47 @@ h5, .h5 {
   padding: .5em;
   margin: 0;
 }
-/* line 149, ../sass/_elements.scss */
+/* line 148, ../sass/_elements.scss */
 .contents .navlinks li {
   border-bottom: 1px solid #3b6e8f;
   background: rgba(244, 244, 244, 0.9);
 }
-/* line 153, ../sass/_elements.scss */
+/* line 152, ../sass/_elements.scss */
 .contents .navlinks li:hover {
   background: #4a8ab3;
   cursor: pointer;
 }
-/* line 157, ../sass/_elements.scss */
+/* line 156, ../sass/_elements.scss */
 .contents .navlinks li:hover a {
   color: #f4f4f4;
 }
-/* line 161, ../sass/_elements.scss */
+/* line 160, ../sass/_elements.scss */
 .contents .external-links li {
   border-bottom: 1px solid #3b6e8f;
 }
-/* line 164, ../sass/_elements.scss */
+/* line 163, ../sass/_elements.scss */
 .contents .external-links li:hover {
   background: #4a8ab3;
   cursor: pointer;
 }
-/* line 168, ../sass/_elements.scss */
+/* line 167, ../sass/_elements.scss */
 .contents .external-links li:hover a {
   color: #f4f4f4;
 }
-/* line 171, ../sass/_elements.scss */
+/* line 170, ../sass/_elements.scss */
 .contents .external-links li:last-child {
   border-bottom: 0;
 }
 
-/* line 177, ../sass/_elements.scss */
+/* line 176, ../sass/_elements.scss */
 .menu-active .contents {
   right: 0;
 }
 
-/* line 181, ../sass/_elements.scss */
+/* line 180, ../sass/_elements.scss */
 .citation {
   position: absolute;
-  bottom: 30px;
+  bottom: 40px;
 }
 
 /*********************************
@@ -526,4 +525,10 @@ visualization styling
   border-top: 30px solid transparent;
   border-bottom: 30px solid transparent;
   border-left: 50px solid #eeeeee;
+}
+/* line 95, ../sass/_visualizations.scss */
+#child-maltreatment .directions {
+  color: #888888;
+  margin-bottom: 0;
+  padding-left: 1.5em;
 }
