@@ -471,23 +471,55 @@ visualization styling
   border-radius: 3px;
 }
 /* line 44, ../sass/_visualizations.scss */
-#child-maltreatment #filters a.EAS {
-  background: #E25F82;
+#child-maltreatment #filters a.FW {
+  background: #c0392b;
+}
+/* line 47, ../sass/_visualizations.scss */
+#child-maltreatment #filters a.SW {
+  background: #d35400;
 }
 /* line 50, ../sass/_visualizations.scss */
+#child-maltreatment #filters a.ME {
+  background: #f39c12;
+}
+/* line 53, ../sass/_visualizations.scss */
+#child-maltreatment #filters a.SE {
+  background: #27ae60;
+}
+/* line 56, ../sass/_visualizations.scss */
+#child-maltreatment #filters a.MT {
+  background: #17a88c;
+}
+/* line 59, ../sass/_visualizations.scss */
+#child-maltreatment #filters a.GL {
+  background: #2980b9;
+}
+/* line 62, ../sass/_visualizations.scss */
+#child-maltreatment #filters a.GP {
+  background: #8e44ad;
+}
+/* line 65, ../sass/_visualizations.scss */
+#child-maltreatment #filters a.SE {
+  background: #e67e22;
+}
+/* line 68, ../sass/_visualizations.scss */
+#child-maltreatment #filters a.NE {
+  background: #34495e;
+}
+/* line 74, ../sass/_visualizations.scss */
 #child-maltreatment #blurb {
   margin-top: 5em;
   padding: 1em;
   background: #eeeeee;
-  height: 120px;
+  height: 170px;
   position: relative;
   border-radius: 3px;
 }
-/* line 58, ../sass/_visualizations.scss */
+/* line 82, ../sass/_visualizations.scss */
 #child-maltreatment #blurb:after {
   position: absolute;
   content: "";
-  top: 50px;
+  top: 75px;
   right: -49px;
   width: 0;
   height: 0;

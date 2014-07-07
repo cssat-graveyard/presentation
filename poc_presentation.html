@@ -15,6 +15,7 @@
 		
 		<link href="D3/county_dashboard/dashboard.css" rel="stylesheet" type="text/css" />
         <link href="css/life.css" rel="stylesheet" type="text/css">
+        <link href="css/hint.css" rel="stylesheet" type="text/css">
 	    <link href="css/style.css" rel="stylesheet" />
 	    
 	    <link rel="shortcut icon" href="favicon.png" />
@@ -35,7 +36,7 @@
 	<!-- Wrapper for Impress presentation -->
 		<div id="impress">
 
-			<div id="introduction" title="Home" class="step slide" data-x="-1400" data-y="-1500" data-scale="5">
+			<div id="introduction" data-title="Home" class="step slide" data-x="-1400" data-y="-1500" data-scale="5">
 				<h1 class="h2">The State of Our Children in Washington and Beyond</h1>
                 <h3 class="subtitle">A look at the data</h3>
                 <div class="intro-image">
@@ -43,7 +44,7 @@
                 </div>
 			</div>
 
-			<div id="dashboard" title="County Dashboard" class="step visualization" data-x="-1400" data-y="-1500" data-z="-3000" data-scale="1">
+			<div id="dashboard" data-title="County Dashboard" class="step visualization" data-x="-1400" data-y="-1500" data-z="-3000" data-scale="1">
 				<h1 class="h2">County Dashboard</h1>
 				<table class="county_dashboard">
 					<tbody>
@@ -73,17 +74,17 @@
 				</table>
 			</div>
 
-			<div id="entry-rate" title="Out-of-Home Care" class="step" data-x="1200" data-y="-1500" data-z="-3000" data-scale="1">
+			<div id="entry-rate" data-title="Out-of-Home Care" class="step" data-x="1200" data-y="-1500" data-z="-3000" data-scale="1">
 				<h1 class="h1">Out-of-Home Care</h1>
 				<img src="R/entry-rate-by-age.svg" />
 			</div>
 
-			<div id="outcomes" title="Outcomes by Age" class="step" data-x="1200" data-y="0" data-z="-3000" data-rotate="90" data-scale="1">
+			<div id="outcomes" data-title="Outcomes by Age" class="step" data-x="1200" data-y="0" data-z="-3000" data-rotate="90" data-scale="1">
 				<h1 class="h1">Outcomes by Age</h1>
                 <img src="R/outcomes-by-age.svg" />
 			</div>
 
-            <div id="child-maltreatment" title="Child Maltreatment" class="step" data-x="1200" data-y="1500" data-z="-3000" data-rotate="90" data-scale="1">
+            <div id="child-maltreatment" data-title="Child Maltreatment" class="step" data-x="1200" data-y="1500" data-z="-3000" data-rotate="90" data-scale="1">
                 <h1 class="h2">Child Maltreatment</h1>
                 <div class="data-contents">
                     <div class="description">
@@ -101,14 +102,14 @@
                     </div>
                     <div class="visualization-right">
                         <ul id="filters">
-                            <li><a id="FW">Far West</a></li>
-                            <li><a id="MT">Rocky Mountain</a></li>
-                            <li><a id="SW">Southwest</a></li>
-                            <li><a id="GP">Plains</a></li>
-                            <li><a id="GL">Great Lakes</a></li>
-                            <li><a id="SE">Southeast</a></li>
-                            <li><a id="ME">Mideast</a></li>
-                            <li><a id="NE">New England</a></li>
+                            <li class="hint--bottom" data-hint="AK, HI, WA, OR, CA, NV, Puerto Rico"><a id="FW">Far West</a></li>
+                            <li class="hint--bottom" data-hint="CO, ID, MT, UT, WY"><a id="MT">Rocky Mountain</a></li>
+                            <li class="hint--bottom" data-hint="TX, AZ, NM, OK"><a id="SW">Southwest</a></li>
+                            <li class="hint--bottom" data-hint="IA, KS, MN, MO, NE, ND, SD"><a id="GP">Plains</a></li>
+                            <li class="hint--bottom" data-hint="IL, IN, MI, OH, WI"><a id="GL">Great Lakes</a></li>
+                            <li class="hint--bottom" data-hint="AL, AR, GA, KY, LA, MS, NC, SC, TN, VA"><a id="SE">Southeast</a></li>
+                            <li class="hint--bottom" data-hint="NY, DE, MD, NJ, PA, DC"><a id="ME">Mideast</a></li>
+                            <li class="hint--bottom" data-hint="CT, ME, MA, NH, RI, VT"><a id="NE">New England</a></li>
                         </ul> 
                         <div id="vis"></div>
                     </div>

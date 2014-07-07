@@ -19,7 +19,7 @@ $( document ).ready(function() {
 
 		$(".step").each(function() {
 			el = $(this);
-			title = el.attr("title");
+			title = el.attr("data-title");
 			link = "#" + el.attr("id");
 
 			menuItem = "<li><a href=" + link + ">" + title + "</a></li>";

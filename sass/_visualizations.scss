@@ -41,8 +41,32 @@ visualization styling
             color: $white;
             border-radius: 3px;
 
-            &.EAS {
-                background: #E25F82;
+            &.FW {
+                background: #c0392b;
+            }
+            &.SW {
+                background: #d35400;
+            }
+            &.ME {
+                background: #f39c12;
+            }
+            &.SE {
+                background: #27ae60;
+            }
+            &.MT {
+                background: #17a88c;
+            }
+            &.GL {
+                background: #2980b9;
+            }
+            &.GP {
+                background: #8e44ad;
+            }
+            &.SE {
+                background: #e67e22;
+            }
+            &.NE {
+                background: #34495e;
             }
        }
     }
@@ -51,14 +75,14 @@ visualization styling
         margin-top: 5em;
         padding: 1em;
         background: $light-gray;
-        height: 120px;
+        height: 170px;
         position: relative;
         border-radius: 3px;
 
         &:after {
             position: absolute;
             content: "";
-            top: 50px;
+            top: 75px;
             right: -49px;
             width: 0; 
             height: 0; 
