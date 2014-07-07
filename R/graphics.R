@@ -8,7 +8,6 @@ require(extrafont)
 
 setwd("C:/Users/gregorp.NEBULA2/Desktop/GitHub/presentation/R")
 con_test <- odbcConnect("test_annie")
-loadfonts()
 
 sel.date.type <- 2
 min.date <- as.Date(ymd('2006-01-01'))
@@ -85,7 +84,11 @@ ent1 <- ggplot(entries$by.age, aes(x = cohort.period, y = rate.of.entries, color
          color = "Age Group") +
     theme_bw(base_family = sel.font)
 
-ggsave("entry-rate-by-age.svg", ent1, width = 8, height = 6)
+ggsave("entry-rate-by-age.pdf", ent1, width = 8, height = 6)
+embed_fonts("entry-rate-by-age.pdf")
+
+
+
 
 ## Outcomes by Age Group (recreating Newby) ----
 
@@ -121,7 +124,9 @@ outcome.plot <- ggplot(outcomes, aes(x = months, y = percent/100,
     guides(col = guide_legend(nrow = 3))
 
 
-ggsave(filename = "outcomes-by-age.svg", outcome.plot, height = 5, width = 8)
+ggsave(filename = "outcomes-by-age.pdf", outcome.plot, height = 5, width = 8)
+embed_fonts("outcomes-by-age.pdf")
+
 
 ## National Census Data
 
@@ -174,8 +179,10 @@ mal.plot <- ggplot(filter(mal.for.plot),
          title = "Founded Allegations for Each State",
          color = "") +
     theme_bw(base_family = sel.font)
-mal.plot
-ggsave(filename = "founded-allegations-us.svg", plot = mal.plot, width = 8, height = 6)
+
+# ggsave(filename = "founded-allegations-us.pdf", plot = mal.plot, width = 8, height = 6)
+# embed_fonts("founded-allegations-us.pdf")
+
 
 # Getting ready for D3 lines
 
@@ -243,7 +250,7 @@ region$RegionCode <- region.codes[region$RegionName]
 write.csv(region, "state-regions.csv", row.names = FALSE)
 
 mal.for.d3 <- mal.for.plot %>%
-    filter(age == "age0to17") %>%
+    filter(age == "age0to17", TimeFrame > 2003) %>%
     select(Location, TimeFrame, rate) %>%
     dcast(Location ~ TimeFrame, value.var = "rate") %>%
     mutate(StateName = Location, State = Location) %>%
@@ -252,5 +259,5 @@ mal.for.d3 <- mal.for.plot %>%
 nc <- ncol(mal.for.d3)
 mal.for.d3 <- mal.for.d3[, c(nc-1, nc, 1:(nc-2))]
 
-write.csv(mal.for.d3, "maltreatment-for-d3.csv", na = "")
+write.csv(mal.for.d3, "maltreatment-for-d3.csv", na = "", row.names = F)
 
