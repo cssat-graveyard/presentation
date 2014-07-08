@@ -1,0 +1,15 @@
+outcomes-by-age
+Source: Children's Administration via the POC Data Portal
+
+entry-rate-by-age
+Source: Children's Administration (supplemented by the US Census Bureau) via the POC Data Portal
+
+teen-birth
+Source: VitalStats, National Center for Health Statistics, CDC (supplemented by the US Census Bureau), via Kids Count
+
+maltreatment-for-d3, Confirmed Child Maltreatment by State
+Source: NCANDS via Kids Count
+
+children-under-5-in-poverty
+Source US Census (ACS 3-year Average 2008-2010) via Kids Count
+(Plotted data is for Washington only).

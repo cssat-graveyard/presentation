@@ -2,13 +2,10 @@ RaceBirth<-read.csv("http://datacenter.kidscount.org/rawdata.axd?ind=3&loc=1",na
 head(RaceBirth)
 View(RaceBirth)
 
-View(RaceBirth)
-
-
 Total<-subset(RaceBirth, Race == "Total")
 Total<-subset(Total, DataFormat == "Rate per 1,000")
 Total<-subset(Total, TimeFrame == "2012") 
-View(Total)
+
 
 head(Total,20)
 Total
@@ -17,6 +14,9 @@ library(maptools)
 library(ggplot2)
 library(ggmap)
 library(maps)
+library(extrafont)
+
+loadfonts(quiet = T)
 
 mapstates<-map_data("state")
 
@@ -28,12 +28,29 @@ Total.Map <- Total.Map[order(Total.Map$order),]
 Total.Map$Data <- as.numeric(as.character(Total.Map$Data))
 
 map.legend <- ggplot(Total.Map, aes(long,lat,group=group)) + 
-  geom_polygon(aes(fill=Data)) #+
-  #theme_nothing() #+
-#  guides(fill = guide_colorbar())
+  geom_polygon(aes(fill=Data)) +
+  coord_map(projection = "globular") +
+  labs(x = "", y = "") +
+  theme_minimal(base_family = "Frutiger LT Std 45 Light") +
+  theme(panel.grid.major = element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank())
+map.legend
 
-require(extrafont)
-loadfonts()
+Sys.setenv(R_GSCMD = "C:/Program Files/gs/gs9.14/bin/gswin64c.exe")
+ggsave("teen-birth.pdf", map.legend, height = 8, width = 10)
+embed_fonts("teen-birth.pdf", outfile="teen-birth-embed.pdf")
+
+
+
+
+
+
+
+
+
+
+
 
 leg <- map.legend + #scale_fill_brewer(palette="PuRd") +
   coord_map(project="globular") +

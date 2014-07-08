@@ -80,7 +80,6 @@ ent1 <- ggplot(entries$by.age, aes(x = cohort.period, y = rate.of.entries, color
     #scale_y_continuous(trans = "log") +
     labs(x = "Entry Quarter",
          y  = "Rate of Entries (per 1,000 population)",
-         title = "WA Entries into Out-of-Home Care by Age",
          color = "Age Group") +
     theme_bw(base_family = sel.font)
 
@@ -175,8 +174,7 @@ mal.plot <- ggplot(filter(mal.for.plot),
                                   alpha("black", 0.5))) +
     scale_size_manual(values = c(rep(1.2, length(highlight.state)), 0.8)) +
     facet_wrap(~ age) +
-    labs(x = "Year", y = "Count of Founded Allegations",
-         title = "Founded Allegations for Each State",
+    labs(x = "Year", y = "Rate of Founded Allegations (per 1,000)",
          color = "") +
     theme_bw(base_family = sel.font)
 
@@ -230,7 +228,8 @@ region$RegionName <- ifelse(region$State %in%
                                             "South Carolina",
                                             "Tennessee",
                                             "Virginia",
-                                            "West Virginia"), "Southeast",
+                                            "West Virginia",
+                                            "Puerto Rico"), "Southeast",
                                             ifelse(region$State %in% c(
                                                 "Arizona",
                                                 "New Mexico",
@@ -260,4 +259,39 @@ nc <- ncol(mal.for.d3)
 mal.for.d3 <- mal.for.d3[, c(nc-1, nc, 1:(nc-2))]
 
 write.csv(mal.for.d3, "maltreatment-for-d3.csv", na = "", row.names = F)
+
+
+
+
+##  Children Under 5 in Poverty, from Kids Count -----------------------------------
+
+poverty <- read.csv("http://datacenter.kidscount.org/rawdata.axd?ind=4748&loc=49", na.strings = "N.A.",
+                    stringsAsFactors = FALSE)
+
+pov <- filter(poverty, Location == "Washington" & DataFormat == "Percent" & TimeFrame == "2008-2010")
+pov$Data <- as.numeric(str_replace_all(pov$Data, "\\*|%", ""))
+pov$Data <- ifelse(pov$Data > 1, pov$Data / 100, pov$Data)
+
+pov.for.plot <- pov %>% filter(!str_detect(Race, "Island|Some|Asian|Total"), Race != "White") %>%
+    mutate(Race = factor(Race)) %>%
+    mutate(Race = reorder(Race, X = -Data))
+
+pov.plot <- ggplot(pov.for.plot, aes(x = Race, y = Data)) +
+    geom_bar(stat = "identity", fill = poc_colors[1]) +
+    labs(x = "", y = "") +
+    geom_text(aes(label = percent(Data), y = Data - .02), color = "white", family = sel.font) +
+    scale_y_continuous(labels = percent_format()) +
+    theme_bw(base_family = sel.font) +
+    theme(axis.text.x = element_text(angle = -25, hjust = 0),
+          plot.margin = unit(c(1, 3, 1, 1) * 5, "mm"))
+
+ggsave("children-under-5-in-poverty.pdf", pov.plot, width = 7, height = 7)
+embed_fonts("children-under-5-in-poverty.pdf")    
+
+#### ----------------------------------
+
+embed_fonts("teen-birth.pdf")
+embed_fonts("teen-birth-by-race.pdf")
+
+
 
