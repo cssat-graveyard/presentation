@@ -89,35 +89,12 @@
 
             <div id="child-maltreatment" data-title="Child Maltreatment" class="step" data-x="1200" data-y="1500" data-z="-3000" data-rotate="90" data-scale="1">
                 <h1 class="h2">Child Maltreatment</h1>
-                <div class="data-contents">
-                    <div class="description">
-                         <p>The number of children found to be victims of maltreatment are recorded at a rate per 1,000 under age 18. Victimized children are defined as those who were the subject of one or more substantiated maltreatment reports or who were identified as alternative response victims. Read more at <a href="http://www.ndacan.cornell.edu">http://www.ndacan.cornell.edu</a>.</p>
+               	<iframe src="D3/child_maltreatment/maltreatment.html" width="1300" height="650"></iframe>
+            </div>
 
-                        <div id="blurb">
-                            <div id="default-blurb">
-                                <h2 class="h4">Nationwide</h2>
-                                <p>603,854 children were confirmed as victims of maltreatment in 2012.</p>
-                            </div>
-                        <div id="blurb-content"></div>
-                        </div>
-
-                        <div class="citation">Source: <a href="http://datacenter.kidscount.org/data/Tables/6221-children-who-are-confirmed-by-child-protective-services-as-victims-of-maltreatment?loc=1&loct=1#detailed/2/2-52/false/868/any/12943">Kids Count Data Center</a></div>
-                    </div>
-                    <div class="visualization-right">
-                    	<p class="directions">Select a region below to compare, or scroll over the graph to highlight states. </p>
-                        <ul id="filters">
-                            <li class="hint--bottom" data-hint="AK, HI, WA, OR, CA, NV"><a id="FW">Far West</a></li>
-                            <li class="hint--bottom" data-hint="CO, ID, MT, UT, WY"><a id="MT">Rocky Mountain</a></li>
-                            <li class="hint--bottom" data-hint="TX, AZ, NM, OK"><a id="SW">Southwest</a></li>
-                            <li class="hint--bottom" data-hint="IA, KS, MN, MO, NE, ND, SD"><a id="GP">Plains</a></li>
-                            <li class="hint--bottom" data-hint="IL, IN, MI, OH, WI"><a id="GL">Great Lakes</a></li>
-                            <li class="hint--bottom" data-hint="AL, AR, GA, KY, LA, MS, NC, SC, TN, VA, Puerto Rico"><a id="SE">Southeast</a></li>
-                            <li class="hint--bottom" data-hint="NY, DE, MD, NJ, PA, DC"><a id="ME">Mideast</a></li>
-                            <li class="hint--bottom" data-hint="CT, ME, MA, NH, RI, VT"><a id="NE">New England</a></li>
-                        </ul> 
-                        <div id="vis"></div>
-                    </div>
-                </div>
+            <div id="entered-care" data-title="Entering Care" class="step" data-x="1200" data-y="3000" data-z="-3000" data-scale="1">
+            	<h1 class="h2">Children Entering Care by Age</h1>
+                <iframe src="D3/entering_care/care.html" width="1300" height="700"></iframe>
             </div>
 		</div>
 
@@ -135,22 +112,6 @@
     			</ul>
             </nav>
 		</div>
-
-    <!-- Child maltreatment visualization scripts -->
-        <script type="text/javascript" src="d3.js"></script>
-        <script type="text/javascript" src="d3.time.js"></script>
-        <script type="text/javascript" src="d3.csv.js"></script>
-        <script type="text/javascript" src="maltreatment.js"></script>
-        <script type="text/javascript">
-        $(document).ready(function() {
-            $('#filters a').click(function() {
-                var countryId = $(this).attr("id");
-                $(this).toggleClass(countryId);
-                showRegion(countryId);
-            });
-            
-        });
-        </script>
 
 	<!-- County Dashboard scripts -->
 

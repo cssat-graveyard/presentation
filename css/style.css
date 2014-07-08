@@ -153,7 +153,7 @@ h5, .h5 {
 .slide-title {
   margin-bottom: 0;
   padding-bottom: .3em;
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid #eeeeee;
 }
 
 /* line 64, ../sass/_elements.scss */
@@ -409,28 +409,59 @@ individual steps
 #child-maltreatment {
   padding-left: 0;
   margin-left: 0;
+  overflow: hidden;
 }
-/* line 76, ../sass/_slides.scss */
+/* line 77, ../sass/_slides.scss */
 #child-maltreatment h1 {
   margin-bottom: .2em;
 }
-/* line 80, ../sass/_slides.scss */
+/* line 81, ../sass/_slides.scss */
 #child-maltreatment h2 {
   font-size: 2em;
 }
-/* line 82, ../sass/_slides.scss */
+/* line 83, ../sass/_slides.scss */
 #child-maltreatment .data-contents {
   border-top: 1px solid #dedede;
   padding-top: 1.5em;
   width: 1300px;
 }
-/* line 87, ../sass/_slides.scss */
+/* line 88, ../sass/_slides.scss */
 #child-maltreatment .description {
   float: left;
   width: 300px;
 }
-/* line 92, ../sass/_slides.scss */
+/* line 93, ../sass/_slides.scss */
 #child-maltreatment .visualization-right {
+  float: right;
+  width: 930px;
+}
+
+/* line 99, ../sass/_slides.scss */
+#entered-care {
+  padding-left: 0;
+  margin-left: 0;
+}
+/* line 103, ../sass/_slides.scss */
+#entered-care h1 {
+  margin-bottom: .2em;
+}
+/* line 107, ../sass/_slides.scss */
+#entered-care h2 {
+  font-size: 2em;
+}
+/* line 109, ../sass/_slides.scss */
+#entered-care .data-contents {
+  border-top: 1px solid #dedede;
+  padding-top: 1.5em;
+  width: 1300px;
+}
+/* line 114, ../sass/_slides.scss */
+#entered-care .description {
+  float: left;
+  width: 300px;
+}
+/* line 119, ../sass/_slides.scss */
+#entered-care .visualization-right {
   float: right;
   width: 930px;
 }
@@ -536,6 +567,84 @@ visualization styling
 }
 /* line 92, ../sass/_visualizations.scss */
 #child-maltreatment .directions {
+  color: #888888;
+  margin-bottom: 0;
+  padding-left: 1.5em;
+}
+
+/* line 100, ../sass/_visualizations.scss */
+#entered-care #care-filters {
+  font-family: "PT Sans", sans-serif;
+  margin-left: 1.5em;
+}
+/* line 104, ../sass/_visualizations.scss */
+#entered-care #care-filters li {
+  margin: 1.3em 0;
+  display: inline-block;
+}
+/* line 109, ../sass/_visualizations.scss */
+#entered-care #care-filters a {
+  font-size: 1em;
+  width: 100%;
+  background: #3b6e8f;
+  color: #f4f4f4;
+  border-radius: 3px;
+}
+/* line 116, ../sass/_visualizations.scss */
+#entered-care #care-filters a.FW {
+  background: #c0392b;
+}
+/* line 119, ../sass/_visualizations.scss */
+#entered-care #care-filters a.SW {
+  background: #d35400;
+}
+/* line 122, ../sass/_visualizations.scss */
+#entered-care #care-filters a.ME {
+  background: #f39c12;
+}
+/* line 125, ../sass/_visualizations.scss */
+#entered-care #care-filters a.SE {
+  background: #27ae60;
+}
+/* line 128, ../sass/_visualizations.scss */
+#entered-care #care-filters a.MT {
+  background: #17a88c;
+}
+/* line 131, ../sass/_visualizations.scss */
+#entered-care #care-filters a.GL {
+  background: #2980b9;
+}
+/* line 134, ../sass/_visualizations.scss */
+#entered-care #care-filters a.GP {
+  background: #8e44ad;
+}
+/* line 137, ../sass/_visualizations.scss */
+#entered-care #care-filters a.NE {
+  background: #34495e;
+}
+/* line 143, ../sass/_visualizations.scss */
+#entered-care #care-blurb {
+  margin-top: 5em;
+  padding: 1em;
+  background: #eeeeee;
+  height: 170px;
+  position: relative;
+  border-radius: 3px;
+}
+/* line 151, ../sass/_visualizations.scss */
+#entered-care #care-blurb:after {
+  position: absolute;
+  content: "";
+  top: 75px;
+  right: -49px;
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 50px solid #eeeeee;
+}
+/* line 164, ../sass/_visualizations.scss */
+#entered-care .directions {
   color: #888888;
   margin-bottom: 0;
   padding-left: 1.5em;

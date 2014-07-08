@@ -95,3 +95,75 @@ visualization styling
         padding-left: 1.5em;
     }
 }
+
+#entered-care {
+    #care-filters {
+       font-family: $sans-serif;
+       margin-left: 1.5em;
+
+       li {
+            margin: 1.3em 0;
+            display: inline-block;
+       }
+
+       a {
+            font-size: 1em;
+            width: 100%;
+            background: $dark-blue;
+            color: $white;
+            border-radius: 3px;
+
+            &.FW {
+                background: #c0392b;
+            }
+            &.SW {
+                background: #d35400;
+            }
+            &.ME {
+                background: #f39c12;
+            }
+            &.SE {
+                background: #27ae60;
+            }
+            &.MT {
+                background: #17a88c;
+            }
+            &.GL {
+                background: #2980b9;
+            }
+            &.GP {
+                background: #8e44ad;
+            }
+            &.NE {
+                background: #34495e;
+            }
+       }
+    }
+
+    #care-blurb {
+        margin-top: 5em;
+        padding: 1em;
+        background: $light-gray;
+        height: 170px;
+        position: relative;
+        border-radius: 3px;
+
+        &:after {
+            position: absolute;
+            content: "";
+            top: 75px;
+            right: -49px;
+            width: 0; 
+            height: 0; 
+            border-top: 30px solid transparent;
+            border-bottom: 30px solid transparent;
+            border-left: 50px solid $light-gray;
+        }
+    }
+
+    .directions {
+        color: darken($light-gray, 40%);
+        margin-bottom: 0;
+        padding-left: 1.5em;
+    }
+}

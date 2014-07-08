@@ -23,20 +23,20 @@ var line = d3.svg.line().x(function (d, i) {
 }).y(function (d) {
     return y(d.y);
 });
-var countries_regions = {};
+var states_regions = {};
 d3.text('state-regions.csv', 'text/csv', function (text) {
     var regions = d3.csv.parseRows(text);
     for (i = 1; i < regions.length; i++) {
-        countries_regions[regions[i][0]] = regions[i][1];
+        states_regions[regions[i][0]] = regions[i][1];
     }
 });
-var startEnd = {}, countryCodes = {};
+var startEnd = {}, stateCodes = {};
 d3.text('maltreatment-for-d3.csv', 'text/csv', function (text) {
-    var countries = d3.csv.parseRows(text);
-    for (i = 1; i < countries.length; i++) {
-        var values = countries[i].slice(2, countries[i.length - 1]);
+    var states = d3.csv.parseRows(text);
+    for (i = 1; i < states.length; i++) {
+        var values = states[i].slice(2, states[i.length - 1]);
         var currData = [];
-        countryCodes[countries[i][1]] = countries[i][0];
+        stateCodes[states[i][1]] = states[i][0];
         var started = false;
         for (j = 0; j < values.length; j++) {
             if (values[j] != '') {
@@ -45,18 +45,18 @@ d3.text('maltreatment-for-d3.csv', 'text/csv', function (text) {
                     y: values[j]
                 });
                 if (!started) {
-                    startEnd[countries[i][1]] = {
+                    startEnd[states[i][1]] = {
                         'startYear': years[j],
                         'startVal': values[j]
                     };
                     started = true;
                 } else if (j == values.length - 1) {
-                    startEnd[countries[i][1]]['endYear'] = years[j];
-                    startEnd[countries[i][1]]['endVal'] = values[j];
+                    startEnd[states[i][1]]['endYear'] = years[j];
+                    startEnd[states[i][1]]['endVal'] = values[j];
                 }
             }
         }
-        vis.append("svg:path").data([currData]).attr("country", countries[i][1]).attr("class", countries_regions[countries[i][1]]).attr("d", line).on("mouseover", onmouseover).on("mouseout", onmouseout);
+        vis.append("svg:path").data([currData]).attr("state", states[i][1]).attr("class", states_regions[states[i][1]]).attr("d", line).on("mouseover", onmouseover).on("mouseout", onmouseout);
     }
 });
 vis.append("svg:line").attr("x1", x(2003)).attr("y1", y(startRate)).attr("x2", x(2012)).attr("y2", y(startRate)).attr("class", "axis")
@@ -90,11 +90,11 @@ function onclick(d, i) {
 function onmouseover(d, i) {
     var currClass = d3.select(this).attr("class");
     d3.select(this).attr("class", currClass + " current");
-    var countryCode = $(this).attr("country");
-    var countryVals = startEnd[countryCode];
-    var percentChange = 100 * (countryVals['endVal'] - countryVals['startVal']) / countryVals['startVal'];
-    var blurb = '<h2>' + countryCodes[countryCode] + '</h2>';
-    blurb += "<p>" + countryCodes[countryCode] + " had a rate of " + Math.round(countryVals['startVal']) + " cases per 1,000 in " + countryVals['startYear'] + " and " + Math.round(countryVals['endVal']) + " per 1,000 in " + countryVals['endYear'] + ", ";
+    var stateCode = $(this).attr("state");
+    var stateVals = startEnd[stateCode];
+    var percentChange = 100 * (stateVals['endVal'] - stateVals['startVal']) / stateVals['startVal'];
+    var blurb = '<h2>' + stateCodes[stateCode] + '</h2>';
+    blurb += "<p>" + stateCodes[stateCode] + " had a rate of " + Math.round(stateVals['startVal']) + " cases per 1,000 in " + stateVals['startYear'] + " and " + Math.round(stateVals['endVal']) + " per 1,000 in " + stateVals['endYear'] + ", ";
     if (percentChange >= 0) {
         blurb += "an increase of " + Math.round(percentChange) + " percent."
     } else {
@@ -114,10 +114,10 @@ function onmouseout(d, i) {
 }
 
 function showRegion(regionCode) {
-    var countries = d3.selectAll("path." + regionCode);
-    if (countries.classed('highlight')) {
-        countries.attr("class", regionCode);
+    var states = d3.selectAll("path." + regionCode);
+    if (states.classed('highlight')) {
+        states.attr("class", regionCode);
     } else {
-        countries.classed('highlight', true);
+        states.classed('highlight', true);
     }
 }

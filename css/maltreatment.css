@@ -6,11 +6,11 @@ Styles for lines visualization
     width: 925px;
     margin: 0 auto;
 }
-#filters {
+#filters, #care-filters {
     font-family: Arial, sans-serif;
     margin-bottom: 20px;
 }
-#filters a {
+#filters a, #care-filters a {
     color: #000;
     font-size: 12px;
     padding: 5px;
@@ -18,11 +18,11 @@ Styles for lines visualization
     cursor: pointer;
     margin-right: 3px;
 }
-#filters a:last-child {
+#filters a:last-child, #care-filters a:last-child {
     margin-right: 0;
 }
 
-#vis {
+#vis, #care-vis {
     min-height: 550px;
 }
 
@@ -37,6 +37,11 @@ path.current, path.highlight.current {
     stroke: #000;
     stroke-width: 2.0;
 }
+
+path[state="Washington"] {
+    stroke: #000;
+}
+
 .FW.highlight {
 	stroke: #c0392b;
 }
@@ -78,11 +83,5 @@ text {
 .xTicks, .yTicks {
     stroke-width: 0.6;
     stroke: #000;
-}
-#cite {
-    font-size: 0.8em;
-    text-align: right;
-    margin-top: 10px;
-    padding-bottom: 20px;
 }
 
