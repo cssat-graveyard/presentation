@@ -19,3 +19,11 @@ children-under-5-ooh
 Title: Rate (per 1,000) of children under 5 who were in out-of-home care on April 1, 2014, by race.
 Source: CA, supplemented by US Census, via POC Data Portal.
 Note: It might be nice to display this next to the children-under-5-in-poverty graph (perhaps first that one, then slide it over and add this one). Washington only.
+
+lwedBYwic
+Title: Percentage of Births to Mothers with Less than a High School Education by Percentage of WIC Births
+Source: DOH
+
+teenBYwic
+Title: Percentage of Births to Teen Mothers by Percentage of WIC Births
+Source: DOH
