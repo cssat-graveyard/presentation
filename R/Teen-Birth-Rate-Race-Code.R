@@ -58,7 +58,7 @@ Sub.Map <-merge(mapstates,SubT,by.x='region',by.y='Location')
 Sub.Map <- Sub.Map[order(Sub.Map$order),]
 Sub.Map$Data <- as.numeric(as.character(Sub.Map$Data))
 
-map.by.race<- ggplot(Sub.Map, aes(long,lat,group=group)) + 
+map.by.race <- ggplot(Sub.Map, aes(long,lat,group=group)) + 
   geom_polygon(aes(fill=Data), color = "gray60", size = 0.1) +
   coord_map(projection = "globular") +
   labs(x = "", y = "") +
@@ -68,8 +68,17 @@ map.by.race<- ggplot(Sub.Map, aes(long,lat,group=group)) +
   theme(panel.grid.major = element_blank(),
         axis.text = element_blank(),
         axis.ticks = element_blank())
-#map.by.race
+map.by.race
 
-ggsave("teen-birth-by-race.svg", map.by.race,  height = 8, width = 10)
 
+
+# ggsave("teen-birth-by-race.svg", map.by.race,  height = 8, width = 10)
+
+
+Sys.setenv(R_GSCMD = "C:/Program Files/gs/gs9.14/bin/gswin64c.exe")
 ggsave("teen-birth-by-race.pdf", map.by.race,  height = 8, width = 10)
+embed_fonts("teen-birth-by-race.pdf", outfile="teen-birth-by-race-embed.pdf")
+
+
+
+
