@@ -16,6 +16,39 @@ visualization styling
 	border: 0;
 }
 
+.county_dashboard {
+    width: 800px;
+}
+
+.dashboard_1 {
+    #t_population {
+        display: none;
+    }
+}
+
+.dashboard_2 {
+
+    #t_trend {
+        display: none;
+    }
+
+    .dashboard-wrap {
+        position: relative;
+        width: 1100px;
+    }
+
+    #t_context {
+        float: left;
+        width: 67%;
+    }
+
+    #dashboard_description {
+        float: right;
+        width: 30%;
+        margin-top: 9em;
+    }
+}
+
 #dashboard #sub_description_title {
 	margin-left: 0;
 	position: absolute;

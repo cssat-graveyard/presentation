@@ -3,35 +3,29 @@
 	<head>
 		<title>County Dashboard</title>
 		<link rel="stylesheet" type="text/css" href="dashboard.css">
+        <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="dashboard.css">
+        <link href="../../css/style.css" rel="stylesheet" />
 	</head>
 	<body>
-		<h1 id="block-title">Dashboard</h1>
-		<table class="county_dashboard">
-			<tbody>
-				<tr>
-					<td>
-						<table>
-							<tbody>
-								<tr>
-									<td id="t_context" valign="top">
-										<h2>&nbsp;</h2>
-										<div id="radios">
-											<div id="radio_state" class="s_r_c">State</div>
-											<div id="radio_region" class="s_r_c">Region</div>
-											<div id="radio_county" class="s_r_c">County</div>
-										</div>
-									</td>
-									<td id="t_trend" valign="top">&nbsp;</td>
-								</tr>
-							</tbody>
-						</table>
-					</td>
-				</tr>
-				<tr>
-					<td id="t_population" style="padding-top: 30px;">&nbsp;</td>
-				</tr>
-			</tbody>
-		</table>
+		<div class="county_dashboard dashboard_2">
+            <div class="dashboard-wrap clearfix">
+    			<div id="t_context" valign="top">
+    				<h2>&nbsp;</h2>
+    				<div id="radios">
+    					<div id="radio_state" class="s_r_c">State</div>
+    					<div id="radio_region" class="s_r_c">Region</div>
+    					<div id="radio_county" class="s_r_c">County</div>
+    				</div>
+    			</div>
+                <div id="dashboard_description">Some text should go here</div>
+            </div>
+			<div id="t_trend" valign="top">&nbsp;</div>
+			<div>
+				<div id="t_population" style="padding-top: 30px;">&nbsp;</div>
+			</div>
+		</div>
 		<script type="text/javascript" src="data_county.js"></script>
 		<script type="text/javascript" src="data_region.js"></script>
 		<script type="text/javascript" src="dict.js"></script>
