@@ -57,11 +57,34 @@
 			</div>
 
 			<div id="reading" class="step slide menu-entry" data-title="National Data" data-x="-5000" data-y="4000" data-z="-3000" data-scale="1">
-				<p>Placeholder for 4th grade reading map</p>
+				<h1 class="h2">4th Grade Reading Achievement Levels</h1>
+				<p>Percentage of fourth grade public school students reading achievement levels, at or above proficiency, as measured and defined by the National Assessment of Education Progress (NAEP) reading test. Washington ranks quite highly and is tied with Pensylvania. </p>
+				<div class="map-wrap">
+					<img src="R/reading-map.png" class="map" />
+					<img src="R/reading-legend.png" class="legend" />
+				</div>
 			</div>
 
 			<div id="teen-births" class="step slide" data-x="-3000" data-y="4000" data-z="-3000" data-scale="1">
-				<p>Placeholder for teen births</p>
+				<h1 class="h2">Teen births by race and year</h1>
+				<div class="maps">
+					<img src="R/teen-birth-1999.png" class="map" id="1999"/>
+				</div>
+				<div class="toggles">
+					<p>View by year:</p>
+					<ul class="controls">
+						<li id="active-1999">1999</li>
+						<li id="active-2007">2007</li>
+						<li id="active-2012">2012</li>
+					</ul>
+					<p>View by race:</p>
+					<ul class="controls">
+						<li id="active-race1">American Indian</li>
+						<li id="active-race2">Black or African American</li>
+						<li id="active-race3">Hispanic or Latino</li>
+						<li id="active-race4">Non-Hispanic White</li>
+					</ul>
+				</div>
 			</div>
 
 			<div id="maltreatment" data-title="Child Maltreatment" class="step menu-entry" data-x="-1000" data-y="4000" data-z="-3000" data-scale="1">
@@ -179,6 +202,52 @@
 
 	<!-- Navigation scripts -->
 		<script type="text/javascript" src="js/scripts.js"></script>
+
+		<script type="text/javascript">
+		$( document ).ready(function() {
+			$("#active-1999").click(function() {
+				$(".controls li.highlighted").removeClass('highlighted');
+				$(this).closest('li').addClass("highlighted");
+				$('.map').attr('src', "R/teen-birth-1999.png");
+			});
+
+			$("#active-2007").click(function() {
+				$(".controls li.highlighted").removeClass('highlighted');
+				$(this).closest('li').addClass("highlighted");
+				$('.map').attr('src', "R/teen-birth-2007.png");
+			});
+
+			$("#active-2012").click(function() {
+				$(".controls li.highlighted").removeClass('highlighted');
+				$(this).closest('li').addClass("highlighted");
+				$('.map').attr('src', "R/teen-birth-2012.png");
+			});
+
+			$("#active-race1").click(function() {
+				$(".controls li.highlighted").removeClass('highlighted');
+				$(this).closest('li').addClass("highlighted");
+				$('.map').attr('src', "R/teen-birthAmericanIndian.png");
+			});
+
+			$("#active-race2").click(function() {
+				$(".controls li.highlighted").removeClass('highlighted');
+				$(this).closest('li').addClass("highlighted");
+				$('.map').attr('src', "R/teen-birthBlackorAfricanAmerican.png");
+			});
+
+			$("#active-race3").click(function() {
+				$(".controls li.highlighted").removeClass('highlighted');
+				$(this).closest('li').addClass("highlighted");
+				$('.map').attr('src', "R/teen-birthHispanicorLatino.png");
+			});
+
+			$("#active-race4").click(function() {
+				$(".controls li.highlighted").removeClass('highlighted');
+				$(this).closest('li').addClass("highlighted");
+				$('.map').attr('src', "R/teen-birthNon-HispanicWhite.png");
+			});
+		});
+		</script>
 
 <!-- test if jQuery loaded
 	<script type="text/javascript">

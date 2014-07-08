@@ -128,3 +128,51 @@ visualization styling
         padding-left: 1.5em;
     }
 }
+
+.map-wrap {
+    clear: both;
+
+    .map {
+        width: 80%;
+        margin-top: 2em;
+        float: left;
+    }
+
+    .legend {
+         position: absolute;
+         bottom: 5em;
+         right: 0;
+         width: 100px;
+    }
+}
+
+.maps {
+    float: left;
+    width: 80%;
+
+    .map {
+        width: 100%;
+    }
+}
+
+.toggles {
+    margin-top: 10em;
+
+    .controls {
+        padding-bottom: 1em;
+
+        li {
+            padding: .5em 1em;
+            margin: .5em;
+            background: $dark-blue;
+            color: $white;
+            text-align: center;
+            cursor: pointer;
+
+            &.highlighted {
+                background: $light-blue;
+                color: $dark-blue;
+            }
+        }
+    }
+}

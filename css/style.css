@@ -371,67 +371,66 @@ individual steps
 .slide {
   display: block;
   width: 1000px;
-  height: 700px;
   padding: 40px 60px;
 }
 
-/* line 44, ../sass/_slides.scss */
+/* line 43, ../sass/_slides.scss */
 #introduction {
   @keyframes dash {
-    /* line 66, ../sass/_slides.scss */
+    /* line 65, ../sass/_slides.scss */
     to {
       stroke-dashoffset: 1000;
     }
 }
 
 }
-/* line 45, ../sass/_slides.scss */
+/* line 44, ../sass/_slides.scss */
 #introduction .subtitle {
   color: #a2a2a2;
   text-align: right;
   padding-top: 1em;
 }
-/* line 51, ../sass/_slides.scss */
+/* line 50, ../sass/_slides.scss */
 #introduction .intro-image {
   text-align: center;
   padding-top: 1em;
 }
-/* line 55, ../sass/_slides.scss */
+/* line 54, ../sass/_slides.scss */
 #introduction .intro-image img {
   width: 100%;
 }
-/* line 60, ../sass/_slides.scss */
+/* line 59, ../sass/_slides.scss */
 #introduction .path {
   stroke-dasharray: 1000;
   animation: dash 5s linear;
 }
 
-/* line 72, ../sass/_slides.scss */
+/* line 71, ../sass/_slides.scss */
 .spaghetti {
   padding-left: 0;
   margin-left: 0;
   overflow: hidden;
 }
-/* line 77, ../sass/_slides.scss */
+/* line 76, ../sass/_slides.scss */
 .spaghetti h1 {
   margin-bottom: .2em;
 }
-/* line 81, ../sass/_slides.scss */
+/* line 80, ../sass/_slides.scss */
 .spaghetti h2 {
   font-size: 2em;
 }
-/* line 83, ../sass/_slides.scss */
+/* line 82, ../sass/_slides.scss */
 .spaghetti .data-contents {
   border-top: 1px solid #dedede;
   padding-top: 1.5em;
   width: 1300px;
 }
-/* line 88, ../sass/_slides.scss */
+/* line 87, ../sass/_slides.scss */
 .spaghetti .description {
   float: left;
   width: 300px;
 }
-/* line 93, ../sass/_slides.scss */
+/* line 92, ../sass/_slides.scss */
 .spaghetti .visualization-right {
   float: right;
   width: 930px;
@@ -572,4 +571,55 @@ visualization styling
   color: #888888;
   margin-bottom: 0;
   padding-left: 1.5em;
+}
+
+/* line 132, ../sass/_visualizations.scss */
+.map-wrap {
+  clear: both;
+}
+/* line 135, ../sass/_visualizations.scss */
+.map-wrap .map {
+  width: 80%;
+  margin-top: 2em;
+  float: left;
+}
+/* line 141, ../sass/_visualizations.scss */
+.map-wrap .legend {
+  position: absolute;
+  bottom: 5em;
+  right: 0;
+  width: 100px;
+}
+
+/* line 149, ../sass/_visualizations.scss */
+.maps {
+  float: left;
+  width: 80%;
+}
+/* line 153, ../sass/_visualizations.scss */
+.maps .map {
+  width: 100%;
+}
+
+/* line 158, ../sass/_visualizations.scss */
+.toggles {
+  margin-top: 10em;
+}
+/* line 161, ../sass/_visualizations.scss */
+.toggles .controls {
+  padding-bottom: 1em;
+}
+/* line 164, ../sass/_visualizations.scss */
+.toggles .controls li {
+  padding: .5em 1em;
+  margin: .5em;
+  background: #3b6e8f;
+  color: #f4f4f4;
+  text-align: center;
+  cursor: pointer;
+}
+/* line 172, ../sass/_visualizations.scss */
+.toggles .controls li.highlighted {
+  background: #a3dce6;
+  color: #3b6e8f;
 }
