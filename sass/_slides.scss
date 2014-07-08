@@ -44,14 +44,16 @@ individual steps
 #introduction {
     .subtitle {
         color: darken($light-gray, 30%);
+        text-align: right;
+        padding-top: 1em;
     }
 
     .intro-image {
         text-align: center;
-        padding-top: 2em;
+        padding-top: 1em;
 
         img {
-            width: 60%;
+            width: 100%;
         }
     }
 
@@ -70,15 +72,36 @@ individual steps
 #child-maltreatment {
     padding-left: 0;
     margin-left: 0;
+    overflow: hidden;
 
     h1 {
         margin-bottom: .2em;
     }
 
-    p {
-        font-size: 1em;
-        line-height: 1.5em;
-        margin-bottom: 1em;
+    h2 { font-size: 2em;}
+
+    .data-contents {
+        border-top: 1px solid #dedede;
+        padding-top: 1.5em;
+        width: 1300px;
+    }
+    .description {
+        float: left;
+        width: 300px;
+    }
+
+    .visualization-right {
+        float: right;
+        width: 930px;
+    }
+}
+
+#entered-care {
+    padding-left: 0;
+    margin-left: 0;
+
+    h1 {
+        margin-bottom: .2em;
     }
 
     h2 { font-size: 2em;}
