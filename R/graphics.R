@@ -290,8 +290,36 @@ embed_fonts("children-under-5-in-poverty.pdf")
 
 #### ----------------------------------
 
-embed_fonts("teen-birth.pdf")
-embed_fonts("teen-birth-by-race.pdf")
+## OOH Placements by Race
+
+place.raw <- sqlQuery(con_test, "
+    call sp_ooh_pit_counts(      
+    '2000-01-01,2013-01-01',-- @date =
+    '0',--  @age_grouping_cd =
+    '1,3,8,9,11',--  @race_cd =
+    '0',--  @gender_cd =
+    '0',--  @init_cd_plcm_setg =
+    '0',--  @long_cd_plcm_setg =
+    '0',--  @county_cd
+    '0,1',--  @bin_los_cd
+    '0',--  @bin_placemet_cd =
+    '0',--  @bin_ihs_svc_cd =
+    '0',--  @cd_reporter_type =
+    '0',--  @filter_access_type =
+    '0',--  @filter_allegation =
+    '0',--  @filter_findig =
+    '0',--  @filter_service_category =
+    '0',--  @budget_cd
+    '0' --  @dependency_cd
+); 
+", stringsAsFactors = F)
+
+place.raw <- format_sp(place.raw)
+place <- place.raw %>%
+    filter(qry.type.first.all == 2,
+           date == max(date)) %>%
+    mutate(placed = total.in.out.of.home.care.1st.day) %>%
+    select(date, placed, length.of.service.desc, bin.los.cd, race.ethnicity, ethnicity.cd)
 
 
 
