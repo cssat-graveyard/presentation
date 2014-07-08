@@ -69,7 +69,7 @@ individual steps
     }
 }
 
-#child-maltreatment {
+.spaghetti {
     padding-left: 0;
     margin-left: 0;
     overflow: hidden;
@@ -96,29 +96,3 @@ individual steps
     }
 }
 
-#entered-care {
-    padding-left: 0;
-    margin-left: 0;
-    overflow: hidden;
-
-    h1 {
-        margin-bottom: .2em;
-    }
-
-    h2 { font-size: 2em;}
-
-    .data-contents {
-        border-top: 1px solid #dedede;
-        padding-top: 1.5em;
-        width: 1300px;
-    }
-    .description {
-        float: left;
-        width: 300px;
-    }
-
-    .visualization-right {
-        float: right;
-        width: 930px;
-    }
-}

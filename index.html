@@ -37,15 +37,43 @@
 	<!-- Wrapper for Impress presentation -->
 		<div id="impress">
 
-			<div id="introduction" data-title="Home" class="step slide" data-x="-1400" data-y="-1500" data-scale="5">
+			<div id="introduction" data-title="Home" class="step slide menu-entry" data-x="-5000" data-y="-4000" data-scale="5">
 				<h1 class="h2">The State of Our Children in Washington and Beyond</h1>
                 <div class="intro-image">
                     <img class="title-image" src="img/visualization.png" />
                 </div>
                 <h3 class="subtitle">A look at the data</h3>
+                <p>Presentation prepared by <a href="http://partnersforourchildren.org/">Partners for Our Children</a>.</p>
 			</div>
 
-			<div id="dashboard" data-title="County Dashboard" class="step visualization" data-x="-1400" data-y="-1500" data-z="-3000" data-scale="1">
+			<div id="acknowledgements" class="step slide" data-x="-5000" data-y="0" data-scale="5">
+				<h1 class="h2">Acknowledgements</h1>
+				<p>Many thanks to...</p>
+			</div>
+
+			<div id="questions" class="step slide" data-x="-5000" data-y="4000" data-scale="5">
+				<h3>How does Washington's metrics on child wellness compare to other states?</h3>
+				<h3>How do the metrics vary by age and race?</h3>
+			</div>
+
+			<div id="reading" class="step slide menu-entry" data-title="National Data" data-x="-5000" data-y="4000" data-z="-3000" data-scale="1">
+				<p>Placeholder for 4th grade reading map</p>
+			</div>
+
+			<div id="teen-births" class="step slide" data-x="-3000" data-y="4000" data-z="-3000" data-scale="1">
+				<p>Placeholder for teen births</p>
+			</div>
+
+			<div id="maltreatment" data-title="Child Maltreatment" class="step menu-entry" data-x="-1000" data-y="4000" data-z="-3000" data-scale="1">
+                <h1 class="h2">Child Maltreatment</h1>
+               	<iframe src="D3/child_maltreatment/maltreatment.html" width="1300" height="650"></iframe>
+            </div>
+
+            <div id="wa-metrics" class="step menu-entry" data-title="Washington Metrics" data-x="-1000" data-y="5000" data-z="-3000" data-rotate="90" data-scale="1">
+            	<p>Text slide</p>
+            </div>
+
+			<div id="dashboard" data-title="County Dashboard" class="step visualization menu-entry" data-x="-1000" data-y="7000" data-z="-3000" data-rotate="90" data-scale="1">
 				<h1 class="h2">County Dashboard</h1>
 				<table class="county_dashboard">
 					<tbody>
@@ -75,26 +103,57 @@
 				</table>
 			</div>
 
-			<div id="entry-rate" data-title="Out-of-Home Care" class="step" data-x="1200" data-y="-1500" data-z="-3000" data-scale="1">
+			<div id="dashboard-2" class="step" data-x="-1000" data-y="7000" data-z="-3000" data-rotate="90" data-scale="1">
+				<p>Second dashboard</p>
+			</div>
+
+			<div id="age-metrics" class="step menu-entry" data-title="Age Metrics" data-x="-1000" data-y="8000" data-z="-3000" data-rotate="180" data-scale="1">
+				<p>Text slide</p>
+			</div>
+
+
+			<div id="entries" class="step" data-x="-2000" data-y="8000" data-z="-3000" data-rotate="180" data-scale="1">
 				<h1 class="h2 slide-title">WA Entries into Out-of-Home Care by Age</h1>
 				<div class="image-wrap">
 					<img src="R/entry-rate-by-age.svg" />
 				</div>
 			</div>
 
-			<div id="outcomes" data-title="Outcomes by Age" class="step" data-x="1200" data-y="0" data-z="-3000" data-rotate="90" data-scale="1">
+			<div id="outcomes" class="step" data-x="-3000" data-y="8000" data-z="-3000" data-rotate="180" data-scale="1">
 				<h1 class="h2 slide-title">Outcomes by Age for WA Entering Care in 2009</h1>
                 <img src="R/outcomes-by-age.svg" />
 			</div>
 
-            <div id="child-maltreatment" data-title="Child Maltreatment" class="step" data-x="1200" data-y="1500" data-z="-3000" data-rotate="90" data-scale="1">
-                <h1 class="h2">Child Maltreatment</h1>
-               	<iframe src="D3/child_maltreatment/maltreatment.html" width="1300" height="650"></iframe>
+            <div id="race-metrics" data-title="Metrics by Race" class="step menu-entry" data-x="-3000" data-y="7000" data-z="-3000" data-rotate="270" data-scale="1">
+            	<p>Text slide</p>
             </div>
 
-            <div id="entered-care" data-title="Entering Care" class="step" data-x="1200" data-y="3000" data-z="-3000" data-scale="1">
-            	<h1 class="h2">Children Entering Care by Age</h1>
-                <iframe src="D3/entering_care/care.html" width="1300" height="700"></iframe>
+            <div id="poverty" class="step" data-x="-3000" data-y="5000" data-z="-3000" data-rotate="270" data-scale="1">
+            	<p>Poverty by race</p>
+            </div>
+
+            <div id="ooh-by-race" class="step" data-x="-3000" data-y="3000" data-z="-3000" data-rotate="270" data-scale="1">
+            	<p>Race and OOH placement</p>
+            </div>
+
+            <div id="ooh-poverty" class="step" data-x="-3000" data-y="1000" data-z="-3000" data-rotate="270" data-scale="1">
+            	<p>OOH per 1,000 in poverty</p>
+            </div>
+
+            <div id="national-context" class="step menu-entry" data-title="National Context" data-x="-3000" data-y="1000" data-rotate="270" data-scale="5">
+            	<p>National context</p>
+            </div>
+
+            <div id="birth-medicaid" class="step" data-x="0" data-y="1000" data-rotate="270" data-scale="5">
+            	<p>Closing visualization</p>
+            </div>
+
+            <div id="sources" class="step menu-entry" data-title="Sources" data-x="3000" data-y="1000" data-rotate="270" data-scale="5">
+            	<p>Sources</p>
+            </div>
+
+            <div id="credits" class="step" data-x="6000" data-y="1000" data-rotate="270" data-scale="5">
+            	<p>Credits and social sharing</p>
             </div>
 		</div>
 
@@ -108,6 +167,7 @@
                 <h3 class="h3">More Options:</h3>
     			<ul class="external-links">
     				<li><a href="#">Download PDF</a></li>
+    				<li><a href="http://partnersforourchildren.org/data-portal">POC Data Portal</a></li>
     				<li><a href="http://partnersforourchildren.org/">POC Home</a></li>
     			</ul>
             </nav>

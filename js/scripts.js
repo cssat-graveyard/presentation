@@ -17,7 +17,7 @@ $( document ).ready(function() {
 
 		var menuItem, el, title, link;
 
-		$(".step").each(function() {
+		$(".menu-entry").each(function() {
 			el = $(this);
 			title = el.attr("data-title");
 			link = "#" + el.attr("id");
