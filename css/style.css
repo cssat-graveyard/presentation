@@ -291,14 +291,15 @@ h5, .h5 {
 /* line 186, ../sass/_elements.scss */
 .citation {
   position: absolute;
-  bottom: 40px;
+  bottom: 0px;
+  right: 150px;
 }
 
-/* line 191, ../sass/_elements.scss */
+/* line 192, ../sass/_elements.scss */
 .image-wrap {
   width: 100%;
 }
-/* line 194, ../sass/_elements.scss */
+/* line 195, ../sass/_elements.scss */
 .image-wrap img {
   max-height: 600px;
 }
@@ -406,62 +407,32 @@ individual steps
 }
 
 /* line 72, ../sass/_slides.scss */
-#child-maltreatment {
+.spaghetti {
   padding-left: 0;
   margin-left: 0;
   overflow: hidden;
 }
 /* line 77, ../sass/_slides.scss */
-#child-maltreatment h1 {
+.spaghetti h1 {
   margin-bottom: .2em;
 }
 /* line 81, ../sass/_slides.scss */
-#child-maltreatment h2 {
+.spaghetti h2 {
   font-size: 2em;
 }
 /* line 83, ../sass/_slides.scss */
-#child-maltreatment .data-contents {
+.spaghetti .data-contents {
   border-top: 1px solid #dedede;
   padding-top: 1.5em;
   width: 1300px;
 }
 /* line 88, ../sass/_slides.scss */
-#child-maltreatment .description {
+.spaghetti .description {
   float: left;
   width: 300px;
 }
 /* line 93, ../sass/_slides.scss */
-#child-maltreatment .visualization-right {
-  float: right;
-  width: 930px;
-}
-
-/* line 99, ../sass/_slides.scss */
-#entered-care {
-  padding-left: 0;
-  margin-left: 0;
-}
-/* line 103, ../sass/_slides.scss */
-#entered-care h1 {
-  margin-bottom: .2em;
-}
-/* line 107, ../sass/_slides.scss */
-#entered-care h2 {
-  font-size: 2em;
-}
-/* line 109, ../sass/_slides.scss */
-#entered-care .data-contents {
-  border-top: 1px solid #dedede;
-  padding-top: 1.5em;
-  width: 1300px;
-}
-/* line 114, ../sass/_slides.scss */
-#entered-care .description {
-  float: left;
-  width: 300px;
-}
-/* line 119, ../sass/_slides.scss */
-#entered-care .visualization-right {
+.spaghetti .visualization-right {
   float: right;
   width: 930px;
 }
@@ -495,17 +466,17 @@ visualization styling
 }
 
 /* line 28, ../sass/_visualizations.scss */
-#child-maltreatment #filters {
+.spaghetti #filters {
   font-family: "PT Sans", sans-serif;
   margin-left: 1.5em;
 }
 /* line 32, ../sass/_visualizations.scss */
-#child-maltreatment #filters li {
+.spaghetti #filters li {
   margin: 1.3em 0;
   display: inline-block;
 }
 /* line 37, ../sass/_visualizations.scss */
-#child-maltreatment #filters a {
+.spaghetti #filters a {
   font-size: 1em;
   width: 100%;
   background: #3b6e8f;
@@ -513,40 +484,40 @@ visualization styling
   border-radius: 3px;
 }
 /* line 44, ../sass/_visualizations.scss */
-#child-maltreatment #filters a.FW {
+.spaghetti #filters a.FW {
   background: #c0392b;
 }
 /* line 47, ../sass/_visualizations.scss */
-#child-maltreatment #filters a.SW {
+.spaghetti #filters a.SW {
   background: #d35400;
 }
 /* line 50, ../sass/_visualizations.scss */
-#child-maltreatment #filters a.ME {
+.spaghetti #filters a.ME {
   background: #f39c12;
 }
 /* line 53, ../sass/_visualizations.scss */
-#child-maltreatment #filters a.SE {
+.spaghetti #filters a.SE {
   background: #27ae60;
 }
 /* line 56, ../sass/_visualizations.scss */
-#child-maltreatment #filters a.MT {
+.spaghetti #filters a.MT {
   background: #17a88c;
 }
 /* line 59, ../sass/_visualizations.scss */
-#child-maltreatment #filters a.GL {
+.spaghetti #filters a.GL {
   background: #2980b9;
 }
 /* line 62, ../sass/_visualizations.scss */
-#child-maltreatment #filters a.GP {
+.spaghetti #filters a.GP {
   background: #8e44ad;
 }
 /* line 65, ../sass/_visualizations.scss */
-#child-maltreatment #filters a.NE {
+.spaghetti #filters a.NE {
   background: #34495e;
 }
 /* line 71, ../sass/_visualizations.scss */
-#child-maltreatment #blurb {
-  margin-top: 5em;
+.spaghetti #blurb {
+  margin-top: 3em;
   padding: 1em;
   background: #eeeeee;
   height: 170px;
@@ -554,7 +525,7 @@ visualization styling
   border-radius: 3px;
 }
 /* line 79, ../sass/_visualizations.scss */
-#child-maltreatment #blurb:after {
+.spaghetti #blurb:after {
   position: absolute;
   content: "";
   top: 75px;
@@ -566,85 +537,7 @@ visualization styling
   border-left: 50px solid #eeeeee;
 }
 /* line 92, ../sass/_visualizations.scss */
-#child-maltreatment .directions {
-  color: #888888;
-  margin-bottom: 0;
-  padding-left: 1.5em;
-}
-
-/* line 100, ../sass/_visualizations.scss */
-#entered-care #care-filters {
-  font-family: "PT Sans", sans-serif;
-  margin-left: 1.5em;
-}
-/* line 104, ../sass/_visualizations.scss */
-#entered-care #care-filters li {
-  margin: 1.3em 0;
-  display: inline-block;
-}
-/* line 109, ../sass/_visualizations.scss */
-#entered-care #care-filters a {
-  font-size: 1em;
-  width: 100%;
-  background: #3b6e8f;
-  color: #f4f4f4;
-  border-radius: 3px;
-}
-/* line 116, ../sass/_visualizations.scss */
-#entered-care #care-filters a.FW {
-  background: #c0392b;
-}
-/* line 119, ../sass/_visualizations.scss */
-#entered-care #care-filters a.SW {
-  background: #d35400;
-}
-/* line 122, ../sass/_visualizations.scss */
-#entered-care #care-filters a.ME {
-  background: #f39c12;
-}
-/* line 125, ../sass/_visualizations.scss */
-#entered-care #care-filters a.SE {
-  background: #27ae60;
-}
-/* line 128, ../sass/_visualizations.scss */
-#entered-care #care-filters a.MT {
-  background: #17a88c;
-}
-/* line 131, ../sass/_visualizations.scss */
-#entered-care #care-filters a.GL {
-  background: #2980b9;
-}
-/* line 134, ../sass/_visualizations.scss */
-#entered-care #care-filters a.GP {
-  background: #8e44ad;
-}
-/* line 137, ../sass/_visualizations.scss */
-#entered-care #care-filters a.NE {
-  background: #34495e;
-}
-/* line 143, ../sass/_visualizations.scss */
-#entered-care #care-blurb {
-  margin-top: 5em;
-  padding: 1em;
-  background: #eeeeee;
-  height: 170px;
-  position: relative;
-  border-radius: 3px;
-}
-/* line 151, ../sass/_visualizations.scss */
-#entered-care #care-blurb:after {
-  position: absolute;
-  content: "";
-  top: 75px;
-  right: -49px;
-  width: 0;
-  height: 0;
-  border-top: 30px solid transparent;
-  border-bottom: 30px solid transparent;
-  border-left: 50px solid #eeeeee;
-}
-/* line 164, ../sass/_visualizations.scss */
-#entered-care .directions {
+.spaghetti .directions {
   color: #888888;
   margin-bottom: 0;
   padding-left: 1.5em;

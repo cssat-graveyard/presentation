@@ -22,24 +22,24 @@
         <script src="../../js/jquery-2.1.1.min.js"></script>
 	</head>
 	<body>
-        <div id="entered-care">
+        <div id="entered-care" class="spaghetti">
         <div class="data-contents">
             <div class="description">
                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 
-                <div id="care-blurb">
-                    <div id="care-default-blurb">
+                <div id="blurb">
+                    <div id="default-blurb">
                         <h2 class="h4">Washington</h2>
                         <p>Washington ranks #4 for children under 1 entering care and #41 for children age 17.</p>
                     </div>
-                <div id="care-blurb-content"></div>
+                <div id="blurb-content"></div>
                 </div>
 
                 <div class="citation">Source: </div>
             </div>
             <div class="visualization-right">
                 <p class="directions">Select a region below to compare, or scroll over the graph to highlight states. </p>
-                <ul id="care-filters">
+                <ul id="filters">
                     <li class="hint--bottom" data-hint="AK, HI, WA, OR, CA, NV"><a id="FW">Far West</a></li>
                     <li class="hint--bottom" data-hint="CO, ID, MT, UT, WY"><a id="MT">Rocky Mountain</a></li>
                     <li class="hint--bottom" data-hint="TX, AZ, NM, OK"><a id="SW">Southwest</a></li>
@@ -49,7 +49,7 @@
                     <li class="hint--bottom" data-hint="NY, DE, MD, NJ, PA, DC"><a id="ME">Mideast</a></li>
                     <li class="hint--bottom" data-hint="CT, ME, MA, NH, RI, VT"><a id="NE">New England</a></li>
                 </ul> 
-                <div id="care-vis"></div>
+                <div id="vis"></div>
             </div>
         </div>
         </div>
@@ -61,7 +61,7 @@
     <script type="text/javascript" src="care.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
-        $('#care-filters a').click(function() {
+        $('#filters a').click(function() {
             var countryId = $(this).attr("id");
             $(this).toggleClass(countryId);
             showRegion(countryId);

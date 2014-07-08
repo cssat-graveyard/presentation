@@ -17,7 +17,7 @@ var regions = {
     y = d3.scale.linear().domain([endRate, startRate]).range([0 + margin, h - margin]),
     x = d3.scale.linear().domain([0, 18]).range([0 + margin - 5, w]),
     Ages = d3.range(startAge, endAge);
-var graph = d3.select("#care-vis").append("svg:svg").attr("width", w).attr("height", h).append("svg:g");
+var graph = d3.select("#vis").append("svg:svg").attr("width", w).attr("height", h).append("svg:g");
 var line = d3.svg.line().x(function (d, i) {
     return x(d.x);
 }).y(function (d) {
@@ -96,16 +96,16 @@ function onmouseover(d, i) {
     var blurb = '<h2>' + stateNames[stateCode] + '</h2>';
     blurb += "<p>" + stateNames[stateCode] + " ranks #" + rank0 + " for children under 1 entering care and #" + rank17 + " for children age 17.";
     blurb += "</p>";
-    $("#care-default-blurb").hide();
-    $("#care-blurb-content").html(blurb);
+    $("#default-blurb").hide();
+    $("#blurb-content").html(blurb);
 }
 
 function onmouseout(d, i) {
     var currClass = d3.select(this).attr("class");
     var prevClass = currClass.substring(0, currClass.length - 8);
     d3.select(this).attr("class", prevClass);
-    $("#care-default-blurb").show();
-    $("#care-blurb-content").html('');
+    $("#default-blurb").show();
+    $("#blurb-content").html('');
 }
 
 function showRegion(regionCode) {
