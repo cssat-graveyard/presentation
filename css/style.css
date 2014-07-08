@@ -440,27 +440,28 @@ individual steps
 #entered-care {
   padding-left: 0;
   margin-left: 0;
+  overflow: hidden;
 }
-/* line 103, ../sass/_slides.scss */
+/* line 104, ../sass/_slides.scss */
 #entered-care h1 {
   margin-bottom: .2em;
 }
-/* line 107, ../sass/_slides.scss */
+/* line 108, ../sass/_slides.scss */
 #entered-care h2 {
   font-size: 2em;
 }
-/* line 109, ../sass/_slides.scss */
+/* line 110, ../sass/_slides.scss */
 #entered-care .data-contents {
   border-top: 1px solid #dedede;
   padding-top: 1.5em;
   width: 1300px;
 }
-/* line 114, ../sass/_slides.scss */
+/* line 115, ../sass/_slides.scss */
 #entered-care .description {
   float: left;
   width: 300px;
 }
-/* line 119, ../sass/_slides.scss */
+/* line 120, ../sass/_slides.scss */
 #entered-care .visualization-right {
   float: right;
   width: 930px;

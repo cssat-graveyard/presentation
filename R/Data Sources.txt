@@ -11,5 +11,11 @@ maltreatment-for-d3, Confirmed Child Maltreatment by State
 Source: NCANDS via Kids Count
 
 children-under-5-in-poverty
+Title: Percent of children living below the poverty line, by race.
+Note: (see children-under-5-ooh note). Washington only.
 Source US Census (ACS 3-year Average 2008-2010) via Kids Count
-(Plotted data is for Washington only).
+
+children-under-5-ooh
+Title: Rate (per 1,000) of children under 5 who were in out-of-home care on April 1, 2014, by race.
+Source: CA, supplemented by US Census, via POC Data Portal.
+Note: It might be nice to display this next to the children-under-5-in-poverty graph (perhaps first that one, then slide it over and add this one). Washington only.
