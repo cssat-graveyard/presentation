@@ -48,12 +48,12 @@
 
 			<div id="acknowledgements" class="step slide" data-x="-5000" data-y="0" data-scale="5">
 				<h1 class="h2">Acknowledgements</h1>
-				<p>Many thanks to...</p>
+				<p>Many thanks to Kids Count and the Washington State Child Well-Being Data Portal for the data used in this presentation.</p>
 			</div>
 
 			<div id="questions" class="step slide" data-x="-5000" data-y="4000" data-scale="5">
 				<h3>How does Washington's metrics on child wellness compare to other states?</h3>
-				<h3>How do the metrics vary by age and race?</h3>
+				<h3>Are there differences by age, race and poverty level?</h3>
 			</div>
 
 			<div id="reading" class="step slide menu-entry" data-title="National Data" data-x="-5000" data-y="4000" data-z="-3000" data-scale="1">
@@ -73,38 +73,14 @@
             	<p>Text slide</p>
             </div>
 
-			<div id="dashboard" data-title="County Dashboard" class="step visualization menu-entry" data-x="-1000" data-y="7000" data-z="-3000" data-rotate="90" data-scale="1">
-				<h1 class="h2">County Dashboard</h1>
-				<table class="county_dashboard">
-					<tbody>
-						<tr>
-							<td>
-								<table>
-									<tbody>
-										<tr>
-											<td id="t_context" valign="top">
-												<h2 class="h3">&nbsp;</h2>
-												<div id="radios">
-													<div id="radio_state" class="s_r_c">State</div>
-													<div id="radio_region" class="s_r_c">Region</div>
-													<div id="radio_county" class="s_r_c">County</div>
-												</div>
-											</td>
-											<td id="t_trend" valign="top">&nbsp;</td>
-										</tr>
-									</tbody>
-								</table>
-							</td>
-						</tr>
-						<tr>
-							<td id="t_population" style="padding-top: 30px;">&nbsp;</td>
-						</tr>
-					</tbody>
-				</table>
+			<div id="dashboard-1" data-title="County Dashboard" class="step visualization menu-entry" data-x="-1000" data-y="7000" data-z="-3000" data-rotate="90" data-scale="1">
+				<h1 class="h2">Washington County Comparison</h1>
+				<iframe src="D3/county_dashboard/dashboard-2.html" width="1300" height="650"></iframe>
 			</div>
 
 			<div id="dashboard-2" class="step" data-x="-1000" data-y="7000" data-z="-3000" data-rotate="90" data-scale="1">
-				<p>Second dashboard</p>
+				<h1 class="h2">Washington County Comparison</h1>
+				<iframe src="D3/county_dashboard/dashboard-1.html" width="1300" height="650"></iframe>
 			</div>
 
 			<div id="age-metrics" class="step menu-entry" data-title="Age Metrics" data-x="-1000" data-y="8000" data-z="-3000" data-rotate="180" data-scale="1">
@@ -115,12 +91,13 @@
 			<div id="entries" class="step" data-x="-2000" data-y="8000" data-z="-3000" data-rotate="180" data-scale="1">
 				<h1 class="h2 slide-title">WA Entries into Out-of-Home Care by Age</h1>
 				<div class="image-wrap">
-					<img src="R/entry-rate-by-age.svg" />
+					<iframe src="D3/entering_care/care.html" width="1300" height="650"></iframe>
 				</div>
 			</div>
 
 			<div id="outcomes" class="step" data-x="-3000" data-y="8000" data-z="-3000" data-rotate="180" data-scale="1">
 				<h1 class="h2 slide-title">Outcomes by Age for WA Entering Care in 2009</h1>
+				<p>Permanency outcomes vary drastically by age. Reunification is always the most common outcome, but while adolescents are quick to reunify, their adoption rate is low. However, young children are adopted quickly--especially infants.</p>
                 <img src="R/outcomes-by-age.svg" />
 			</div>
 
@@ -129,7 +106,11 @@
             </div>
 
             <div id="poverty" class="step" data-x="-3000" data-y="5000" data-z="-3000" data-rotate="270" data-scale="1">
-            	<p>Poverty by race</p>
+            	<h1 class="h2">Children Under 5 in Poverty</h1>
+            	<p>The percent of children under five living below the poverty line is especially high for minorities</p>
+            	<div class="image-wrap">
+            		<img src="R/children-under-5-in-poverty.svg" />
+            	</div>
             </div>
 
             <div id="ooh-by-race" class="step" data-x="-3000" data-y="3000" data-z="-3000" data-rotate="270" data-scale="1">
@@ -137,7 +118,10 @@
             </div>
 
             <div id="ooh-poverty" class="step" data-x="-3000" data-y="1000" data-z="-3000" data-rotate="270" data-scale="1">
-            	<p>OOH per 1,000 in poverty</p>
+            	<h1 class="h2">Children Under 5 Placed in Out-of-Home Care</h1>
+            	<div class="image-wrap">
+            		<img src="R/children-under-5-ooh.svg" />
+            	</div>
             </div>
 
             <div id="national-context" class="step menu-entry" data-title="National Context" data-x="-3000" data-y="1000" data-rotate="270" data-scale="5">
@@ -145,7 +129,10 @@
             </div>
 
             <div id="birth-medicaid" class="step" data-x="0" data-y="1000" data-rotate="270" data-scale="5">
-            	<p>Closing visualization</p>
+            	<h1 class="h2">This needs a good title</h1>
+            	<div class="image-wrap">
+            		<img src="R/lwedBYwic.png" />
+            	</div>
             </div>
 
             <div id="sources" class="step menu-entry" data-title="Sources" data-x="3000" data-y="1000" data-rotate="270" data-scale="5">
