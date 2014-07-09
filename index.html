@@ -66,14 +66,14 @@
 			</div>
 
 			<div id="teen-births" class="step slide" data-x="-3000" data-y="4000" data-z="-3000" data-scale="1">
-				<h1 class="h2">Teen births by race and year</h1>
+				<h1 class="h2">Teen birth rates by race and year</h1>
 				<div class="maps">
 					<img src="R/teen-birth-1999.png" class="map" id="1999"/>
 				</div>
 				<div class="toggles">
 					<p>View by year:</p>
 					<ul class="controls">
-						<li id="active-1999">1999</li>
+						<li id="active-1999" class="highlighted">1999</li>
 						<li id="active-2007">2007</li>
 						<li id="active-2012">2012</li>
 					</ul>
@@ -85,6 +85,7 @@
 						<li id="active-race4">Non-Hispanic White</li>
 					</ul>
 				</div>
+				<div class="citation">Source: VitalStats, National Center for Health Statistics, CDC (supplemented by the US Census Bureau), via Kids Count</div>
 			</div>
 
 			<div id="maltreatment" data-title="Child Maltreatment" class="step menu-entry" data-x="-1000" data-y="4000" data-z="-3000" data-scale="1">
@@ -137,7 +138,11 @@
             </div>
 
             <div id="ooh-by-race" class="step" data-x="-3000" data-y="3000" data-z="-3000" data-rotate="270" data-scale="1">
-            	<p>Race and OOH placement</p>
+            	<h1 class="h3">Rate (per 1,000) of children under 5 who were in out-of-home care on April 1, 2014, by race</h1>
+            	<div class="image-wrap">
+            		<img src="R/children-under-5-ooh.svg" />
+            	</div>
+            	<div class="citation">Source: CA, supplemented by US Census, via POC Data Portal.</div>
             </div>
 
             <div id="ooh-poverty" class="step" data-x="-3000" data-y="1000" data-z="-3000" data-rotate="270" data-scale="1">
@@ -151,18 +156,27 @@
             	<p>National context</p>
             </div>
 
-            <div id="birth-medicaid" class="step" data-x="0" data-y="1000" data-rotate="270" data-scale="5">
-            	<h1 class="h2">This needs a good title</h1>
+            <div id="education-wic" class="step" data-x="0" data-y="1000" data-rotate="270" data-scale="5">
+            	<h1 class="h2">Percentage of Births to Mothers with Less than a High School Education by Percentage of WIC Births</h1>
             	<div class="image-wrap">
             		<img src="R/lwedBYwic.png" />
             	</div>
+            	<div class="citation">Source: DOH</div>
             </div>
 
-            <div id="sources" class="step menu-entry" data-title="Sources" data-x="3000" data-y="1000" data-rotate="270" data-scale="5">
+            <div id="teens-wic" class="step" data-x="3000" data-y="1000" data-rotate="270" data-scale="5">
+            	<h1 class="h2">Percentage of Births to Teen Mothers by Percentage of WIC Births</h1>
+            	<div class="image-wrap">
+            		<img src="R/teenBYwic.png" />
+            	</div>
+            	<div class="citation">Source: DOH</div>
+            </div>
+
+            <div id="sources" class="step menu-entry" data-title="Sources" data-x="6000" data-y="1000" data-rotate="270" data-scale="5">
             	<p>Sources</p>
             </div>
 
-            <div id="credits" class="step" data-x="6000" data-y="1000" data-rotate="270" data-scale="5">
+            <div id="credits" class="step" data-x="9000" data-y="1000" data-rotate="270" data-scale="5">
             	<p>Credits and social sharing</p>
             </div>
 		</div>
@@ -183,18 +197,6 @@
             </nav>
 		</div>
 
-	<!-- County Dashboard scripts -->
-
-		<script type="text/javascript" src="D3/county_dashboard/data_county.js"></script>
-		<script type="text/javascript" src="D3/county_dashboard/data_region.js"></script>
-		<script type="text/javascript" src="D3/county_dashboard/dict.js"></script>
-		<script type="text/javascript" src="D3/county_dashboard/d3.js"></script>
-		<script type="text/javascript" src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-		<script type="text/javascript" src="D3/county_dashboard/population.js"></script>
-		<script type="text/javascript" src="D3/county_dashboard/sparkline.js"></script>
-		<script type="text/javascript" src="D3/county_dashboard/wa_geo_map.js"></script>
-		<script type="text/javascript" src="D3/county_dashboard/wa_geo_map_region.js"></script>
-		<script type="text/javascript" src="js/dashboard-init.js"></script>
 
 	<!-- Include impress and initialize -->
 		<script src="js/impress.js"></script>
@@ -202,52 +204,6 @@
 
 	<!-- Navigation scripts -->
 		<script type="text/javascript" src="js/scripts.js"></script>
-
-		<script type="text/javascript">
-		$( document ).ready(function() {
-			$("#active-1999").click(function() {
-				$(".controls li.highlighted").removeClass('highlighted');
-				$(this).closest('li').addClass("highlighted");
-				$('.map').attr('src', "R/teen-birth-1999.png");
-			});
-
-			$("#active-2007").click(function() {
-				$(".controls li.highlighted").removeClass('highlighted');
-				$(this).closest('li').addClass("highlighted");
-				$('.map').attr('src', "R/teen-birth-2007.png");
-			});
-
-			$("#active-2012").click(function() {
-				$(".controls li.highlighted").removeClass('highlighted');
-				$(this).closest('li').addClass("highlighted");
-				$('.map').attr('src', "R/teen-birth-2012.png");
-			});
-
-			$("#active-race1").click(function() {
-				$(".controls li.highlighted").removeClass('highlighted');
-				$(this).closest('li').addClass("highlighted");
-				$('.map').attr('src', "R/teen-birthAmericanIndian.png");
-			});
-
-			$("#active-race2").click(function() {
-				$(".controls li.highlighted").removeClass('highlighted');
-				$(this).closest('li').addClass("highlighted");
-				$('.map').attr('src', "R/teen-birthBlackorAfricanAmerican.png");
-			});
-
-			$("#active-race3").click(function() {
-				$(".controls li.highlighted").removeClass('highlighted');
-				$(this).closest('li').addClass("highlighted");
-				$('.map').attr('src', "R/teen-birthHispanicorLatino.png");
-			});
-
-			$("#active-race4").click(function() {
-				$(".controls li.highlighted").removeClass('highlighted');
-				$(this).closest('li').addClass("highlighted");
-				$('.map').attr('src', "R/teen-birthNon-HispanicWhite.png");
-			});
-		});
-		</script>
 
 <!-- test if jQuery loaded
 	<script type="text/javascript">

@@ -34,7 +34,53 @@ $( document ).ready(function() {
 
 // Open/close ToC
 $( document ).ready(function() {
-	$(".contents-menu").click(function() {
+	$(".contents-menu").click(function(event) {
+		event.stopPropagation();
 		$('body').toggleClass("menu-active");
+	});
+});
+
+//Toggles for teen birth maps
+$( document ).ready(function() {
+	$("#active-1999").click(function() {
+		$(".controls li.highlighted").removeClass('highlighted');
+		$(this).closest('li').addClass("highlighted");
+		$('.map').attr('src', "R/teen-birth-1999.png");
+	});
+
+	$("#active-2007").click(function() {
+		$(".controls li.highlighted").removeClass('highlighted');
+		$(this).closest('li').addClass("highlighted");
+		$('.map').attr('src', "R/teen-birth-2007.png");
+	});
+
+	$("#active-2012").click(function() {
+		$(".controls li.highlighted").removeClass('highlighted');
+		$(this).closest('li').addClass("highlighted");
+		$('.map').attr('src', "R/teen-birth-2012.png");
+	});
+
+	$("#active-race1").click(function() {
+		$(".controls li.highlighted").removeClass('highlighted');
+		$(this).closest('li').addClass("highlighted");
+		$('.map').attr('src', "R/teen-birthAmericanIndian.png");
+	});
+
+	$("#active-race2").click(function() {
+		$(".controls li.highlighted").removeClass('highlighted');
+		$(this).closest('li').addClass("highlighted");
+		$('.map').attr('src', "R/teen-birthBlackorAfricanAmerican.png");
+	});
+
+	$("#active-race3").click(function() {
+		$(".controls li.highlighted").removeClass('highlighted');
+		$(this).closest('li').addClass("highlighted");
+		$('.map').attr('src', "R/teen-birthHispanicorLatino.png");
+	});
+
+	$("#active-race4").click(function() {
+		$(".controls li.highlighted").removeClass('highlighted');
+		$(this).closest('li').addClass("highlighted");
+		$('.map').attr('src', "R/teen-birthNon-HispanicWhite.png");
 	});
 });

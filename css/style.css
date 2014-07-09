@@ -603,13 +603,15 @@ visualization styling
 
 /* line 158, ../sass/_visualizations.scss */
 .toggles {
-  margin-top: 10em;
+  margin-top: 2em;
+  width: 170px;
+  float: right;
 }
-/* line 161, ../sass/_visualizations.scss */
+/* line 163, ../sass/_visualizations.scss */
 .toggles .controls {
   padding-bottom: 1em;
 }
-/* line 164, ../sass/_visualizations.scss */
+/* line 166, ../sass/_visualizations.scss */
 .toggles .controls li {
   padding: .5em 1em;
   margin: .5em;
@@ -618,7 +620,7 @@ visualization styling
   text-align: center;
   cursor: pointer;
 }
-/* line 172, ../sass/_visualizations.scss */
+/* line 174, ../sass/_visualizations.scss */
 .toggles .controls li.highlighted {
   background: #a3dce6;
   color: #3b6e8f;
