@@ -329,7 +329,11 @@ place <- place.raw %>%
                                    labels = c("American Indian/Alaskan Native",
                                               "Black/African American",
                                               "Hispanic or Latino",
+<<<<<<< HEAD
                                               "Multiracial",
+=======
+                                              "Two or More Races",
+>>>>>>> origin/data
                                               "Non-Hispanic White")))
 
 ooh.by.race <- ggplot(place, aes(x = race.ethnicity, y = placed)) +
@@ -340,6 +344,13 @@ ooh.by.race <- ggplot(place, aes(x = race.ethnicity, y = placed)) +
     theme_bw(base_family = sel.font) +
     theme(axis.text.x = element_text(angle = -25, hjust = 0),
           plot.margin = unit(c(1, 3, 1, 1) * 5, "mm"))
+<<<<<<< HEAD
+=======
+
+ggsave("children-under-5-ooh.pdf", ooh.by.race, width = 7, height = 7)
+embed_fonts("children-under-5-ooh.pdf")
+
+>>>>>>> origin/data
 
 ggsave("children-under-5-ooh.pdf", ooh.by.race, width = 7, height = 7)
 embed_fonts("children-under-5-ooh.pdf")    
