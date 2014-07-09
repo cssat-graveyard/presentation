@@ -1,49 +1,34 @@
 <!doctype html>
 <html>
-	<head>
-		<title>County Dashboard</title>
-        <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <head>
+        <title>County Dashboard</title>
+                <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="dashboard.css">
-        <link href="../../css/style.css" rel="stylesheet" />
-	</head>
-	<body>
-		<table class="county_dashboard dashboard_1">
-			<tbody>
-				<tr>
-					<td>
-						<table>
-							<tbody>
-								<tr>
-									<td id="t_context" valign="top">
-										<h2>&nbsp;</h2>
-										<div id="radios">
-											<div id="radio_state" class="s_r_c">State</div>
-											<div id="radio_region" class="s_r_c">Region</div>
-											<div id="radio_county" class="s_r_c">County</div>
-										</div>
-									</td>
-									<td id="t_trend" valign="top">&nbsp;</td>
-								</tr>
-							</tbody>
-						</table>
-					</td>
-				</tr>
-				<tr>
-					<td id="t_population" style="padding-top: 30px;">&nbsp;</td>
-				</tr>
-			</tbody>
-		</table>
-		<script type="text/javascript" src="data_county.js"></script>
-		<script type="text/javascript" src="data_region.js"></script>
-		<script type="text/javascript" src="dict.js"></script>
-		<script type="text/javascript" src="d3.js"></script>
-		<script type="text/javascript" src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-		<script type="text/javascript" src="population.js"></script>
-		<script type="text/javascript" src="sparkline.js"></script>
-		<script type="text/javascript" src="wa_geo_map.js"></script>
-		<script type="text/javascript" src="wa_geo_map_region.js"></script>
-		<script type="text/javascript">// <![CDATA[
+        <link rel="stylesheet" type="text/css" href="dashboard.css">
+        <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    </head>
+    <body>
+        <div class="county_dashboard dashboard_1">
+            <div id="t_context" valign="top">
+                <h2 class="h4">&nbsp;</h2>
+                <div id="radios">
+                    <div id="radio_state" class="s_r_c">State</div>
+                    <div id="radio_region" class="s_r_c">Region</div>
+                    <div id="radio_county" class="s_r_c">County</div>
+                </div>
+            </div>
+            <div id="t_population" style="padding-top: 30px;">&nbsp;</div>
+        </div>
+        <script type="text/javascript" src="data_county.js"></script>
+        <script type="text/javascript" src="data_region.js"></script>
+        <script type="text/javascript" src="dict.js"></script>
+        <script type="text/javascript" src="d3.js"></script>
+        <script type="text/javascript" src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+        <script type="text/javascript" src="population.js"></script>
+        <script type="text/javascript" src="sparkline.js"></script>
+        <script type="text/javascript" src="wa_geo_map.js"></script>
+        <script type="text/javascript" src="wa_geo_map_region.js"></script>
+        <script type="text/javascript">// <![CDATA[
            var context_w = 714,
                context_h = 420,
                map_w = context_w * 0.4379,  // layout for map
@@ -59,13 +44,6 @@
                 height_p = 115 - margin_p.top - margin_p.bottom,
                 population_w = 202,
                 population_h = 115;
-                
-                
-            var margin_t = {top: 5, right: 5, bottom: 5, left: 35},  // layout for trends
-                width_t = 350 - margin_t.left - margin_t.right,
-                height_t = 90 - margin_t.top - margin_t.bottom,
-                sparkline_w = 340,
-                sparkline_h = 90;
                 
             var fast_fact_desc = fast_fact_desc;  // change them once get the real description file
             var population_desc = population_desc;
@@ -129,9 +107,6 @@
             
             var svg_population = d3.select("#t_population").append("svg")
                     .attr("id","svg_population");             
-                       
-            var svg_trend = d3.select("#t_trend").append("svg")
-                    .attr("id","svg_trend");
             
             //DATA IN CONTEXT
             
@@ -271,9 +246,6 @@
             //initialize population fast fact 
             population_fast_fact(current_pointer, "county");
                  
-            //initialize foster care trends
-            foster_care_trends(current_pointer, "county");
-                 
             //initialize tool tips     
             tool_tip();
             
@@ -315,9 +287,7 @@
                  
                  get_current_pointer("Washington", scope);
                  
-                 population_fast_fact(current_pointer, scope);  
-                               
-                 foster_care_trends(current_pointer, scope);
+                 population_fast_fact(current_pointer, scope);                                 
                  
                  tool_tip();
                  
@@ -350,7 +320,6 @@
                         }).replace(/ /g,"_"), scope);
                         
                 population_fast_fact(current_pointer, scope);                
-                foster_care_trends(current_pointer, scope);
                 
                 tool_tip();
              })
@@ -379,8 +348,6 @@
                  get_current_pointer(default_county, scope);
                  
                  population_fast_fact(current_pointer, scope);  
-                               
-                 foster_care_trends(current_pointer, scope);
                  
                  tool_tip();
                  
@@ -450,7 +417,6 @@
                     // change display at fast fact and population
                     get_current_pointer(county_id, scope);
                     population_fast_fact(current_pointer, scope);                
-                    foster_care_trends(current_pointer, scope);
                     tool_tip();                     
                  });           
              }
@@ -488,7 +454,6 @@
                     // change display at fast fact and population
                     get_current_pointer(region_name.replace(/ /g, "_"), scope);
                     population_fast_fact(current_pointer, scope);                
-                    foster_care_trends(current_pointer, scope);
                     tool_tip();
                     
                  });    
@@ -538,51 +503,6 @@
                           });
                  }
               
-             function foster_care_trends(current_pointer, scope){
-
-                    var sparkline_chart = d3.sparkline()
-                        .sparkline_w(sparkline_w)
-                        .sparkline_h(sparkline_h)
-                        .sparkline_domain(sparkline_domain);
-                       
-                     if(scope == "county")
-                        var data = data_county;
-                     else{
-                        var data = data_region;
-                        sparkline_chart.titles(titles_region);
-                     }
-                        
-                    d3.selectAll(".sparkline").remove();
-                    d3.selectAll(".sparkline_axis").remove();
-                    d3.selectAll(".sparkline_lines").remove();
-                    d3.select("#svg_trend")
-                          .attr("width",width_t + margin_t.left + margin_t.right)
-                          .attr("height",(height_t + margin_t.top + margin_t.bottom)*5 + 50)
-                          .selectAll("g")
-                          .data(data[current_pointer]["foster_care_trend"]).enter()
-                          .append("g")
-                          .attr("class","sparkline")
-                          .attr("transform", function(d, i){ return "translate(" + margin_t.left + "," + ((margin_t.top + (height_t + margin_t.top + margin_t.bottom)) * i) + ")";})
-                          .call(sparkline_chart);
-                    
-                     d3.selectAll(".sparkline").on("mouseover",function(){
-                           d3.select(this).select(".trend_line").style("stroke",d3.hsl(color_main).brighter(0.5));                 
-                          })
-                          .on("mouseout",function(){
-                            if(d3.select(this).attr("checked") != "true"){
-                                d3.select(this).select(".trend_line").style("stroke","#555");
-                            }else{
-                                d3.select(this).select(".trend_line").style("stroke",color_main);
-                            }   
-                          })
-                          .on("click",function(){
-                            d3.selectAll(".sparkline").attr("checked","false").selectAll(".trend_line").style("stroke","#555");  
-                            d3.select(this).attr("checked","true");
-                            d3.select(this).select(".trend_line").style("stroke",color_main);  
-                            if(scope != "state")         
-                                map_ranking(scope, "foster_care_trend", d3.select(this).select(".trend").attr("id"));
-                          }); 
-                  } 
 
               // get location's ID                                                    /***************************currently, we only show the data base on county level****************************************/
               function get_current_pointer(id, scope){
@@ -636,26 +556,6 @@
                           .html(function(d) {
                             return "<strong>" + fast_fact_desc[4]["title"] + "</strong> <br /><span>" + fast_fact_desc[4]["descrption"] + "</span>";
                           })
-                                  
-                       d3.select("#svg_trend").call(tip_f_0); 
-                       d3.select("#trend_0").select(".sparkline_title").on('mouseover', tip_f_0.show)
-                                .on('mouseout', tip_f_0.hide);
-                        
-                       d3.select("#svg_trend").call(tip_f_1); 
-                       d3.select("#trend_1").select(".sparkline_title").on('mouseover', tip_f_1.show)
-                                .on('mouseout', tip_f_1.hide);
-                                
-                       d3.select("#svg_trend").call(tip_f_2); 
-                       d3.select("#trend_2").select(".sparkline_title").on('mouseover', tip_f_2.show)
-                                .on('mouseout', tip_f_2.hide);
-                                
-                       d3.select("#svg_trend").call(tip_f_3); 
-                       d3.select("#trend_3").select(".sparkline_title").on('mouseover', tip_f_3.show)
-                                .on('mouseout', tip_f_3.hide);
-                                
-                       d3.select("#svg_trend").call(tip_f_4); 
-                       d3.select("#trend_4").select(".sparkline_title").on('mouseover', tip_f_4.show)
-                                .on('mouseout', tip_f_4.hide);
                       
                        var tip_p_0 = d3.tip()
                           .attr('class', 'd3-tip')
@@ -703,10 +603,6 @@
                        d3.select("#svg_population").call(tip_p_2); 
                        d3.select("#population_2").select(".text_title").on('mouseover', tip_p_2.show)
                                 .on('mouseout', tip_p_2.hide);
-                                
-                       d3.select("#svg_population").call(tip_p_3); 
-                       d3.select("#population_3").select(".text_title").on('mouseover', tip_p_3.show)
-                                .on('mouseout', tip_p_3.hide);
                                 
                        d3.select("#svg_population").call(tip_p_4); 
                        d3.select("#population_4").select(".text_title").on('mouseover', tip_p_4.show)
@@ -790,5 +686,5 @@
                     return counties;
                 }
 // ]]></script>
-	</body>
+    </body>
 </html>

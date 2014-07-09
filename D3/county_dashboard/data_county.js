@@ -66,12 +66,6 @@
        "min": 0.062,
        "max": 0.13
       },
-      "population_3": {
-       "title": "H.S. Grad Rate",
-       "valueFormat": "p",
-       "min": 0.373056994818653,
-       "max": 0.970588235294118
-      },
       "population_4": {
        "title": "Free/Reduced Lunch",
        "valueFormat": "p",
@@ -394,10 +388,6 @@
         "statistic": 0.088
        },
        {
-        "id": "population_3",
-        "statistic": 0.775577557755776
-       },
-       {
         "id": "population_4",
         "statistic": 0.74273127753304
        }
@@ -665,10 +655,6 @@
        {
         "id": "population_2",
         "statistic": 0.088
-       },
-       {
-        "id": "population_3",
-        "statistic": 0.732258064516129
        },
        {
         "id": "population_4",
@@ -972,10 +958,6 @@
         "statistic": 0.087
        },
        {
-        "id": "population_3",
-        "statistic": 0.822875297855441
-       },
-       {
         "id": "population_4",
         "statistic": 0.490393979637007
        }
@@ -1275,10 +1257,6 @@
        {
         "id": "population_2",
         "statistic": 0.077
-       },
-       {
-        "id": "population_3",
-        "statistic": 0.751690821256039
        },
        {
         "id": "population_4",
@@ -1588,10 +1566,6 @@
        {
         "id": "population_2",
         "statistic": 0.099
-       },
-       {
-        "id": "population_3",
-        "statistic": 0.440586001085187
        },
        {
         "id": "population_4",
@@ -1923,10 +1897,6 @@
         "statistic": 0.104
        },
        {
-        "id": "population_3",
-        "statistic": 0.791026536312849
-       },
-       {
         "id": "population_4",
         "statistic": 0.423099176814034
        }
@@ -2242,10 +2212,6 @@
        {
         "id": "population_2",
         "statistic": 0.102
-       },
-       {
-        "id": "population_3",
-        "statistic": 0.848484848484848
        },
        {
         "id": "population_4",
@@ -2565,10 +2531,6 @@
         "statistic": 0.109
        },
        {
-        "id": "population_3",
-        "statistic": 0.813216453135536
-       },
-       {
         "id": "population_4",
         "statistic": 0.532609984584371
        }
@@ -2847,10 +2809,6 @@
        {
         "id": "population_2",
         "statistic": 0.075
-       },
-       {
-        "id": "population_3",
-        "statistic": 0.852207293666027
        },
        {
         "id": "population_4",
@@ -3170,10 +3128,6 @@
         "statistic": 0.13
        },
        {
-        "id": "population_3",
-        "statistic": 0.821917808219178
-       },
-       {
         "id": "population_4",
         "statistic": 0.665178571428571
        }
@@ -3460,10 +3414,6 @@
        {
         "id": "population_2",
         "statistic": 0.094
-       },
-       {
-        "id": "population_3",
-        "statistic": 0.713178294573643
        },
        {
         "id": "population_4",
@@ -3783,10 +3733,6 @@
         "statistic": 0.078
        },
        {
-        "id": "population_3",
-        "statistic": 0.970588235294118
-       },
-       {
         "id": "population_4",
         "statistic": 0.507936507936508
        }
@@ -4098,10 +4044,6 @@
        {
         "id": "population_2",
         "statistic": 0.094
-       },
-       {
-        "id": "population_3",
-        "statistic": 0.78117998506348
        },
        {
         "id": "population_4",
@@ -4421,10 +4363,6 @@
         "statistic": 0.125
        },
        {
-        "id": "population_3",
-        "statistic": 0.736501079913607
-       },
-       {
         "id": "population_4",
         "statistic": 0.604858083459383
        }
@@ -4730,10 +4668,6 @@
         "statistic": 0.082
        },
        {
-        "id": "population_3",
-        "statistic": 0.842261904761905
-       },
-       {
         "id": "population_4",
         "statistic": 0.377201954767587
        }
@@ -5025,10 +4959,6 @@
        {
         "id": "population_2",
         "statistic": 0.094
-       },
-       {
-        "id": "population_3",
-        "statistic": 0.861940298507463
        },
        {
         "id": "population_4",
@@ -5364,10 +5294,6 @@
         "statistic": 0.068
        },
        {
-        "id": "population_3",
-        "statistic": 0.823751700508893
-       },
-       {
         "id": "population_4",
         "statistic": 0.369322406972248
        }
@@ -5677,10 +5603,6 @@
         "statistic": 0.074
        },
        {
-        "id": "population_3",
-        "statistic": 0.851321928460342
-       },
-       {
         "id": "population_4",
         "statistic": 0.360130664673477
        }
@@ -5970,10 +5892,6 @@
         "statistic": 0.083
        },
        {
-        "id": "population_3",
-        "statistic": 0.706572769953052
-       },
-       {
         "id": "population_4",
         "statistic": 0.433333333333333
        }
@@ -6253,10 +6171,6 @@
        {
         "id": "population_2",
         "statistic": 0.096
-       },
-       {
-        "id": "population_3",
-        "statistic": 0.862660944206009
        },
        {
         "id": "population_4",
@@ -6558,10 +6472,6 @@
        {
         "id": "population_2",
         "statistic": 0.124
-       },
-       {
-        "id": "population_3",
-        "statistic": 0.748815165876777
        },
        {
         "id": "population_4",
@@ -6881,10 +6791,6 @@
         "statistic": 0.077
        },
        {
-        "id": "population_3",
-        "statistic": 0.893491124260355
-       },
-       {
         "id": "population_4",
         "statistic": 0.441419543023821
        }
@@ -7180,10 +7086,6 @@
        {
         "id": "population_2",
         "statistic": 0.104
-       },
-       {
-        "id": "population_3",
-        "statistic": 0.735632183908046
        },
        {
         "id": "population_4",
@@ -7487,10 +7389,6 @@
         "statistic": 0.092
        },
        {
-        "id": "population_3",
-        "statistic": 0.740506329113924
-       },
-       {
         "id": "population_4",
         "statistic": 0.662897310513447
        }
@@ -7782,10 +7680,6 @@
        {
         "id": "population_2",
         "statistic": 0.113
-       },
-       {
-        "id": "population_3",
-        "statistic": 0.721649484536082
        },
        {
         "id": "population_4",
@@ -8103,10 +7997,6 @@
        {
         "id": "population_2",
         "statistic": 0.116
-       },
-       {
-        "id": "population_3",
-        "statistic": 0.80625
        },
        {
         "id": "population_4",
@@ -8442,10 +8332,6 @@
         "statistic": 0.089
        },
        {
-        "id": "population_3",
-        "statistic": 0.756935123042506
-       },
-       {
         "id": "population_4",
         "statistic": 0.472152194211018
        }
@@ -8763,10 +8649,6 @@
         "statistic": 0.062
        },
        {
-        "id": "population_3",
-        "statistic": 0.810457516339869
-       },
-       {
         "id": "population_4",
         "statistic": 0.434420985284709
        }
@@ -9078,10 +8960,6 @@
        {
         "id": "population_2",
         "statistic": 0.092
-       },
-       {
-        "id": "population_3",
-        "statistic": 0.71047619047619
        },
        {
         "id": "population_4",
@@ -9399,10 +9277,6 @@
        {
         "id": "population_2",
         "statistic": 0.108
-       },
-       {
-        "id": "population_3",
-        "statistic": 0.373056994818653
        },
        {
         "id": "population_4",
@@ -9738,10 +9612,6 @@
         "statistic": 0.078
        },
        {
-        "id": "population_3",
-        "statistic": 0.770864596560083
-       },
-       {
         "id": "population_4",
         "statistic": 0.382711151298186
        }
@@ -10075,10 +9945,6 @@
         "statistic": 0.086
        },
        {
-        "id": "population_3",
-        "statistic": 0.804175787169557
-       },
-       {
         "id": "population_4",
         "statistic": 0.468395985254151
        }
@@ -10382,10 +10248,6 @@
        {
         "id": "population_2",
         "statistic": 0.115
-       },
-       {
-        "id": "population_3",
-        "statistic": 0.656609195402299
        },
        {
         "id": "population_4",
@@ -10699,10 +10561,6 @@
        {
         "id": "population_2",
         "statistic": 0.078
-       },
-       {
-        "id": "population_3",
-        "statistic": 0.807667731629393
        },
        {
         "id": "population_4",
@@ -11022,10 +10880,6 @@
         "statistic": 0.122
        },
        {
-        "id": "population_3",
-        "statistic": 0.818181818181818
-       },
-       {
         "id": "population_4",
         "statistic": 0.538283062645012
        }
@@ -11321,10 +11175,6 @@
        {
         "id": "population_2",
         "statistic": 0.072
-       },
-       {
-        "id": "population_3",
-        "statistic": 0.845132743362832
        },
        {
         "id": "population_4",
@@ -11656,10 +11506,6 @@
         "statistic": 0.075
        },
        {
-        "id": "population_3",
-        "statistic": 0.790366972477064
-       },
-       {
         "id": "population_4",
         "statistic": 0.434581063854444
        }
@@ -11959,10 +11805,6 @@
        {
         "id": "population_2",
         "statistic": 0.063
-       },
-       {
-        "id": "population_3",
-        "statistic": 0.904891304347826
        },
        {
         "id": "population_4",
@@ -12292,10 +12134,6 @@
        {
         "id": "population_2",
         "statistic": 0.098
-       },
-       {
-        "id": "population_3",
-        "statistic": 0.732494529540481
        },
        {
         "id": "population_4",

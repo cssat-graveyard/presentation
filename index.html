@@ -35,25 +35,57 @@
 		</div>
 
 	<!-- Wrapper for Impress presentation -->
-		<div id="impress">
+		<div id="impress" class="presentation">
 
-			<div id="introduction" data-title="Home" class="step slide menu-entry" data-x="-5000" data-y="-4000" data-scale="5">
-				<h1 class="h2">The State of Our Children in Washington and Beyond</h1>
-                <div class="intro-image">
-                    <img class="title-image" src="img/visualization.png" />
+			<div id="introduction" data-title="Home" class="step image-bg menu-entry" data-x="-5000" data-y="-4000" data-scale="5">
+				<div class="gallery">
+					<div class="tile">
+						<img src="img/woman_and_baby.jpg">
+					</div>
+					<div class="tile">
+						<img src="img/boy_alone.jpg">
+					</div>
+					<div class="tile">
+						<img src="img/woman_and_girl.jpg">
+					</div>
+				</div>
+				<div class="text">
+					<h1 class="h2">The State of Our Children in Washington and Beyond</h1>
+	            	<h3 class="h3 subtitle">A look at the data</h3>
                 </div>
-                <h3 class="subtitle">A look at the data</h3>
                 <p>Presentation prepared by <a href="http://partnersforourchildren.org/">Partners for Our Children</a>.</p>
 			</div>
 
 			<div id="acknowledgements" class="step slide" data-x="-5000" data-y="0" data-scale="5">
-				<h1 class="h2">Acknowledgements</h1>
-				<p>Many thanks to Kids Count and the Washington State Child Well-Being Data Portal for the data used in this presentation.</p>
+				<div class="text">
+					<h1 class="h2">Acknowledgements</h1>
+					<p>Many thanks to Kids Count and the Washington State Child Well-Being Data Portal for the data used in this presentation.</p>
+				</div>
+
+				<div class="gallery">
+					<div class="tile">
+						<img src="img/kidscount_logo.png" />
+					</div>
+
+					<div class="tile">
+						<img src="img/POC_logo.png" />
+					</div>
+
+					<div class="tile">
+						<img src="img/doh_logo.jpg" />
+					</div>
+				</div>
 			</div>
 
 			<div id="questions" class="step slide" data-x="-5000" data-y="4000" data-scale="5">
-				<h3>How does Washington's metrics on child wellness compare to other states?</h3>
-				<h3>Are there differences by age, race and poverty level?</h3>
+				<div class="questions">
+					<p>How does Washington compare to the <span>rest of the country</span>?</p>
+					<p>How do the counties in Washington compare to <span>one another</span>? </p>
+					<p>Are there <span>differences</span> by age, race and poverty level?</p>
+				</div>
+				<div class="image">
+					<img src="img/questions.jpg">
+				</div>
 			</div>
 
 			<div id="reading" class="step slide menu-entry" data-title="National Data" data-x="-5000" data-y="4000" data-z="-3000" data-scale="1">
@@ -66,7 +98,8 @@
 			</div>
 
 			<div id="teen-births" class="step slide" data-x="-3000" data-y="4000" data-z="-3000" data-scale="1">
-				<h1 class="h2">Teen birth rates by race and year</h1>
+				<h1 class="h3">Teen birth rates by race and year</h1>
+				<p id="maps-description">Births to teenagers per 1,000 females between ages 15 and 19. The teenage birth rate in Washington has dropped from 41 per 1,000 in 1999 to 23 in 2012, moving from a rank of 18th to 12th lowest in the country. This downward trend can be seen nationwide.</p>
 				<div class="maps">
 					<img src="R/teen-birth-1999.png" class="map" id="1999"/>
 				</div>
@@ -88,8 +121,8 @@
 				<div class="citation">Source: VitalStats, National Center for Health Statistics, CDC (supplemented by the US Census Bureau), via Kids Count</div>
 			</div>
 
-			<div id="maltreatment" data-title="Child Maltreatment" class="step menu-entry" data-x="-1000" data-y="4000" data-z="-3000" data-scale="1">
-                <h1 class="h2">Child Maltreatment</h1>
+			<div id="maltreatment" data-title="Child Maltreatment" class="step visualization menu-entry" data-x="-1000" data-y="4000" data-z="-3000" data-scale="1">
+                <h1 class="h3">Child Maltreatment</h1>
                	<iframe src="D3/child_maltreatment/maltreatment.html" width="1300" height="650"></iframe>
             </div>
 
@@ -98,13 +131,13 @@
             </div>
 
 			<div id="dashboard-1" data-title="County Dashboard" class="step visualization menu-entry" data-x="-1000" data-y="7000" data-z="-3000" data-rotate="90" data-scale="1">
-				<h1 class="h2">Washington County Comparison</h1>
-				<iframe src="D3/county_dashboard/dashboard-2.html" width="1300" height="650"></iframe>
+				<h1 class="h3">Washington County Comparison</h1>
+				<iframe src="D3/county_dashboard/dashboard-1.html" width="1300" height="650"></iframe>
 			</div>
 
-			<div id="dashboard-2" class="step" data-x="-1000" data-y="7000" data-z="-3000" data-rotate="90" data-scale="1">
-				<h1 class="h2">Washington County Comparison</h1>
-				<iframe src="D3/county_dashboard/dashboard-1.html" width="1300" height="650"></iframe>
+			<div id="dashboard-2" class="step visualization" data-x="-1000" data-y="7000" data-z="-3000" data-rotate="90" data-scale="1">
+				<h1 class="h3">Washington County Comparison</h1>
+				<iframe src="D3/county_dashboard/dashboard-2.html" width="1300" height="650"></iframe>
 			</div>
 
 			<div id="age-metrics" class="step menu-entry" data-title="Age Metrics" data-x="-1000" data-y="8000" data-z="-3000" data-rotate="180" data-scale="1">
@@ -112,8 +145,8 @@
 			</div>
 
 
-			<div id="entries" class="step" data-x="-2000" data-y="8000" data-z="-3000" data-rotate="180" data-scale="1">
-				<h1 class="h2 slide-title">WA Entries into Out-of-Home Care by Age</h1>
+			<div id="entries" class="step visualization" data-x="-2000" data-y="8000" data-z="-3000" data-rotate="180" data-scale="1">
+				<h1 class="h3">WA Entries into Out-of-Home Care by Age</h1>
 				<div class="image-wrap">
 					<iframe src="D3/entering_care/care.html" width="1300" height="650"></iframe>
 				</div>
@@ -129,54 +162,59 @@
             	<p>Text slide</p>
             </div>
 
-            <div id="poverty" class="step" data-x="-3000" data-y="5000" data-z="-3000" data-rotate="270" data-scale="1">
-            	<h1 class="h2">Children Under 5 in Poverty</h1>
-            	<p>The percent of children under five living below the poverty line is especially high for minorities</p>
-            	<div class="image-wrap">
+            <div id="poverty" class="step slide" data-x="-3000" data-y="5000" data-z="-3000" data-rotate="270" data-scale="1">
+            	<h1 class="h3">Poverty and Out-of-Home Placement by Race</h1>
+            	<p>The percent of children under five living below the poverty line is especially high for minorities. Black and especially Native American children under age five in Washington are greatly overrepresented in the out-of-home care population. Despite the high poverty rate, young Hispanic children are actually placed at a lower rate than non-Hispanic white children.</p>
+            	<div class="double-wrap">
             		<img src="R/children-under-5-in-poverty.svg" />
-            	</div>
-            </div>
-
-            <div id="ooh-by-race" class="step" data-x="-3000" data-y="3000" data-z="-3000" data-rotate="270" data-scale="1">
-            	<h1 class="h3">Rate (per 1,000) of children under 5 who were in out-of-home care on April 1, 2014, by race</h1>
-            	<div class="image-wrap">
             		<img src="R/children-under-5-ooh.svg" />
             	</div>
             	<div class="citation">Source: CA, supplemented by US Census, via POC Data Portal.</div>
             </div>
 
-            <div id="ooh-poverty" class="step" data-x="-3000" data-y="1000" data-z="-3000" data-rotate="270" data-scale="1">
-            	<h1 class="h2">Children Under 5 Placed in Out-of-Home Care</h1>
-            	<div class="image-wrap">
+            <div id="ooh-by-race" class="step slide" data-x="-3000" data-y="5000" data-z="-3000" data-rotate="270" data-scale="1">
+            	<h1 class="h3">Poverty and Out-of-Home Placement by Race</h1>
+            	<p>The percent of children under five living below the poverty line is especially high for minorities. Black and especially Native American children under age five in Washington are greatly overrepresented in the out-of-home care population. Despite the high poverty rate, young Hispanic children are actually placed at a lower rate than non-Hispanic white children.</p>
+            	<div class="double-wrap">
+            		<img src="R/children-under-5-in-poverty.svg" />
+            		<img src="R/children-under-5-ooh.svg" />
+            	</div>
+            	<div class="citation">Source: CA, supplemented by US Census, via POC Data Portal.</div>
+            </div>
+
+            <div id="ooh-poverty" class="step" data-x="-3000" data-y="3000" data-z="-3000" data-rotate="270" data-scale="1">
+            	<h1 class="h2">Out-of-Home Placement Rates By Race and Poverty</h1>
+            	<p>If, instead of dividing by the total population, we divide by the population below the federal poverty line, then is Non-Hispanic White children and Native American children who have the highest placement rates in out-of-home care.</p>
+            	<div class="double-wrap">
             		<img src="R/children-under-5-ooh.svg" />
             	</div>
             </div>
 
-            <div id="national-context" class="step menu-entry" data-title="National Context" data-x="-3000" data-y="1000" data-rotate="270" data-scale="5">
+            <div id="national-context" class="step menu-entry" data-title="National Context" data-x="-3000" data-y="3000" data-rotate="270" data-scale="5">
             	<p>National context</p>
             </div>
 
-            <div id="education-wic" class="step" data-x="0" data-y="1000" data-rotate="270" data-scale="5">
-            	<h1 class="h2">Percentage of Births to Mothers with Less than a High School Education by Percentage of WIC Births</h1>
+            <div id="education-wic" class="step" data-x="0" data-y="3000" data-rotate="270" data-scale="5">
+            	<h1 class="h4">Percentage of Births to Mothers with Less than a High School Education by Percentage of WIC Births</h1>
             	<div class="image-wrap">
             		<img src="R/lwedBYwic.png" />
             	</div>
             	<div class="citation">Source: DOH</div>
             </div>
 
-            <div id="teens-wic" class="step" data-x="3000" data-y="1000" data-rotate="270" data-scale="5">
-            	<h1 class="h2">Percentage of Births to Teen Mothers by Percentage of WIC Births</h1>
+            <div id="teens-wic" class="step" data-x="3000" data-y="3000" data-rotate="270" data-scale="5">
+            	<h1 class="h4">Percentage of Births to Teen Mothers by Percentage of WIC Births</h1>
             	<div class="image-wrap">
             		<img src="R/teenBYwic.png" />
             	</div>
             	<div class="citation">Source: DOH</div>
             </div>
 
-            <div id="sources" class="step menu-entry" data-title="Sources" data-x="6000" data-y="1000" data-rotate="270" data-scale="5">
+            <div id="sources" class="step menu-entry" data-title="Sources" data-x="6000" data-y="3000" data-rotate="270" data-scale="5">
             	<p>Sources</p>
             </div>
 
-            <div id="credits" class="step" data-x="9000" data-y="1000" data-rotate="270" data-scale="5">
+            <div id="credits" class="step" data-x="9000" data-y="3000" data-rotate="270" data-scale="5">
             	<p>Credits and social sharing</p>
             </div>
 		</div>

@@ -7,9 +7,10 @@ individual steps
 
 .step {
     position: relative;
-    width: 1140px;
+    width: 1180px;
+    height: 700px;
     padding: 40px;
-    margin: 20px auto;
+    margin: 0px auto;
 
     -webkit-box-sizing: border-box;
     -moz-box-sizing:    border-box;
@@ -18,7 +19,7 @@ individual steps
     box-sizing:         border-box;
 }
 
-/* Make inactive slides slightly transparent */
+/* Make inactive slides invisible */
 
 .impress-enabled .step {
     margin: 0;
@@ -37,34 +38,116 @@ individual steps
 .slide {
     display: block;
     width: 1000px;
-    padding: 40px 60px;
+    height: 700px;
+    padding: 0 60px;
+}
+
+.visualization {
+    padding: 0 0;
 }
 
 #introduction {
+
     .subtitle {
         color: darken($light-gray, 30%);
-        text-align: right;
-        padding-top: 1em;
+        margin: 0;
     }
 
-    .intro-image {
+    .gallery {
+        width: 1180px;
         text-align: center;
-        padding-top: 1em;
+
+        .tile {
+            width: 32%;
+            padding-right: 1%;
+            display: inline-block;
+            overflow: hidden;
+            height: 250px;
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .text {
+        margin-top: 2em;
+        margin-left: 2em;
+        padding: 2em 0;
+        text-align: center;
+        border-top: 4px double $dark-green;
+        border-bottom: 4px double $dark-green;
+    }
+
+    p {
+        text-align: center;
+        padding-top: 5em;
+    }
+
+}
+
+#acknowledgements {
+    text-align: center;
+
+    .text {
+        margin-top: 3em;
+        margin-left: 2em;
+        margin-bottom: 2em;
+        padding: 2em 0;
+        text-align: center;
+        border-top: 4px double $dark-green;
+        border-bottom: 4px double $dark-green;
+    }
+
+    .gallery {
+        width: 1000px;
+        text-align: center;
+
+        .tile {
+            width: 25%;
+            padding-right: 5%;
+            display: inline-block;
+            overflow: hidden;
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+#questions {
+
+    .questions {
+        width: 45%;
+        float: left;
+        padding-top: 4em;
+    }
+
+    .image {
+        width: 50%;
+        float: right;
+        padding-top: 8em;
 
         img {
             width: 100%;
         }
     }
 
-    .path {
-      stroke-dasharray: 1000;
-      animation: dash 5s linear;
-    }
+    p { 
+        font-size: 2.5em;
+        line-height: 1.2em;
+        margin-bottom: 1.5em;
+        color: $dark-green;
 
-    @keyframes dash {
-      to {
-        stroke-dashoffset: 1000;
-      }
+        span {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
     }
 }
 
@@ -95,3 +178,23 @@ individual steps
     }
 }
 
+#teen-births {
+    .maps {
+        float: left;
+        width: 80%;
+        overflow: hidden;
+        height: 500px;
+
+        img {
+            display: block;
+            width: 100%;
+            margin-top: -50px;
+        }
+    }
+}
+
+#poverty {
+    .double-wrap img:last-child {
+        display: none;
+    }
+}

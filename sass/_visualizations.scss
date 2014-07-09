@@ -12,49 +12,14 @@ visualization styling
 	border-bottom: 1px solid $light-gray;
 }
 
-.county_dashboard table, td, tr {
-	border: 0;
-}
-
 .county_dashboard {
-    width: 800px;
+    width: 900px;
 }
 
 .dashboard_1 {
-    #t_population {
-        display: none;
+    #radios {
+        margin-right: 220px;
     }
-}
-
-.dashboard_2 {
-
-    #t_trend {
-        display: none;
-    }
-
-    .dashboard-wrap {
-        position: relative;
-        width: 1100px;
-    }
-
-    #t_context {
-        float: left;
-        width: 67%;
-    }
-
-    #dashboard_description {
-        float: right;
-        width: 30%;
-        margin-top: 9em;
-    }
-}
-
-#dashboard #sub_description_title {
-	margin-left: 0;
-	position: absolute;
-	margin-top: 1.5em;
-	font-family: $slab;
-	font-size: .8em;
 }
 
 .spaghetti {
@@ -143,15 +108,6 @@ visualization styling
          bottom: 5em;
          right: 0;
          width: 100px;
-    }
-}
-
-.maps {
-    float: left;
-    width: 80%;
-
-    .map {
-        width: 100%;
     }
 }
 

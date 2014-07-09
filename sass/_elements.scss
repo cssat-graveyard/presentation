@@ -9,7 +9,6 @@ are not specific to a single slide
 body {
 	font-family: $sans-serif;
 	min-height: 740px;
-
 }
 
 b, strong { font-weight: bold; }
@@ -194,5 +193,13 @@ h5, .h5 {
 
 	img {
 		max-height: 600px;
+	}
+}
+
+.double-wrap {
+	width: 1180px;
+
+	img {
+		width: 45%;
 	}
 }
