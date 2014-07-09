@@ -290,8 +290,58 @@ embed_fonts("children-under-5-in-poverty.pdf")
 
 #### ----------------------------------
 
-embed_fonts("teen-birth.pdf")
-embed_fonts("teen-birth-by-race.pdf")
+## OOH Placements by Race
 
+place.raw <- sqlQuery(con_test, "
+    call sp_ooh_pit_rates(      
+    '2000-01-01,2013-01-01',-- @date =
+    '1',--  @age_grouping_cd =
+    '1,3,8,9,11',--  @race_cd =
+    '0',--  @gender_cd =
+    '0',--  @init_cd_plcm_setg =
+    '0',--  @long_cd_plcm_setg =
+    '0',--  @county_cd
+    '0',--  @bin_los_cd
+    '0',--  @bin_placemet_cd =
+    '0',--  @bin_ihs_svc_cd =
+    '0',--  @cd_reporter_type =
+    '0',--  @filter_access_type =
+    '0',--  @filter_allegation =
+    '0',--  @filter_findig =
+    '0',--  @filter_service_category =
+    '0',--  @budget_cd
+    '0' --  @dependency_cd
+); 
+", stringsAsFactors = F)
+
+place.raw <- format_sp(place.raw)
+place <- place.raw %>%
+    filter(qry.type.first.all == 2,
+           date == max(date)) %>%
+    mutate(placed = total.in.out.of.home.care.1st.day) %>%
+    select(date, placed, race.ethnicity, ethnicity.cd) %>%
+    mutate(race.ethnicity = factor(race.ethnicity,
+                                   levels = c("American Indian/Alaskan Native",
+                                              "Black/African American",
+                                              "Hispanic or Latino",
+                                              "Multiracial",
+                                              "Non-Hispanic, White Alone"),
+                                   labels = c("American Indian/Alaskan Native",
+                                              "Black/African American",
+                                              "Hispanic or Latino",
+                                              "Two or More Races",
+                                              "Non-Hispanic White")))
+
+ooh.by.race <- ggplot(place, aes(x = race.ethnicity, y = placed)) +
+    geom_bar(stat = "identity", fill = poc_colors[1]) +
+    labs(x = "", y = "Rate (per 1,000)") +
+    geom_text(aes(label = round(placed, 1), y = placed - 1), color = "white", family = sel.font) +
+    #scale_y_continuous(labels = percent_format()) +
+    theme_bw(base_family = sel.font) +
+    theme(axis.text.x = element_text(angle = -25, hjust = 0),
+          plot.margin = unit(c(1, 3, 1, 1) * 5, "mm"))
+
+ggsave("children-under-5-ooh.pdf", ooh.by.race, width = 7, height = 7)
+embed_fonts("children-under-5-ooh.pdf")
 
 
