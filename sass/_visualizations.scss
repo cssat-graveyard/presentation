@@ -20,6 +20,17 @@ visualization styling
     #radios {
         margin-right: 220px;
     }
+
+    #t_population {
+        margin-left: 15%;
+    }
+}
+
+#dashboard_text {
+    position: absolute;
+    top: 8em;
+    right: 250px;
+    width: 20%;
 }
 
 .spaghetti {
@@ -106,7 +117,7 @@ visualization styling
     .legend {
          position: absolute;
          bottom: 5em;
-         right: 0;
+         right: 5em;
          width: 100px;
     }
 }
@@ -133,4 +144,8 @@ visualization styling
             }
         }
     }
+}
+
+#birth-maps {
+    height: 700px;
 }

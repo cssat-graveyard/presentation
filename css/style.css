@@ -77,6 +77,7 @@ the other stylesheets.
 ***********************************/
 /* COLORS */
 /* TYPOGRAPHY */
+/* SLIDE WIDTHS */
 /***************************************
 ELEMENTS
 
@@ -151,7 +152,7 @@ h5, .h5 {
 
 /* line 57, ../sass/_elements.scss */
 .slide-title {
-  margin-bottom: 0;
+  margin-bottom: .3em;
   padding-bottom: .3em;
   border-bottom: 1px solid #eeeeee;
 }
@@ -166,8 +167,17 @@ h5, .h5 {
   padding: .3em .5em;
 }
 
+/* line 72, ../sass/_elements.scss */
+.image-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1000;
+  width: 90%;
+}
+
 /* Previous and next buttons */
-/* line 74, ../sass/_elements.scss */
+/* line 82, ../sass/_elements.scss */
 .nav-button {
   border: 0;
   width: 60px;
@@ -177,12 +187,12 @@ h5, .h5 {
   opacity: .5;
 }
 
-/* line 83, ../sass/_elements.scss */
+/* line 91, ../sass/_elements.scss */
 .nav-button:hover {
   opacity: 1;
 }
 
-/* line 87, ../sass/_elements.scss */
+/* line 95, ../sass/_elements.scss */
 #prev {
   position: absolute;
   bottom: 10px;
@@ -191,7 +201,7 @@ h5, .h5 {
   background-size: 80px;
 }
 
-/* line 95, ../sass/_elements.scss */
+/* line 103, ../sass/_elements.scss */
 #next {
   position: absolute;
   bottom: 10px;
@@ -201,7 +211,7 @@ h5, .h5 {
 }
 
 /* Slide-out menu */
-/* line 105, ../sass/_elements.scss */
+/* line 113, ../sass/_elements.scss */
 .contents-menu {
   color: #f4f4f4;
   background: #3b6e8f;
@@ -210,13 +220,18 @@ h5, .h5 {
   position: absolute;
   top: 10px;
   right: 5px;
+  pointer-events: auto;
 }
-/* line 114, ../sass/_elements.scss */
+/* line 123, ../sass/_elements.scss */
 .contents-menu span {
   font-weight: bold;
 }
+/* line 127, ../sass/_elements.scss */
+.contents-menu.mobile {
+  display: none;
+}
 
-/* line 119, ../sass/_elements.scss */
+/* line 133, ../sass/_elements.scss */
 .contents {
   background: rgba(244, 244, 244, 0.9);
   line-height: 1.5em;
@@ -233,7 +248,7 @@ h5, .h5 {
   -o-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
-/* line 135, ../sass/_elements.scss */
+/* line 149, ../sass/_elements.scss */
 .contents a {
   color: #3b6e8f;
   text-decoration: none;
@@ -242,7 +257,7 @@ h5, .h5 {
   padding: .5em 1em;
   line-height: 2.5em;
 }
-/* line 144, ../sass/_elements.scss */
+/* line 158, ../sass/_elements.scss */
 .contents .h3 {
   background: #3b6e8f;
   font-size: 1em;
@@ -251,66 +266,83 @@ h5, .h5 {
   padding: .5em;
   margin: 0;
 }
-/* line 153, ../sass/_elements.scss */
+/* line 167, ../sass/_elements.scss */
 .contents .navlinks li {
   border-bottom: 1px solid #3b6e8f;
   background: rgba(244, 244, 244, 0.9);
 }
-/* line 157, ../sass/_elements.scss */
+/* line 171, ../sass/_elements.scss */
 .contents .navlinks li:hover {
   background: #4a8ab3;
   cursor: pointer;
 }
-/* line 161, ../sass/_elements.scss */
+/* line 175, ../sass/_elements.scss */
 .contents .navlinks li:hover a {
   color: #f4f4f4;
 }
-/* line 165, ../sass/_elements.scss */
+/* line 179, ../sass/_elements.scss */
 .contents .external-links li {
   border-bottom: 1px solid #3b6e8f;
 }
-/* line 168, ../sass/_elements.scss */
+/* line 182, ../sass/_elements.scss */
 .contents .external-links li:hover {
   background: #4a8ab3;
   cursor: pointer;
 }
-/* line 172, ../sass/_elements.scss */
+/* line 186, ../sass/_elements.scss */
 .contents .external-links li:hover a {
   color: #f4f4f4;
 }
-/* line 175, ../sass/_elements.scss */
+/* line 189, ../sass/_elements.scss */
 .contents .external-links li:last-child {
   border-bottom: 0;
 }
 
-/* line 181, ../sass/_elements.scss */
+/* line 195, ../sass/_elements.scss */
 .menu-active .contents {
   right: 0;
 }
 
-/* line 185, ../sass/_elements.scss */
+/* line 199, ../sass/_elements.scss */
 .citation {
   position: absolute;
-  bottom: 0px;
-  right: 150px;
+  bottom: 0;
+  right: 0;
 }
 
-/* line 191, ../sass/_elements.scss */
+/* line 205, ../sass/_elements.scss */
 .image-wrap {
   width: 100%;
 }
-/* line 194, ../sass/_elements.scss */
+/* line 208, ../sass/_elements.scss */
 .image-wrap img {
   max-height: 600px;
 }
 
-/* line 199, ../sass/_elements.scss */
+/* line 213, ../sass/_elements.scss */
 .double-wrap {
   width: 1180px;
 }
-/* line 202, ../sass/_elements.scss */
+@media screen and (max-width: 800px) {
+  /* line 213, ../sass/_elements.scss */
+  .double-wrap {
+    width: 800px;
+  }
+}
+/* line 220, ../sass/_elements.scss */
 .double-wrap img {
   width: 45%;
+}
+
+/* line 226, ../sass/_elements.scss */
+.social-icons li {
+  display: inline-block;
+  margin-right: 1em;
+  width: 3em;
+}
+/* line 231, ../sass/_elements.scss */
+.social-icons li img {
+  width: 100%;
 }
 
 /*********************************
@@ -359,9 +391,15 @@ individual steps
   -o-box-sizing: border-box;
   box-sizing: border-box;
 }
+@media screen and (max-width: 800px) {
+  /* line 8, ../sass/_slides.scss */
+  .step {
+    width: 800px;
+  }
+}
 
 /* Make inactive slides invisible */
-/* line 24, ../sass/_slides.scss */
+/* line 28, ../sass/_slides.scss */
 .impress-enabled .step {
   margin: 0;
   opacity: 0;
@@ -372,35 +410,62 @@ individual steps
   transition: opacity 1s;
 }
 
-/* line 35, ../sass/_slides.scss */
+/* line 39, ../sass/_slides.scss */
 .impress-enabled .step.active {
   opacity: 1;
 }
 
-/* line 38, ../sass/_slides.scss */
+/* line 42, ../sass/_slides.scss */
 .slide {
   display: block;
-  width: 1000px;
+  width: 1180px;
   height: 700px;
   padding: 0 60px;
 }
-
-/* line 45, ../sass/_slides.scss */
-.visualization {
-  padding: 0 0;
+@media screen and (max-width: 800px) {
+  /* line 42, ../sass/_slides.scss */
+  .slide {
+    width: 800px;
+  }
 }
 
-/* line 51, ../sass/_slides.scss */
+/* line 53, ../sass/_slides.scss */
+.visualization {
+  padding: 0 0;
+  overflow: hidden;
+}
+
+/* line 58, ../sass/_slides.scss */
+.text-slide {
+  text-align: center;
+  padding: 2em;
+  margin-top: 15%;
+  border-top: 4px double #5b8067;
+  border-bottom: 4px double #5b8067;
+}
+/* line 65, ../sass/_slides.scss */
+.text-slide p {
+  font-size: 1.5em;
+  line-height: 1.8em;
+}
+
+/* line 73, ../sass/_slides.scss */
 #introduction .subtitle {
   color: #a2a2a2;
   margin: 0;
 }
-/* line 56, ../sass/_slides.scss */
+/* line 78, ../sass/_slides.scss */
 #introduction .gallery {
   width: 1180px;
   text-align: center;
 }
-/* line 60, ../sass/_slides.scss */
+@media screen and (max-width: 800px) {
+  /* line 78, ../sass/_slides.scss */
+  #introduction .gallery {
+    width: 800px;
+  }
+}
+/* line 86, ../sass/_slides.scss */
 #introduction .gallery .tile {
   width: 32%;
   padding-right: 1%;
@@ -408,13 +473,13 @@ individual steps
   overflow: hidden;
   height: 250px;
 }
-/* line 67, ../sass/_slides.scss */
+/* line 93, ../sass/_slides.scss */
 #introduction .gallery .tile img {
   display: block;
   width: 100%;
   height: 100%;
 }
-/* line 75, ../sass/_slides.scss */
+/* line 101, ../sass/_slides.scss */
 #introduction .text {
   margin-top: 2em;
   margin-left: 2em;
@@ -423,17 +488,17 @@ individual steps
   border-top: 4px double #5b8067;
   border-bottom: 4px double #5b8067;
 }
-/* line 84, ../sass/_slides.scss */
+/* line 110, ../sass/_slides.scss */
 #introduction p {
   text-align: center;
   padding-top: 5em;
 }
 
-/* line 91, ../sass/_slides.scss */
+/* line 117, ../sass/_slides.scss */
 #acknowledgements {
   text-align: center;
 }
-/* line 94, ../sass/_slides.scss */
+/* line 120, ../sass/_slides.scss */
 #acknowledgements .text {
   margin-top: 3em;
   margin-left: 2em;
@@ -443,102 +508,149 @@ individual steps
   border-top: 4px double #5b8067;
   border-bottom: 4px double #5b8067;
 }
-/* line 104, ../sass/_slides.scss */
+/* line 130, ../sass/_slides.scss */
 #acknowledgements .gallery {
-  width: 1000px;
+  width: 1180px;
   text-align: center;
+  padding-bottom: 2em;
 }
-/* line 108, ../sass/_slides.scss */
+/* line 135, ../sass/_slides.scss */
 #acknowledgements .gallery .tile {
   width: 25%;
   padding-right: 5%;
   display: inline-block;
   overflow: hidden;
 }
-/* line 114, ../sass/_slides.scss */
+/* line 141, ../sass/_slides.scss */
 #acknowledgements .gallery .tile img {
   display: block;
   width: 100%;
-  height: 100%;
 }
 
-/* line 125, ../sass/_slides.scss */
+/* line 151, ../sass/_slides.scss */
 #questions .questions {
   width: 45%;
   float: left;
-  padding-top: 4em;
+  padding-top: 2em;
 }
-/* line 131, ../sass/_slides.scss */
+/* line 157, ../sass/_slides.scss */
 #questions .image {
   width: 50%;
   float: right;
-  padding-top: 8em;
+  padding-top: 2em;
 }
-/* line 136, ../sass/_slides.scss */
+/* line 162, ../sass/_slides.scss */
 #questions .image img {
   width: 100%;
 }
-/* line 141, ../sass/_slides.scss */
+/* line 167, ../sass/_slides.scss */
 #questions p {
-  font-size: 2.5em;
+  font-size: 2em;
   line-height: 1.2em;
   margin-bottom: 1.5em;
-  color: #5b8067;
 }
-/* line 147, ../sass/_slides.scss */
+/* line 172, ../sass/_slides.scss */
 #questions p span {
   font-weight: bold;
   font-size: 1.1em;
 }
 
-/* line 154, ../sass/_slides.scss */
+/* line 179, ../sass/_slides.scss */
 .spaghetti {
   padding-left: 0;
   margin-left: 0;
   overflow: hidden;
 }
-/* line 159, ../sass/_slides.scss */
+/* line 184, ../sass/_slides.scss */
 .spaghetti h1 {
   margin-bottom: .2em;
 }
-/* line 163, ../sass/_slides.scss */
+/* line 188, ../sass/_slides.scss */
 .spaghetti h2 {
   font-size: 2em;
 }
-/* line 165, ../sass/_slides.scss */
+/* line 190, ../sass/_slides.scss */
 .spaghetti .data-contents {
-  border-top: 1px solid #dedede;
-  padding-top: 1.5em;
+  padding-top: 1em;
   width: 1300px;
 }
-/* line 170, ../sass/_slides.scss */
+/* line 194, ../sass/_slides.scss */
 .spaghetti .description {
   float: left;
   width: 300px;
 }
-/* line 175, ../sass/_slides.scss */
+/* line 199, ../sass/_slides.scss */
 .spaghetti .visualization-right {
   float: right;
   width: 930px;
 }
 
-/* line 182, ../sass/_slides.scss */
-#teen-births .maps {
+/* line 205, ../sass/_slides.scss */
+#teen-births {
+  overflow: hidden;
+}
+
+/* line 209, ../sass/_slides.scss */
+#birth-maps {
+  overflow: hidden;
+  margin-left: -3em;
+}
+/* line 212, ../sass/_slides.scss */
+#birth-maps .maps {
   float: left;
   width: 80%;
   overflow: hidden;
   height: 500px;
 }
-/* line 188, ../sass/_slides.scss */
-#teen-births .maps img {
+/* line 218, ../sass/_slides.scss */
+#birth-maps .maps img {
   display: block;
   width: 100%;
   margin-top: -50px;
 }
 
-/* line 197, ../sass/_slides.scss */
-#poverty .double-wrap img:last-child {
+/* line 227, ../sass/_slides.scss */
+#poverty .last {
   display: none;
+}
+
+/* line 233, ../sass/_slides.scss */
+#education-wic .chart-titles {
+  width: 1180px;
+}
+@media screen and (max-width: 800px) {
+  /* line 233, ../sass/_slides.scss */
+  #education-wic .chart-titles {
+    width: 800px;
+  }
+}
+/* line 240, ../sass/_slides.scss */
+#education-wic .chart-titles h2 {
+  width: 45%;
+  display: inline-block;
+  padding: 0 15px;
+  font-family: "PT Sans", sans-serif;
+  color: #444444;
+}
+
+/* line 251, ../sass/_slides.scss */
+#sources ul {
+  margin-top: 1em;
+  text-align: center;
+}
+/* line 255, ../sass/_slides.scss */
+#sources ul li {
+  font-size: 1.5em;
+  padding: .5em 0;
+}
+/* line 261, ../sass/_slides.scss */
+#sources .text-slide {
+  margin-top: 10%;
+}
+
+/* line 267, ../sass/_slides.scss */
+#credits .text-slide p {
+  padding-bottom: 1em;
 }
 
 /************************
@@ -564,18 +676,30 @@ visualization styling
 .dashboard_1 #radios {
   margin-right: 220px;
 }
+/* line 24, ../sass/_visualizations.scss */
+.dashboard_1 #t_population {
+  margin-left: 15%;
+}
 
-/* line 26, ../sass/_visualizations.scss */
+/* line 29, ../sass/_visualizations.scss */
+#dashboard_text {
+  position: absolute;
+  top: 8em;
+  right: 250px;
+  width: 20%;
+}
+
+/* line 37, ../sass/_visualizations.scss */
 .spaghetti #filters {
   font-family: "PT Sans", sans-serif;
   margin-left: 1.5em;
 }
-/* line 30, ../sass/_visualizations.scss */
+/* line 41, ../sass/_visualizations.scss */
 .spaghetti #filters li {
   margin: 1.3em 0;
   display: inline-block;
 }
-/* line 35, ../sass/_visualizations.scss */
+/* line 46, ../sass/_visualizations.scss */
 .spaghetti #filters a {
   font-size: 1em;
   width: 100%;
@@ -583,39 +707,39 @@ visualization styling
   color: #f4f4f4;
   border-radius: 3px;
 }
-/* line 42, ../sass/_visualizations.scss */
+/* line 53, ../sass/_visualizations.scss */
 .spaghetti #filters a.FW {
   background: #c0392b;
 }
-/* line 45, ../sass/_visualizations.scss */
+/* line 56, ../sass/_visualizations.scss */
 .spaghetti #filters a.SW {
   background: #d35400;
 }
-/* line 48, ../sass/_visualizations.scss */
+/* line 59, ../sass/_visualizations.scss */
 .spaghetti #filters a.ME {
   background: #f39c12;
 }
-/* line 51, ../sass/_visualizations.scss */
+/* line 62, ../sass/_visualizations.scss */
 .spaghetti #filters a.SE {
   background: #27ae60;
 }
-/* line 54, ../sass/_visualizations.scss */
+/* line 65, ../sass/_visualizations.scss */
 .spaghetti #filters a.MT {
   background: #17a88c;
 }
-/* line 57, ../sass/_visualizations.scss */
+/* line 68, ../sass/_visualizations.scss */
 .spaghetti #filters a.GL {
   background: #2980b9;
 }
-/* line 60, ../sass/_visualizations.scss */
+/* line 71, ../sass/_visualizations.scss */
 .spaghetti #filters a.GP {
   background: #8e44ad;
 }
-/* line 63, ../sass/_visualizations.scss */
+/* line 74, ../sass/_visualizations.scss */
 .spaghetti #filters a.NE {
   background: #34495e;
 }
-/* line 69, ../sass/_visualizations.scss */
+/* line 80, ../sass/_visualizations.scss */
 .spaghetti #blurb {
   margin-top: 3em;
   padding: 1em;
@@ -624,7 +748,7 @@ visualization styling
   position: relative;
   border-radius: 3px;
 }
-/* line 77, ../sass/_visualizations.scss */
+/* line 88, ../sass/_visualizations.scss */
 .spaghetti #blurb:after {
   position: absolute;
   content: "";
@@ -636,42 +760,42 @@ visualization styling
   border-bottom: 30px solid transparent;
   border-left: 50px solid #eeeeee;
 }
-/* line 90, ../sass/_visualizations.scss */
+/* line 101, ../sass/_visualizations.scss */
 .spaghetti .directions {
   color: #888888;
   margin-bottom: 0;
   padding-left: 1.5em;
 }
 
-/* line 97, ../sass/_visualizations.scss */
+/* line 108, ../sass/_visualizations.scss */
 .map-wrap {
   clear: both;
 }
-/* line 100, ../sass/_visualizations.scss */
+/* line 111, ../sass/_visualizations.scss */
 .map-wrap .map {
   width: 80%;
   margin-top: 2em;
   float: left;
 }
-/* line 106, ../sass/_visualizations.scss */
+/* line 117, ../sass/_visualizations.scss */
 .map-wrap .legend {
   position: absolute;
   bottom: 5em;
-  right: 0;
+  right: 5em;
   width: 100px;
 }
 
-/* line 114, ../sass/_visualizations.scss */
+/* line 125, ../sass/_visualizations.scss */
 .toggles {
   margin-top: 2em;
   width: 170px;
   float: right;
 }
-/* line 119, ../sass/_visualizations.scss */
+/* line 130, ../sass/_visualizations.scss */
 .toggles .controls {
   padding-bottom: 1em;
 }
-/* line 122, ../sass/_visualizations.scss */
+/* line 133, ../sass/_visualizations.scss */
 .toggles .controls li {
   padding: .5em 1em;
   margin: .5em;
@@ -680,8 +804,13 @@ visualization styling
   text-align: center;
   cursor: pointer;
 }
-/* line 130, ../sass/_visualizations.scss */
+/* line 141, ../sass/_visualizations.scss */
 .toggles .controls li.highlighted {
   background: #a3dce6;
   color: #3b6e8f;
+}
+
+/* line 149, ../sass/_visualizations.scss */
+#birth-maps {
+  height: 700px;
 }

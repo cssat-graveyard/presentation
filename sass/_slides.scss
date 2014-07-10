@@ -12,6 +12,10 @@ individual steps
     padding: 40px;
     margin: 0px auto;
 
+    @media screen and (max-width: 800px){
+        width: $tablet;
+    }
+
     -webkit-box-sizing: border-box;
     -moz-box-sizing:    border-box;
     -ms-box-sizing:     border-box;
@@ -37,13 +41,31 @@ individual steps
 
 .slide {
     display: block;
-    width: 1000px;
+    width: 1180px;
     height: 700px;
     padding: 0 60px;
+
+    @media screen and (max-width: 800px){
+        width: $tablet;
+    }
 }
 
 .visualization {
     padding: 0 0;
+    overflow: hidden;
+}
+
+.text-slide {
+    text-align: center;
+    padding: 2em;
+    margin-top: 15%;
+    border-top: 4px double $dark-green;
+    border-bottom: 4px double $dark-green;
+
+    p {
+        font-size: 1.5em;
+        line-height: 1.8em;
+    }
 }
 
 #introduction {
@@ -56,6 +78,10 @@ individual steps
     .gallery {
         width: 1180px;
         text-align: center;
+
+            @media screen and (max-width: 800px){
+        width: $tablet;
+    }
 
         .tile {
             width: 32%;
@@ -102,8 +128,9 @@ individual steps
     }
 
     .gallery {
-        width: 1000px;
+        width: 1180px;
         text-align: center;
+        padding-bottom: 2em;
 
         .tile {
             width: 25%;
@@ -114,7 +141,6 @@ individual steps
             img {
                 display: block;
                 width: 100%;
-                height: 100%;
             }
         }
     }
@@ -125,13 +151,13 @@ individual steps
     .questions {
         width: 45%;
         float: left;
-        padding-top: 4em;
+        padding-top: 2em;
     }
 
     .image {
         width: 50%;
         float: right;
-        padding-top: 8em;
+        padding-top: 2em;
 
         img {
             width: 100%;
@@ -139,10 +165,9 @@ individual steps
     }
 
     p { 
-        font-size: 2.5em;
+        font-size: 2em;
         line-height: 1.2em;
         margin-bottom: 1.5em;
-        color: $dark-green;
 
         span {
             font-weight: bold;
@@ -163,8 +188,7 @@ individual steps
     h2 { font-size: 2em;}
 
     .data-contents {
-        border-top: 1px solid #dedede;
-        padding-top: 1.5em;
+        padding-top: 1em;
         width: 1300px;
     }
     .description {
@@ -179,6 +203,12 @@ individual steps
 }
 
 #teen-births {
+    overflow: hidden;
+}
+
+#birth-maps {
+    overflow: hidden;
+    margin-left: -3em;
     .maps {
         float: left;
         width: 80%;
@@ -194,7 +224,47 @@ individual steps
 }
 
 #poverty {
-    .double-wrap img:last-child {
+    .last {
         display: none;
+    }
+}
+
+#education-wic {
+    .chart-titles {
+        width: 1180px;
+
+        @media screen and (max-width: 800px){
+            width: $tablet;
+        }
+
+        h2 {
+            width: 45%;
+            display: inline-block;
+            padding: 0 15px;
+            font-family: $sans-serif;
+            color: $dark-gray;
+        }
+    }
+}
+
+#sources {
+    ul {
+        margin-top: 1em;
+        text-align: center;
+
+        li {
+            font-size: 1.5em;
+            padding: .5em 0;
+        }
+    }
+
+    .text-slide {
+        margin-top: 10%;
+    }
+}
+
+#credits {
+    .text-slide p {
+        padding-bottom: 1em;
     }
 }

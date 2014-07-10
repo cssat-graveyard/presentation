@@ -35,7 +35,7 @@ $( document ).ready(function() {
 // Open/close ToC
 $( document ).ready(function() {
 	$(".contents-menu").click(function(event) {
-		event.stopPropagation();
+		event.stopImmediatePropagation();
 		$('body').toggleClass("menu-active");
 	});
 });
