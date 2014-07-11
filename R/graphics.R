@@ -12,7 +12,7 @@ con_test <- odbcConnect("test_annie")
 sel.date.type <- 2
 min.date <- as.Date(ymd('2006-01-01'))
 sel.qry.type <- 0
-sel.font <- "Frutiger LT Std 45 Light"
+sel.font <- "PT Sans"
 
 bo.ramp <- colorRampPalette(colors = portal_colors[c(4, 8)],
                             space = "Lab", bias = 1,
@@ -283,7 +283,10 @@ pov.plot <- ggplot(pov.for.plot, aes(x = Race, y = Data)) +
     scale_y_continuous(labels = percent_format()) +
     theme_bw(base_family = sel.font) +
     theme(axis.text.x = element_text(angle = -25, hjust = 0),
-          plot.margin = unit(c(1, 3, 1, 1) * 5, "mm"))
+          plot.margin = unit(c(1, 3, 1, 1) * 5, "mm"),
+          panel.border = element_rect(size = 1, colour = poc_colors[1]),
+          axis.ticks = element_line(size = 1, colour = poc_colors[1]))
+
 
 ggsave("children-under-5-in-poverty.pdf", pov.plot, width = 7, height = 7)
 embed_fonts("children-under-5-in-poverty.pdf")    
@@ -296,7 +299,7 @@ place.raw <- sqlQuery(con_test, "
     call sp_ooh_pit_rates(      
     '2000-01-01,2013-01-01',-- @date =
     '1',--  @age_grouping_cd =
-    '1,3,8,9,11',--  @race_cd =
+    '1,8,9,11,12',--  @race_cd =
     '0',--  @gender_cd =
     '0',--  @init_cd_plcm_setg =
     '0',--  @long_cd_plcm_setg =
@@ -322,12 +325,12 @@ place <- place.raw %>%
     select(date, placed, race.ethnicity, ethnicity.cd) %>%
     mutate(race.ethnicity = factor(race.ethnicity,
                                    levels = c("American Indian/Alaskan Native",
-                                              "Black/African American",
+                                              "Non-Hispanic, Black Alone",
                                               "Hispanic or Latino",
                                               "Multiracial",
                                               "Non-Hispanic, White Alone"),
                                    labels = c("American Indian/Alaskan Native",
-                                              "Black/African American",
+                                              "Non-Hispanic Black",
                                               "Hispanic or Latino",
 <<<<<<< HEAD
                                               "Multiracial",
@@ -343,14 +346,41 @@ ooh.by.race <- ggplot(place, aes(x = race.ethnicity, y = placed)) +
     #scale_y_continuous(labels = percent_format()) +
     theme_bw(base_family = sel.font) +
     theme(axis.text.x = element_text(angle = -25, hjust = 0),
+<<<<<<< HEAD
           plot.margin = unit(c(1, 3, 1, 1) * 5, "mm"))
 <<<<<<< HEAD
 =======
+=======
+          plot.margin = unit(c(1, 3, 1, 1) * 5, "mm"),
+          panel.border = element_rect(size = 1, colour = poc_colors[1]),
+          axis.ticks = element_line(size = 1, colour = poc_colors[1]))
+
+>>>>>>> upstream/data
 
 ggsave("children-under-5-ooh.pdf", ooh.by.race, width = 7, height = 7)
 embed_fonts("children-under-5-ooh.pdf")
 
+<<<<<<< HEAD
 >>>>>>> origin/data
 
 ggsave("children-under-5-ooh.pdf", ooh.by.race, width = 7, height = 7)
 embed_fonts("children-under-5-ooh.pdf")    
+=======
+pov.for.plot$ethnicity.cd = as.integer(c(8, 11, 12, 1, 9))
+ooh.pov <- left_join(place, pov.for.plot)
+ooh.pov$pov.place = ooh.pov$placed / ooh.pov$Data
+
+ooh.pov.plot <- ggplot(ooh.pov, aes(x = race.ethnicity, y = pov.place)) +
+    geom_bar(stat = "identity", fill = poc_colors[1]) +
+    labs(x = "", y = "Rate (per 1,000 in poverty)") +
+    geom_text(aes(label = round(pov.place, 1), y = pov.place - 2), color = "white", family = sel.font) +
+    #scale_y_continuous(labels = percent_format()) +
+    theme_bw(base_family = sel.font) +
+    theme(axis.text.x = element_text(angle = -25, hjust = 0),
+          plot.margin = unit(c(1, 3, 1, 1) * 5, "mm"),
+          panel.border = element_rect(size = 1, colour = poc_colors[1]),
+          axis.ticks = element_line(size = 1, colour = poc_colors[1]))
+
+ggsave("children-under-5-ooh-poverty.pdf", ooh.pov.plot, width = 7, height = 7)
+embed_fonts("children-under-5-ooh.pdf")
+>>>>>>> upstream/data

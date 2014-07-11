@@ -1,6 +1,10 @@
 
 setwd("C:/Users/mienkoja/Dropbox/repos/presentation/R")
 Sys.setenv(R_GSCMD = "C:/Program Files/gs/gs9.05/bin/gswin64c.exe")
+<<<<<<< HEAD
+=======
+sel.font <- "PT Sans"
+>>>>>>> upstream/data
 
 require(xlsx)
 require(tm)
@@ -27,9 +31,16 @@ filetxt <- sub(".pdf", ".txt", dest)
 shell.exec(filetxt); shell.exec(filetxt)    # strangely the first try always throws an error..
 
 txt <- readLines(filetxt) # don't mind warning...
+<<<<<<< HEAD
 
 wic_births_2010c <- c(strsplit(txt[48], split=" ")[[1]], strsplit(txt[185], split=" ")[[1]])
 wic_births_2010n <- as.numeric(sub("%", "", pwic_births_2010))/100
+=======
+txt <- readLines("960-221_2010WICDataByCounty.txt")
+
+wic_births_2010c <- c(strsplit(txt[48], split=" ")[[1]], strsplit(txt[185], split=" ")[[1]])
+wic_births_2010n <- as.numeric(sub("%", "", wic_births_2010c))/100
+>>>>>>> upstream/data
 
 # Get percentage of teen births
 # importing xls downloaded in repo but available from http://www.doh.wa.gov/portals/1/Documents/5400/BirthA92012.xls
@@ -65,7 +76,14 @@ lwed_bth_rt_2010 <- lwed_births_2010/totl_births_2010[,1]
 
 # plot stuff
 
+<<<<<<< HEAD
 plot_dat <- data.frame(wic = wic_births_2010n, lwed = lwed_bth_rt_2010, teen = teen_bth_rt_2010)
+=======
+plot_dat <- data.frame(wic = wic_births_2010n,
+                       lwed = lwed_bth_rt_2010,
+                       teen = teen_bth_rt_2010,
+                       county = birth_by_medu$X1)
+>>>>>>> upstream/data
 
 ggplot(plot_dat, aes(x=wic, y=lwed)) +
         geom_smooth(size = 2, colour=portal_colors[1], fill=NA) +
@@ -79,6 +97,7 @@ ggplot(plot_dat, aes(x=wic, y=lwed)) +
 ggsave(file="lwedBYwic.pdf")
 embed_fonts("lwedBYwic.pdf")
 
+<<<<<<< HEAD
 ggplot(plot_dat, aes(x=wic, y=teen)) +
   geom_smooth(size = 2, colour=portal_colors[1], fill=NA) +
   geom_point(size = 4, colour=portal_colors[4]) +
@@ -90,3 +109,29 @@ ggplot(plot_dat, aes(x=wic, y=teen)) +
            base_size = 18)
 ggsave(file="teenBYwic.pdf")
 embed_fonts("teenBYwic.pdf")       
+=======
+ann <- subset(plot_dat, county %in% c("Adams", "King", "Pierce", "Spokane", "Yakima"))
+ann$xadj <- c(-3, 2.5, -2.7, 3.7, -3.1) / 100
+
+ggplot(plot_dat, aes(x=wic, y=teen)) +
+    geom_smooth(size = 2, colour=portal_colors[1], fill=NA, span = .9, method = "loess") +
+    geom_point(size = 4, colour=portal_colors[4]) +
+    scale_y_continuous(labels = percent) +
+    scale_x_continuous(labels = percent) +
+    labs(x = "Percentage of WIC Births",
+         y = "Percentage of Teen Mothers") +
+    geom_text(aes(label = county, x = wic + xadj), data = ann, family = sel.font) +
+    coord_fixed() +
+    theme_bw() +
+    theme(panel.border = element_rect(size = 1, colour = poc_colors[1]),
+          axis.ticks = element_line(size = 1, colour = poc_colors[1]),
+          panel.grid.minor = element_blank(),
+          panel.grid.major = element_line(color = "gray80"),
+          text = element_text(family = sel.font))
+
+ggsave(file="teenBYwic.pdf", height = 7, width = 7)
+embed_fonts("teenBYwic.pdf")
+
+
+
+>>>>>>> upstream/data
