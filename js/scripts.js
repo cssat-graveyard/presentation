@@ -12,7 +12,8 @@ $( document ).ready(function() {
 //Table of contents
 $( document ).ready(function() {
 		var links = "<nav role='navigation' class='table-of-contents'>" +
-			"<h3 class='h3'>Jump to Slide:</h3>" +
+			"<h3 class='h3'>Jump to Slide:</h3>" + 
+			"<button class='close-menu'><img src='img/cross.svg'/></button>" +
 			"<ul class='navlinks'>";
 
 		var menuItem, el, title, link;
@@ -34,10 +35,35 @@ $( document ).ready(function() {
 
 // Open/close ToC
 $( document ).ready(function() {
-	$(".contents-menu").click(function(event) {
-		event.stopImmediatePropagation();
+	$(".contents-menu").click(function() {
 		$('body').toggleClass("menu-active");
 	});
+	$(".close-menu").click(function() {
+		$('body').toggleClass("menu-active");
+	});
+});
+
+//Generate slide numbers 
+$( document ).ready(function() {
+	var i = 1;
+	var el;
+
+	$(".step").each(function(){
+		el = $(this);
+
+		el.attr('data-number', i);
+
+		i++;
+
+	});
+
+	//Change slide number on transition
+
+	 $(document).on('impress:stepenter', function(e) {
+	 	var slidenumber = $(e.target).attr("data-number");
+
+	 	$('.slide-number').text(slidenumber);
+	 });
 });
 
 //Toggles for teen birth maps

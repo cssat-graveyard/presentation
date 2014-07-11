@@ -52,6 +52,9 @@ individual steps
 
 .visualization {
     padding: 0 0;
+}
+
+.vis-wrap {
     overflow: hidden;
 }
 
@@ -164,7 +167,7 @@ individual steps
         }
     }
 
-    p { 
+    .question { 
         font-size: 2em;
         line-height: 1.2em;
         margin-bottom: 1.5em;
@@ -223,29 +226,12 @@ individual steps
     }
 }
 
-#poverty {
-    .last {
-        display: none;
+#poverty-race {
+    .citation {
+        margin-bottom: -50px;
     }
 }
 
-#education-wic {
-    .chart-titles {
-        width: 1180px;
-
-        @media screen and (max-width: 800px){
-            width: $tablet;
-        }
-
-        h2 {
-            width: 45%;
-            display: inline-block;
-            padding: 0 15px;
-            font-family: $sans-serif;
-            color: $dark-gray;
-        }
-    }
-}
 
 #sources {
     ul {

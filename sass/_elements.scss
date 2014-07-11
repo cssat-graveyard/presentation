@@ -11,6 +11,8 @@ body {
 	min-height: 740px;
 }
 
+button:focus {outline: none; }
+
 b, strong { font-weight: bold; }
 i, em { font-style: italic; }
 
@@ -43,7 +45,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-	font-size: 3em;
+	font-size: 2.8em;
 }
 
 h4, .h4 {
@@ -54,10 +56,31 @@ h5, .h5 {
 	font-size: 1.5em;
 }
 
+h6, .h6 {
+	font-size: 1.2em;
+}
+
 .slide-title {
 	margin-bottom: .3em;
 	padding-bottom: .3em;
 	border-bottom: 1px solid $light-gray;
+}
+
+.chart-titles {
+    width: 1180px;
+    padding-top: 2em;
+
+    @media screen and (max-width: 800px){
+        width: $tablet;
+    }
+
+    h2 {
+        width: 45%;
+        display: inline-block;
+        padding: 0 15px;
+        font-family: $sans-serif;
+        color: $dark-gray;
+    }
 }
 
 .button {
@@ -164,6 +187,30 @@ h5, .h5 {
 		margin: 0;
 	}
 
+	button.close-menu {
+		position: absolute;
+		top: 4px;
+		left: 170px;
+		width: 35px;
+		height: 30px;
+		cursor: pointer;
+		background: none;
+		border: 0;
+		overflow: visible;
+
+		img {
+			width: 25px;
+			height: 25px;
+			margin-left: -1px;
+			margin-top: 1px;
+			border: 1px solid $light-gray;
+			border-radius: 50%;
+			cursor: pointer;
+			background: $dark-gray;
+			z-index: 1000;
+		}
+	}
+
 	.navlinks li {
 		border-bottom: 1px solid $dark-blue;
 		background: rgba($white, .9);
@@ -196,6 +243,25 @@ h5, .h5 {
 	right: 0;
 }
 
+/* Slide numbers */
+
+.slide-number {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	color: $dark-blue;
+	font-size: 1.5em;
+}
+
+#introduction,
+#acknowledgements,
+#credits {
+	.slide-number {
+		display: none;
+	}
+}
+
+/* Image and citation elements */
 .citation {
 	position: absolute;
 	bottom: 0;
@@ -219,6 +285,19 @@ h5, .h5 {
 
 	img {
 		width: 45%;
+	}
+}
+
+.image-and-text {
+	img {
+		width: 60%;
+	}
+
+	p {
+		width: 35%;
+		float: right;
+		font-size: 1.5em;
+		padding-top: 6em;
 	}
 }
 

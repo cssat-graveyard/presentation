@@ -57,7 +57,8 @@
                 <p>Presentation prepared by <a href="http://partnersforourchildren.org/" target="blank">Partners for Our Children</a>.</p>
 			</div>
 
-			<div id="acknowledgements" class="step slide" data-x="-5000" data-y="0" data-scale="5">
+			<div id="acknowledgements" class="step slide menu-entry" data-title="Acknowledgements" data-x="-5000" data-y="0" data-scale="5">
+				
 				<div class="text">
 					<h1 class="h2">Acknowledgements</h1>
 					<p>Many thanks to the following for the data used in this presentation.</p>
@@ -87,17 +88,18 @@
 					</div>
 
 					<div class="tile">
-						<img src="img/census-logo.png" />
+						<img src="img/CensusLogo.jpg" />
 					</div>
 				</div>
 			</div>
 
 			<div id="questions" class="step slide" data-x="-5000" data-y="4000" data-scale="5">
+				
 				<h1 class="h3 slide-title">Presentation Overview</h1>
 				<div class="questions">
-					<p>How does Washington compare to the <span>rest of the country</span>?</p>
-					<p>How do the counties in Washington compare to <span>one another</span>? </p>
-					<p>Are there <span>differences</span> by age, race and poverty level?</p>
+					<p class="question">How does Washington compare to the <span>rest of the country</span>?</p>
+					<p class="question">How do the counties in Washington compare to <span>one another</span>? </p>
+					<p class="question">Are there <span>differences</span> by age, race and poverty level?</p>
 				</div>
 				<div class="image">
 					<img src="img/questions.jpg">
@@ -105,6 +107,7 @@
 			</div>
 
 			<div id="reading" class="step slide menu-entry" data-title="Child Wellness Nationwide" data-x="-5000" data-y="4000" data-z="-3000" data-scale="1">
+				
 				<h1 class="h3 slide-title">4th Grade Reading Achievement Levels</h1>
 				<p>Percentage of fourth grade public school students reading achievement levels, at or above proficiency, as measured and defined by the National Assessment of Education Progress (NAEP) reading test. Washington ranks 10th highest for reading achievement and is tied with Pennsylvania.</p>
 				<div class="map-wrap">
@@ -114,17 +117,22 @@
 			</div>
 
 			<div id="teen-births" class="step slide" data-x="-3000" data-y="4000" data-z="-3000" data-scale="1">
+				
 				<h1 class="h3 slide-title">Teen birth rates by race and year</h1>
 				<iframe src="teen-births.html" width="1180" height="700"></iframe>
 				<div class="citation">Source: VitalStats, National Center for Health Statistics, CDC (supplemented by the US Census Bureau), via Kids Count</div>
 			</div>
 
 			<div id="maltreatment" data-title="Child Maltreatment" class="step visualization menu-entry" data-x="-1000" data-y="4000" data-z="-3000" data-scale="1">
+				
                 <h1 class="h3 slide-title">Child Maltreatment</h1>
-               	<iframe src="D3/child_maltreatment/maltreatment.html" width="1300" height="650"></iframe>
+                <div class="vis-wrap">
+               		<iframe src="D3/child_maltreatment/maltreatment.html" width="1300" height="650"></iframe>
+               	</div>
             </div>
 
             <div id="wa-metrics" class="step slide menu-entry" data-title="Child Welfare in WA" data-x="-1000" data-y="5000" data-z="-3000" data-rotate="90" data-scale="1">
+            	
             	<div class="text-slide">
 	            	<h1 class="h2">Washington Child Welfare Metrics</h1>
 	            	<p>The Child Welfare Dashboard provides an at-a-glance view of the child welfare system in Washington State - by county, region, and the entire state. The dashboard allows you to quickly see and compare key measurements across the state. </p>
@@ -132,16 +140,23 @@
             </div>
 
 			<div id="dashboard-1" class="step visualization" data-x="-1000" data-y="7000" data-z="-3000" data-rotate="90" data-scale="1">
+				
 				<h1 class="h3 slide-title">Washington County Comparison</h1>
-				<iframe src="D3/county_dashboard/dashboard-1.html" width="1300" height="650"></iframe>
+				<div class="vis-wrap">
+					<iframe src="D3/county_dashboard/dashboard-1.html" width="1300" height="650"></iframe>
+				</div>
 			</div>
 
 			<div id="dashboard-2" class="step visualization" data-x="-1000" data-y="8000" data-z="-3000" data-rotate="90" data-scale="1">
+				
 				<h1 class="h3 slide-title">Washington County Comparison</h1>
-				<iframe src="D3/county_dashboard/dashboard-2.html" width="1300" height="650"></iframe>
+				<div class="vis-wrap">
+					<iframe src="D3/county_dashboard/dashboard-2.html" width="1300" height="650"></iframe>
+				</div>
 			</div>
 
 			<div id="age-metrics" class="step menu-entry" data-title="Age and Child Welfare" data-x="-1000" data-y="9000" data-z="-3000" data-rotate="180" data-scale="1">
+				
 				<div class="text-slide">
 					<h1 class="h3">Age and Child Welfare</h1>
 					<p>Age is a major factor in the child welfare system. Logically, this makes sense because younger children require far more attention since they cannot care for themselves. So how exactly does age affect the number of foster care entries or permanency outcomes? </p>
@@ -150,13 +165,15 @@
 
 
 			<div id="entries" class="step visualization" data-x="-2000" data-y="9000" data-z="-3000" data-rotate="180" data-scale="1">
+				
 				<h1 class="h3 slide-title">WA Entries into Out-of-Home Care by Age</h1>
-				<div class="image-wrap">
+				<div class="vis-wrap">
 					<iframe src="D3/entering_care/care.html" width="1300" height="650"></iframe>
 				</div>
 			</div>
 
-			<div id="outcomes" class="step slide" data-x="-3000" data-y="9000" data-z="-3000" data-rotate="180" data-scale="1">
+			<div id="outcomes" class="step slide" data-x="-4000" data-y="9000" data-z="-3000" data-rotate="180" data-scale="1">
+				
 				<h1 class="h3 slide-title">WA Outcomes by Age Entering Care in 2009</h1>
 				<p>Permanency outcomes vary drastically by age. Reunification is always the most common outcome, but while adolescents are quick to reunify, their adoption rate is low. However, young children are adopted quickly--especially infants.</p>
                 <img src="R/outcomes-by-age.svg" />
@@ -164,41 +181,35 @@
 
             <div id="race-metrics" data-title="Race, Poverty, and Foster Care" class="step menu-entry" data-x="-3000" data-y="7000" data-z="-3000" data-rotate="270" data-scale="1">
             	<div class="text-slide">
+            		
             		<h1 class="h3">Race, Poverty, and Foster Care</h1>
             		<p>When data is broken down by race, it can tell an interesting story. So let’s explore poverty and foster care placement by race.</p>
             	</div>
             </div>
 
-            <div id="poverty" class="step slide" data-x="-3000" data-y="5000" data-z="-3000" data-rotate="270" data-scale="1">
+            <div id="poverty-race" class="step slide" data-x="-3000" data-y="5000" data-z="-3000" data-rotate="270" data-scale="1">
+            	
             	<h1 class="h3 slide-title">Poverty and Out-of-Home Placement by Race</h1>
             	<p>The percent of children under five living below the poverty line is especially high for minorities. Black and especially Native American children under age five in Washington are greatly overrepresented in the out-of-home care population. Despite the high poverty rate, young Hispanic children are actually placed at a lower rate than non-Hispanic white children.</p>
+            	<div class="chart-titles">
+            		<h2 class="h6">Percent of children living below the poverty line, by race</h2>
+            		<h2 class="h6">Rate (per 1,000) of children under 5 who were in out-of-home care on April 1, 2014, by race</h2>
+            	</div>
             	<div class="double-wrap">
             		<img src="R/children-under-5-in-poverty.svg" />
-            	</div>
-            	<div class="citation">Source: CA, supplemented by US Census, via POC Data Portal.</div>
-            </div>
-
-            <div id="race" class="step slide" data-x="-3000" data-y="5000" data-z="-3000" data-rotate="270" data-scale="1">
-            	<h1 class="h3 slide-title">Poverty and Out-of-Home Placement by Race</h1>
-            	<p>The percent of children under five living below the poverty line is especially high for minorities. Black and especially Native American children under age five in Washington are greatly overrepresented in the out-of-home care population. Despite the high poverty rate, young Hispanic children are actually placed at a lower rate than non-Hispanic white children.</p>
-            	<div class="double-wrap">
-            		<img class="first" src="R/children-under-5-in-poverty.svg" />
-            		<img class="last" src="R/children-under-5-ooh.svg" />
-            	</div>
-            	<div class="citation">Source: CA, supplemented by US Census, via POC Data Portal.</div>
-            </div>
-
-            <div id="poverty-race" class="step slide" data-x="-3000" data-y="3000" data-z="-3000" data-rotate="270" data-scale="1">
-            	<h1 class="h3 slide-title">Out-of-Home Placement Rates By Race and Poverty</h1>
-            	<p>If, instead of dividing by the total population, we divide by the population below the federal poverty line, then is Non-Hispanic White children and Native American children who have the highest placement rates in out-of-home care.</p>
-            	<div class="double-wrap">
             		<img src="R/children-under-5-ooh.svg" />
             	</div>
+            	<div class="citation">Source: CA, supplemented by US Census, via POC Data Portal.</div>
             </div>
 
              <div id="poverty-race-2" class="step slide" data-x="-3000" data-y="3000" data-z="-3000" data-rotate="270" data-scale="1">
-            	<h1 class="h3 slide-title">Out-of-Home Placement Rates By Race and Poverty</h1>
+             	
+            	<h1 class="h3 slide-title">Out-of-Home Placement Rates By Race and Poverty Level</h1>
             	<p>If, instead of dividing by the total population, we divide by the population below the federal poverty line, then is Non-Hispanic White children and Native American children who have the highest placement rates in out-of-home care.</p>
+            	<div class="chart-titles">
+            		<h2 class="h6">Rate (per 1,000) of children under 5 who were in out-of-home care on April 1, 2014, by race</h2>
+            		<h2 class="h6">Rate (per 1,000 *in poverty*) of children under 5 who were in out-of-home care on April 1, 2014, by race</h2>
+            	</div>
             	<div class="double-wrap">
             		<img src="R/children-under-5-ooh.svg" />
             		<img src="R/children-under-5-ooh-poverty.svg" />
@@ -206,21 +217,19 @@
             </div>
 
             <div id="national-context" class="step menu-entry" data-title="Education, Teen Mothers, WIC" data-x="3000" data-y="3000" data-rotate="270" data-scale="5">
+            	
             	<div class="text-slide">
-            		<h1 class="h3">Title Here</h1>
-            		<p>This slide has not yet been written</p>
+            		<h1 class="h3">WIC and Teen Mothers</h1>
+            		<p>We’ve seen compelling data for individual variables at the state and county levels. Let’s now look at a correlation.</p>
             	</div>
             </div>
 
             <div id="education-wic" class="step" data-x="8000" data-y="3000" data-rotate="270" data-scale="5">
-            	<h1 class="h4 slide-title">Education, Teen Mothers, and WIC</h1>
-            	<div class="chart-titles">
-            		<h2 class="h5">Percentage of Births to Mothers with Less than a High School Education by Percentage of WIC Births</h2>
-            		<h2 class="h5">Percentage of Births to Teen Mothers by Percentage of WIC Births</h2>
-            	</div>
-            	<div class="double-wrap">
-            		<img src="R/lwedBYwic.png" />
+            	
+            	<h1 class="h4 slide-title">Percentage of Births to Teen Mothers by Percentage of WIC Births by County</h1>
+            	<div class="image-and-text">
             		<img src="R/teenBYwic.png" />
+            		<p>It’s no surprise that the percentage of births in a county eligible for WIC---really the percentage of births to low-income mothers---is strongly correlated with births to teenage mothers.</p>
             	</div>
             	<div class="citation">Source: DOH</div>
             </div>
@@ -254,6 +263,7 @@
             </nav>
 		</div>
 
+		<p class="slide-number"></p>
 
 	<!-- Include impress and initialize -->
 		<script src="js/impress.js"></script>
