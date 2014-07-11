@@ -406,25 +406,25 @@ h6, .h6 {
   width: 45%;
 }
 
-/* line 292, ../sass/_elements.scss */
+/* line 293, ../sass/_elements.scss */
 .image-and-text img {
   width: 60%;
 }
-/* line 296, ../sass/_elements.scss */
+/* line 297, ../sass/_elements.scss */
 .image-and-text p {
   width: 35%;
   float: right;
   font-size: 1.5em;
-  padding-top: 6em;
+  padding-top: 5em;
 }
 
-/* line 305, ../sass/_elements.scss */
+/* line 306, ../sass/_elements.scss */
 .social-icons li {
   display: inline-block;
   margin-right: 1em;
   width: 3em;
 }
-/* line 310, ../sass/_elements.scss */
+/* line 311, ../sass/_elements.scss */
 .social-icons li img {
   width: 100%;
 }
