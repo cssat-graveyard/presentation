@@ -32,3 +32,11 @@ teenBYwic (wic_births.R)
 Title: Percentage of Births to Teen Mothers by Percentage of WIC Births
 Source: DOH
 
+ideation.plot
+Title: "Yes" to "During the past 12 months, did you ever seriously consider attempting suicide?  (yes, no)
+Source: Healthy Youth Survey 2012, Grade 10 (DOH)
+
+
+hopeless.plot
+Title: "No" to "When you feel sad or hopeless, are there adults that you can turn to for help?  (I never feel sad or hopeless, yes, no, not sure)
+Source: Healthy Youth Survey 2012, Grade 10 (DOH)
