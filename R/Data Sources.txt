@@ -32,3 +32,7 @@ teenBYwic (wic_births.R)
 Title: Percentage of Births to Teen Mothers by Percentage of WIC Births
 Source: DOH
 
+Nonfatal Injuries By County
+Nonfatal Injuries resulting in Hospitalization by County and Age, 2008-2012; with the corresponding statewide spreadsheet for comparison.
+Source: Washington DOH
+http://www.doh.wa.gov/YouandYourFamily/InjuryandViolencePrevention/Data/WashingtonStateInjuryDataTables.aspx
