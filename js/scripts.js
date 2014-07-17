@@ -35,11 +35,18 @@ $( document ).ready(function() {
 
 // Open/close ToC
 $( document ).ready(function() {
-	$(".contents-menu").click(function() {
-		$('body').toggleClass("menu-active");
+	$(".no-menu .contents-menu").on('touchstart click', function(event) {
+		$('body').removeClass("no-menu");
+		$('body').addClass("menu-active");
+		event.stopPropagation();
 	});
-	$(".close-menu").click(function() {
-		$('body').toggleClass("menu-active");
+	$(".menu-active .contents-menu").on('touchstart click', function(event) {
+		$('body').removeClass("menu-active");
+		$('body').addClass("no-menu");
+	});
+	$(".close-menu").on('touchstart click', function() {
+		$('body').removeClass("menu-active");
+		event.stopPropagation();
 	});
 });
 

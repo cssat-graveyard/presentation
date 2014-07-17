@@ -49,7 +49,7 @@ var population_desc=[{
 	"descrption": "Percentage unemployment among the general population (Bureau of Labor Statistics, 2012)."
 },
 {
-	"id": "population_4",
+	"id": "population_3",
 	"title": "Free/Reduced Lunch",
 	"descrption": "Percentage of enrolled students applying for free or reduced school lunches (Office of the Superintendant of Public Instruction, 2013)."
 }];

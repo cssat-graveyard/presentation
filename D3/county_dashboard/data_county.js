@@ -70,12 +70,6 @@ var titles_county =
    "max": 0.13
   },
   "population_3": {
-   "title": "H.S. Grad Rate",
-   "valueFormat": "p",
-   "min": 0.373056994818653,
-   "max": 0.970588235294118
-  },
-  "population_4": {
    "title": "Free/Reduced Lunch",
    "valueFormat": "p",
    "min": 0.344280121792084,
@@ -408,10 +402,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.775577557755776
-   },
-   {
-    "id": "population_4",
     "statistic": 0.74273127753304
    }
   ]
@@ -701,10 +691,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.732258064516129
-   },
-   {
-    "id": "population_4",
     "statistic": 0.529356060606061
    }
   ]
@@ -1014,10 +1000,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.822875297855441
-   },
-   {
-    "id": "population_4",
     "statistic": 0.490393979637007
    }
   ]
@@ -1327,10 +1309,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.751690821256039
-   },
-   {
-    "id": "population_4",
     "statistic": 0.578303870415077
    }
   ]
@@ -1640,10 +1618,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.440586001085187
-   },
-   {
-    "id": "population_4",
     "statistic": 0.525346724055476
    }
   ]
@@ -1969,10 +1943,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.791026536312849
-   },
-   {
-    "id": "population_4",
     "statistic": 0.423099176814034
    }
   ]
@@ -2298,10 +2268,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.848484848484848
-   },
-   {
-    "id": "population_4",
     "statistic": 0.62800875273523
    }
   ]
@@ -2623,10 +2589,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.813216453135536
-   },
-   {
-    "id": "population_4",
     "statistic": 0.532609984584371
    }
   ]
@@ -2928,10 +2890,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.852207293666027
-   },
-   {
-    "id": "population_4",
     "statistic": 0.630403249202205
    }
   ]
@@ -3257,10 +3215,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.821917808219178
-   },
-   {
-    "id": "population_4",
     "statistic": 0.665178571428571
    }
   ]
@@ -3558,10 +3512,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.713178294573643
-   },
-   {
-    "id": "population_4",
     "statistic": 0.702586675361374
    }
   ]
@@ -3887,10 +3837,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.970588235294118
-   },
-   {
-    "id": "population_4",
     "statistic": 0.507936507936508
    }
   ]
@@ -4216,10 +4162,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.78117998506348
-   },
-   {
-    "id": "population_4",
     "statistic": 0.69751166407465
    }
   ]
@@ -4545,10 +4487,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.736501079913607
-   },
-   {
-    "id": "population_4",
     "statistic": 0.604858083459383
    }
   ]
@@ -4858,10 +4796,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.842261904761905
-   },
-   {
-    "id": "population_4",
     "statistic": 0.377201954767587
    }
   ]
@@ -5163,10 +5097,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.861940298507463
-   },
-   {
-    "id": "population_4",
     "statistic": 0.47550866616428
    }
   ]
@@ -5492,10 +5422,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.823751700508893
-   },
-   {
-    "id": "population_4",
     "statistic": 0.369322406972248
    }
   ]
@@ -5813,10 +5739,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.851321928460342
-   },
-   {
-    "id": "population_4",
     "statistic": 0.360130664673477
    }
   ]
@@ -6122,10 +6044,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.706572769953052
-   },
-   {
-    "id": "population_4",
     "statistic": 0.433333333333333
    }
   ]
@@ -6435,10 +6353,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.862660944206009
-   },
-   {
-    "id": "population_4",
     "statistic": 0.546109016112444
    }
   ]
@@ -6752,10 +6666,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.748815165876777
-   },
-   {
-    "id": "population_4",
     "statistic": 0.574689493118496
    }
   ]
@@ -7081,10 +6991,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.893491124260355
-   },
-   {
-    "id": "population_4",
     "statistic": 0.441419543023821
    }
   ]
@@ -7390,10 +7296,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.735632183908046
-   },
-   {
-    "id": "population_4",
     "statistic": 0.582707229954428
    }
   ]
@@ -7703,10 +7605,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.740506329113924
-   },
-   {
-    "id": "population_4",
     "statistic": 0.662897310513447
    }
   ]
@@ -8012,10 +7910,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.721649484536082
-   },
-   {
-    "id": "population_4",
     "statistic": 0.611567419575633
    }
   ]
@@ -8341,10 +8235,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.80625
-   },
-   {
-    "id": "population_4",
     "statistic": 0.573950091296409
    }
   ]
@@ -8670,10 +8560,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.756935123042506
-   },
-   {
-    "id": "population_4",
     "statistic": 0.472152194211018
    }
   ]
@@ -8999,10 +8885,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.810457516339869
-   },
-   {
-    "id": "population_4",
     "statistic": 0.434420985284709
    }
   ]
@@ -9324,10 +9206,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.71047619047619
-   },
-   {
-    "id": "population_4",
     "statistic": 0.533788497956743
    }
   ]
@@ -9653,10 +9531,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.373056994818653
-   },
-   {
-    "id": "population_4",
     "statistic": 0.492063492063492
    }
   ]
@@ -9982,10 +9856,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.770864596560083
-   },
-   {
-    "id": "population_4",
     "statistic": 0.382711151298186
    }
   ]
@@ -10311,10 +10181,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.804175787169557
-   },
-   {
-    "id": "population_4",
     "statistic": 0.468395985254151
    }
   ]
@@ -10624,10 +10490,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.656609195402299
-   },
-   {
-    "id": "population_4",
     "statistic": 0.647629925756711
    }
   ]
@@ -10953,10 +10815,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.807667731629393
-   },
-   {
-    "id": "population_4",
     "statistic": 0.375541469861237
    }
   ]
@@ -11282,10 +11140,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.818181818181818
-   },
-   {
-    "id": "population_4",
     "statistic": 0.538283062645012
    }
   ]
@@ -11591,10 +11445,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.845132743362832
-   },
-   {
-    "id": "population_4",
     "statistic": 0.568872987477639
    }
   ]
@@ -11920,10 +11770,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.790366972477064
-   },
-   {
-    "id": "population_4",
     "statistic": 0.434581063854444
    }
   ]
@@ -12225,10 +12071,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.904891304347826
-   },
-   {
-    "id": "population_4",
     "statistic": 0.344280121792084
    }
   ]
@@ -12554,10 +12396,6 @@ var data_county =
    },
    {
     "id": "population_3",
-    "statistic": 0.732494529540481
-   },
-   {
-    "id": "population_4",
     "statistic": 0.70988952177071
    }
   ]

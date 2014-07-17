@@ -26,12 +26,12 @@
 	    <!-- Load jQuery -->
 		<script src="js/jquery-2.1.1.min.js"></script>
 	</head>
-	<body class="impress-not-supported">
+	<body class="impress-not-supported no-menu">
 
 	<!-- Fallback message for older browsers -->
 		<div class="fallback-message">
-		    <p>Your browser <b>doesn't support the features required</b> by this presentation, so you are presented with a simplified version.</p>
-	    	<p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.
+		    <p>Your device is too small or your browser is not up-to-date enough to effectively view this data-rich presentation.</p>
+	    	<p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser or a device larger than a mobile phone.
 	    	</p>
 		</div>
 
@@ -106,39 +106,6 @@
 				</div>
 			</div>
 
-			<div id="reading" class="step slide menu-entry" data-title="Child Wellness Nationwide" data-x="-5000" data-y="4000" data-z="-3000" data-scale="1">
-				
-				<h1 class="h3 slide-title">4th Grade Reading Achievement Levels</h1>
-				<p>Percentage of fourth grade public school students reading achievement levels, at or above proficiency, as measured and defined by the National Assessment of Education Progress (NAEP) reading test. Washington ranks 10th highest for reading achievement and is tied with Pennsylvania.</p>
-				<div class="map-wrap">
-					<img src="R/reading-map.png" class="map" />
-					<img src="R/reading-legend.png" class="legend" />
-				</div>
-			</div>
-
-			<div id="teen-births" class="step slide" data-x="-3000" data-y="4000" data-z="-3000" data-scale="1">
-				
-				<h1 class="h3 slide-title">Teen birth rates by race and year</h1>
-				<iframe src="teen-births.html" width="1180" height="700"></iframe>
-				<div class="citation">Source: VitalStats, National Center for Health Statistics, CDC (supplemented by the US Census Bureau), via Kids Count</div>
-			</div>
-
-			<div id="maltreatment" data-title="Child Maltreatment" class="step visualization menu-entry" data-x="-1000" data-y="4000" data-z="-3000" data-scale="1">
-				
-                <h1 class="h3 slide-title">Child Maltreatment</h1>
-                <div class="vis-wrap">
-               		<iframe src="D3/child_maltreatment/maltreatment.html" width="1300" height="650"></iframe>
-               	</div>
-            </div>
-
-            <div id="wa-metrics" class="step slide menu-entry" data-title="Child Welfare in WA" data-x="-1000" data-y="5000" data-z="-3000" data-rotate="90" data-scale="1">
-            	
-            	<div class="text-slide">
-	            	<h1 class="h2">Washington Child Welfare Metrics</h1>
-	            	<p>The Child Welfare Dashboard provides an at-a-glance view of the child welfare system in Washington State - by county, region, and the entire state. The dashboard allows you to quickly see and compare key measurements across the state. </p>
-            	</div>
-            </div>
-
 			<div id="dashboard-1" class="step visualization" data-x="-1000" data-y="7000" data-z="-3000" data-rotate="90" data-scale="1">
 				
 				<h1 class="h3 slide-title">Washington County Comparison</h1>
@@ -152,23 +119,6 @@
 				<h1 class="h3 slide-title">Washington County Comparison</h1>
 				<div class="vis-wrap">
 					<iframe src="D3/county_dashboard/dashboard-2.html" width="1300" height="650"></iframe>
-				</div>
-			</div>
-
-			<div id="age-metrics" class="step menu-entry" data-title="Age and Child Welfare" data-x="-1000" data-y="9000" data-z="-3000" data-rotate="180" data-scale="1">
-				
-				<div class="text-slide">
-					<h1 class="h3">Age and Child Welfare</h1>
-					<p>Age is a major factor in the child welfare system. Logically, this makes sense because younger children require far more attention since they cannot care for themselves. So how exactly does age affect the number of foster care entries or permanency outcomes? </p>
-				</div>
-			</div>
-
-
-			<div id="entries" class="step visualization" data-x="-2000" data-y="9000" data-z="-3000" data-rotate="180" data-scale="1">
-				
-				<h1 class="h3 slide-title">WA Entries into Out-of-Home Care by Age</h1>
-				<div class="vis-wrap">
-					<iframe src="D3/entering_care/care.html" width="1300" height="650"></iframe>
 				</div>
 			</div>
 
@@ -200,38 +150,6 @@
             		<img src="R/children-under-5-ooh.svg" />
             	</div>
             	<div class="citation">Source: CA, supplemented by US Census, via POC Data Portal.</div>
-            </div>
-
-             <div id="poverty-race-2" class="step slide" data-x="-3000" data-y="3000" data-z="-3000" data-rotate="270" data-scale="1">
-             	
-            	<h1 class="h3 slide-title">Out-of-Home Placement Rates By Race and Poverty Level</h1>
-            	<p>If, instead of dividing by the total population, we divide by the population below the federal poverty line, then is Non-Hispanic White children and Native American children who have the highest placement rates in out-of-home care.</p>
-            	<div class="chart-titles">
-            		<h2 class="h6">Rate (per 1,000) of children under 5 who were in out-of-home care on April 1, 2014, by race</h2>
-            		<h2 class="h6">Rate (per 1,000 *in poverty*) of children under 5 who were in out-of-home care on April 1, 2014, by race</h2>
-            	</div>
-            	<div class="double-wrap">
-            		<img src="R/children-under-5-ooh.svg" />
-            		<img src="R/children-under-5-ooh-poverty.svg" />
-            	</div>
-            </div>
-
-            <div id="national-context" class="step menu-entry" data-title="Education, Teen Mothers, WIC" data-x="3000" data-y="3000" data-rotate="270" data-scale="5">
-            	
-            	<div class="text-slide">
-            		<h1 class="h3">WIC and Teen Mothers</h1>
-            		<p>We’ve seen compelling data for individual variables at the state and county levels. Let’s now look at a correlation.</p>
-            	</div>
-            </div>
-
-            <div id="education-wic" class="step" data-x="8000" data-y="3000" data-rotate="270" data-scale="5">
-            	
-            	<h1 class="h4 slide-title">Percentage of Births to Teen Mothers by Percentage of WIC Births by County</h1>
-            	<div class="image-and-text">
-            		<img src="R/teenBYwic.png" />
-            		<p>It’s no surprise that the percentage of births in a county eligible for WIC---really the percentage of births to low-income mothers---is strongly correlated with births to teenage mothers.</p>
-            	</div>
-            	<div class="citation">Source: DOH</div>
             </div>
 
          <div id="credits" class="step" data-x="12000" data-y="3000" data-rotate="270" data-scale="5">

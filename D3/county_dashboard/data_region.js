@@ -63,12 +63,6 @@ var titles_region =
    "max": 0.101060932968003
   },
   "population_3": {
-   "title": "H.S. Grad Rate",
-   "valueFormat": "p",
-   "min": 0.74155427103404,
-   "max": 0.823751700508893
-  },
-  "population_4": {
    "title": "Free/Reduced Lunch",
    "valueFormat": "p",
    "min": 0.369322406972248,
@@ -401,10 +395,6 @@ var data_region =
    },
    {
     "id": "population_3",
-    "statistic": 0.789773224761404
-   },
-   {
-    "id": "population_4",
     "statistic": 0.541003757946124
    }
   ]
@@ -730,10 +720,6 @@ var data_region =
    },
    {
     "id": "population_3",
-    "statistic": 0.768306902985075
-   },
-   {
-    "id": "population_4",
     "statistic": 0.62218315355356
    }
   ]
@@ -1059,10 +1045,6 @@ var data_region =
    },
    {
     "id": "population_3",
-    "statistic": 0.770973344408367
-   },
-   {
-    "id": "population_4",
     "statistic": 0.409467081974778
    }
   ]
@@ -1388,10 +1370,6 @@ var data_region =
    },
    {
     "id": "population_3",
-    "statistic": 0.823751700508893
-   },
-   {
-    "id": "population_4",
     "statistic": 0.369322406972248
    }
   ]
@@ -1717,10 +1695,6 @@ var data_region =
    },
    {
     "id": "population_3",
-    "statistic": 0.781900452488688
-   },
-   {
-    "id": "population_4",
     "statistic": 0.447574448959263
    }
   ]
@@ -2046,10 +2020,6 @@ var data_region =
    },
    {
     "id": "population_3",
-    "statistic": 0.74155427103404
-   },
-   {
-    "id": "population_4",
     "statistic": 0.460316141149876
    }
   ]
@@ -2375,10 +2345,6 @@ var data_region =
    },
    {
     "id": "population_3",
-    "statistic": 0.782284809186754
-   },
-   {
-    "id": "population_4",
     "statistic": 0.456715081184693
    }
   ]

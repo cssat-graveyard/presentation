@@ -84,101 +84,107 @@ ELEMENTS
 These are the basic HTML elements that 
 are not specific to a single slide
 ***************************************/
+@media screen and (max-width: 600px) {
+  /* line 9, ../sass/_elements.scss */
+  .impress-supported #impress {
+    overflow: hidden;
+  }
+}
 /* Basic element styles */
-/* line 9, ../sass/_elements.scss */
+/* line 14, ../sass/_elements.scss */
 body {
   font-family: "PT Sans", sans-serif;
   min-height: 740px;
 }
 
-/* line 14, ../sass/_elements.scss */
+/* line 19, ../sass/_elements.scss */
 button:focus {
   outline: none;
 }
 
-/* line 16, ../sass/_elements.scss */
+/* line 21, ../sass/_elements.scss */
 b, strong {
   font-weight: bold;
 }
 
-/* line 17, ../sass/_elements.scss */
+/* line 22, ../sass/_elements.scss */
 i, em {
   font-style: italic;
 }
 
-/* line 19, ../sass/_elements.scss */
+/* line 24, ../sass/_elements.scss */
 a {
   color: #6db33f;
 }
 
-/* line 23, ../sass/_elements.scss */
+/* line 28, ../sass/_elements.scss */
 a:focus, a:hover {
   color: #5b8067;
 }
 
-/* line 27, ../sass/_elements.scss */
+/* line 32, ../sass/_elements.scss */
 p {
   line-height: 1.5em;
   font-size: 18px;
   color: #444444;
 }
 
-/* line 33, ../sass/_elements.scss */
+/* line 38, ../sass/_elements.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Arvo", serif;
   margin-bottom: .5em;
   color: #5b8067;
 }
 
-/* line 39, ../sass/_elements.scss */
+/* line 44, ../sass/_elements.scss */
 h1, .h1 {
   font-size: 5em;
 }
 
-/* line 43, ../sass/_elements.scss */
+/* line 48, ../sass/_elements.scss */
 h2, .h2 {
   font-size: 4em;
 }
 
-/* line 47, ../sass/_elements.scss */
+/* line 52, ../sass/_elements.scss */
 h3, .h3 {
   font-size: 2.8em;
 }
 
-/* line 51, ../sass/_elements.scss */
+/* line 56, ../sass/_elements.scss */
 h4, .h4 {
   font-size: 2em;
 }
 
-/* line 55, ../sass/_elements.scss */
+/* line 60, ../sass/_elements.scss */
 h5, .h5 {
   font-size: 1.5em;
 }
 
-/* line 59, ../sass/_elements.scss */
+/* line 64, ../sass/_elements.scss */
 h6, .h6 {
   font-size: 1.2em;
 }
 
-/* line 63, ../sass/_elements.scss */
+/* line 68, ../sass/_elements.scss */
 .slide-title {
   margin-bottom: .3em;
   padding-bottom: .3em;
   border-bottom: 1px solid #eeeeee;
 }
 
-/* line 69, ../sass/_elements.scss */
+/* line 74, ../sass/_elements.scss */
 .chart-titles {
   width: 1180px;
   padding-top: 2em;
 }
 @media screen and (max-width: 800px) {
-  /* line 69, ../sass/_elements.scss */
+  /* line 74, ../sass/_elements.scss */
   .chart-titles {
     width: 800px;
   }
 }
-/* line 77, ../sass/_elements.scss */
+/* line 82, ../sass/_elements.scss */
 .chart-titles h2 {
   width: 45%;
   display: inline-block;
@@ -187,7 +193,7 @@ h6, .h6 {
   color: #444444;
 }
 
-/* line 86, ../sass/_elements.scss */
+/* line 91, ../sass/_elements.scss */
 .button {
   background: #3b6e8f;
   border: 0;
@@ -197,7 +203,7 @@ h6, .h6 {
   padding: .3em .5em;
 }
 
-/* line 95, ../sass/_elements.scss */
+/* line 100, ../sass/_elements.scss */
 .image-bg {
   position: absolute;
   left: 0;
@@ -207,7 +213,7 @@ h6, .h6 {
 }
 
 /* Previous and next buttons */
-/* line 105, ../sass/_elements.scss */
+/* line 110, ../sass/_elements.scss */
 .nav-button {
   border: 0;
   width: 60px;
@@ -217,12 +223,12 @@ h6, .h6 {
   opacity: .5;
 }
 
-/* line 114, ../sass/_elements.scss */
+/* line 119, ../sass/_elements.scss */
 .nav-button:hover {
   opacity: 1;
 }
 
-/* line 118, ../sass/_elements.scss */
+/* line 123, ../sass/_elements.scss */
 #prev {
   position: absolute;
   bottom: 10px;
@@ -231,7 +237,7 @@ h6, .h6 {
   background-size: 80px;
 }
 
-/* line 126, ../sass/_elements.scss */
+/* line 131, ../sass/_elements.scss */
 #next {
   position: absolute;
   bottom: 10px;
@@ -241,7 +247,7 @@ h6, .h6 {
 }
 
 /* Slide-out menu */
-/* line 136, ../sass/_elements.scss */
+/* line 141, ../sass/_elements.scss */
 .contents-menu {
   color: #f4f4f4;
   background: #3b6e8f;
@@ -251,17 +257,17 @@ h6, .h6 {
   top: 10px;
   right: 5px;
   pointer-events: auto;
+  /*	&.mobile {
+  		display: none;
+  	}
+  */
 }
-/* line 146, ../sass/_elements.scss */
+/* line 151, ../sass/_elements.scss */
 .contents-menu span {
   font-weight: bold;
 }
-/* line 150, ../sass/_elements.scss */
-.contents-menu.mobile {
-  display: none;
-}
 
-/* line 156, ../sass/_elements.scss */
+/* line 161, ../sass/_elements.scss */
 .contents {
   background: rgba(244, 244, 244, 0.9);
   line-height: 1.5em;
@@ -278,7 +284,7 @@ h6, .h6 {
   -o-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
-/* line 172, ../sass/_elements.scss */
+/* line 177, ../sass/_elements.scss */
 .contents a {
   color: #3b6e8f;
   text-decoration: none;
@@ -287,7 +293,7 @@ h6, .h6 {
   padding: .5em 1em;
   line-height: 2.5em;
 }
-/* line 181, ../sass/_elements.scss */
+/* line 186, ../sass/_elements.scss */
 .contents .h3 {
   background: #3b6e8f;
   font-size: 1em;
@@ -296,7 +302,7 @@ h6, .h6 {
   padding: .5em;
   margin: 0;
 }
-/* line 190, ../sass/_elements.scss */
+/* line 195, ../sass/_elements.scss */
 .contents button.close-menu {
   position: absolute;
   top: 4px;
@@ -308,7 +314,7 @@ h6, .h6 {
   border: 0;
   overflow: visible;
 }
-/* line 201, ../sass/_elements.scss */
+/* line 206, ../sass/_elements.scss */
 .contents button.close-menu img {
   width: 25px;
   height: 25px;
@@ -320,45 +326,45 @@ h6, .h6 {
   background: #444444;
   z-index: 1000;
 }
-/* line 214, ../sass/_elements.scss */
+/* line 219, ../sass/_elements.scss */
 .contents .navlinks li {
   border-bottom: 1px solid #3b6e8f;
   background: rgba(244, 244, 244, 0.9);
 }
-/* line 218, ../sass/_elements.scss */
+/* line 223, ../sass/_elements.scss */
 .contents .navlinks li:hover {
   background: #4a8ab3;
   cursor: pointer;
 }
-/* line 222, ../sass/_elements.scss */
+/* line 227, ../sass/_elements.scss */
 .contents .navlinks li:hover a {
   color: #f4f4f4;
 }
-/* line 226, ../sass/_elements.scss */
+/* line 231, ../sass/_elements.scss */
 .contents .external-links li {
   border-bottom: 1px solid #3b6e8f;
 }
-/* line 229, ../sass/_elements.scss */
+/* line 234, ../sass/_elements.scss */
 .contents .external-links li:hover {
   background: #4a8ab3;
   cursor: pointer;
 }
-/* line 233, ../sass/_elements.scss */
+/* line 238, ../sass/_elements.scss */
 .contents .external-links li:hover a {
   color: #f4f4f4;
 }
-/* line 236, ../sass/_elements.scss */
+/* line 241, ../sass/_elements.scss */
 .contents .external-links li:last-child {
   border-bottom: 0;
 }
 
-/* line 242, ../sass/_elements.scss */
+/* line 247, ../sass/_elements.scss */
 .menu-active .contents {
   right: 0;
 }
 
 /* Slide numbers */
-/* line 248, ../sass/_elements.scss */
+/* line 253, ../sass/_elements.scss */
 .slide-number {
   position: absolute;
   left: 10px;
@@ -367,7 +373,7 @@ h6, .h6 {
   font-size: 1.5em;
 }
 
-/* line 259, ../sass/_elements.scss */
+/* line 264, ../sass/_elements.scss */
 #introduction .slide-number,
 #acknowledgements .slide-number,
 #credits .slide-number {
@@ -375,42 +381,42 @@ h6, .h6 {
 }
 
 /* Image and citation elements */
-/* line 265, ../sass/_elements.scss */
+/* line 270, ../sass/_elements.scss */
 .citation {
   position: absolute;
   bottom: 0;
   right: 0;
 }
 
-/* line 271, ../sass/_elements.scss */
+/* line 276, ../sass/_elements.scss */
 .image-wrap {
   width: 100%;
 }
-/* line 274, ../sass/_elements.scss */
+/* line 279, ../sass/_elements.scss */
 .image-wrap img {
   max-height: 600px;
 }
 
-/* line 279, ../sass/_elements.scss */
+/* line 284, ../sass/_elements.scss */
 .double-wrap {
   width: 1180px;
 }
 @media screen and (max-width: 800px) {
-  /* line 279, ../sass/_elements.scss */
+  /* line 284, ../sass/_elements.scss */
   .double-wrap {
     width: 800px;
   }
 }
-/* line 286, ../sass/_elements.scss */
+/* line 291, ../sass/_elements.scss */
 .double-wrap img {
   width: 45%;
 }
 
-/* line 293, ../sass/_elements.scss */
+/* line 298, ../sass/_elements.scss */
 .image-and-text img {
   width: 60%;
 }
-/* line 297, ../sass/_elements.scss */
+/* line 302, ../sass/_elements.scss */
 .image-and-text p {
   width: 35%;
   float: right;
@@ -418,13 +424,13 @@ h6, .h6 {
   padding-top: 5em;
 }
 
-/* line 306, ../sass/_elements.scss */
+/* line 311, ../sass/_elements.scss */
 .social-icons li {
   display: inline-block;
   margin-right: 1em;
   width: 3em;
 }
-/* line 311, ../sass/_elements.scss */
+/* line 316, ../sass/_elements.scss */
 .social-icons li img {
   width: 100%;
 }
@@ -439,21 +445,25 @@ the presentation.
 /* line 9, ../sass/_messages.scss */
 .fallback-message {
   text-align: center;
-  margin-top: 15%;
-  font-size: 2em;
-  color: #f4f4f4;
-  background: #98a094;
-  background: rgba(152, 160, 148, 0.7);
-  padding: 1em;
+  width: 1300px;
+  background: rgba(68, 68, 68, 0.9);
+  padding: 10em 0 10em 0;
+  height: 1200px;
+  z-index: 5000;
+  position: absolute;
 }
 /* line 18, ../sass/_messages.scss */
 .fallback-message p {
-  padding: .5em 0;
+  padding: .5em;
+  font-size: 72px;
+  color: #f4f4f4;
 }
 
-/* line 23, ../sass/_messages.scss */
-.impress-supported .fallback-message {
-  display: none;
+@media screen and (min-width: 600px) {
+  /* line 25, ../sass/_messages.scss */
+  .impress-supported .fallback-message {
+    display: none;
+  }
 }
 
 /***************************

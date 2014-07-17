@@ -5,6 +5,11 @@ These are the basic HTML elements that
 are not specific to a single slide
 ***************************************/
 
+@media screen and (max-width: 600px){
+	.impress-supported #impress{
+		overflow: hidden;
+	}
+}
 /* Basic element styles */
 body {
 	font-family: $sans-serif;
@@ -147,10 +152,10 @@ h6, .h6 {
 		font-weight: bold;
 	}
 
-	&.mobile {
+/*	&.mobile {
 		display: none;
 	}
-
+*/
 }
 
 .contents {

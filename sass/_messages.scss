@@ -8,18 +8,23 @@ the presentation.
 
 .fallback-message {
 	text-align: center;
-	margin-top: 15%;
-	font-size: 2em;
-	color: $white;
-	background: $brown;
-	background: rgba($brown, .7);
-	padding: 1em;
+	width: 1300px;
+	background: rgba($dark-gray, .9);
+	padding: 10em 0 10em 0;
+	height: 1200px;
+	z-index: 5000;
+	position: absolute;
 
 	p {
-		padding: .5em 0;
+		padding: .5em;
+		font-size: 72px;
+		color: $white;
 	}
 }
 
 .impress-supported .fallback-message {
-    display: none;
+
+	@media screen and (min-width: 600px){
+		display: none;
+	}
 }
