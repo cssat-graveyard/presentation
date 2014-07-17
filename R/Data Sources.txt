@@ -20,13 +20,10 @@ Title: Rate (per 1,000) of children under 5 who were in out-of-home care on Apri
 Source: CA, supplemented by US Census, via POC Data Portal.
 Note: It might be nice to display this next to the children-under-5-in-poverty graph (perhaps first that one, then slide it over and add this one). Washington only.
 
-<<<<<<< HEAD
-=======
 children-under-5-ooh-poverty
 Title: Rate (per 1,000 *in poverty*) of children under 5 who were in out-of-home care on April 1, 2014, by race.
 Source: Calculated based on previous two graphs.
 
->>>>>>> origin/data
 lwedBYwic (see wic_births.R)
 Title: Percentage of Births to Mothers with Less than a High School Education by Percentage of WIC Births
 Source: DOH
@@ -34,7 +31,17 @@ Source: DOH
 teenBYwic (wic_births.R)
 Title: Percentage of Births to Teen Mothers by Percentage of WIC Births
 Source: DOH
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/data
+Nonfatal Injuries By County
+Nonfatal Injuries resulting in Hospitalization by County and Age, 2008-2012; with the corresponding statewide spreadsheet for comparison.
+Source: Washington DOH
+http://www.doh.wa.gov/YouandYourFamily/InjuryandViolencePrevention/Data/WashingtonStateInjuryDataTables.aspx
+
+ideation.plot
+Title: "Yes" to "During the past 12 months, did you ever seriously consider attempting suicide?  (yes, no)
+Source: Healthy Youth Survey 2012, Grade 10 (DOH)
+
+hopeless.plot
+Title: "No" to "When you feel sad or hopeless, are there adults that you can turn to for help?  (I never feel sad or hopeless, yes, no, not sure)
+Source: Healthy Youth Survey 2012, Grade 10 (DOH)
+
