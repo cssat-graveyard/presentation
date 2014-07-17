@@ -42,9 +42,10 @@ $( document ).ready(function() {
 	});
 	$(".menu-active .contents-menu").on('touchstart click', function(event) {
 		$('body').removeClass("menu-active");
-		$('body').addClass("no-menu");
+		$('body').addClass("menu-active");
+		event.stopPropagation();
 	});
-	$(".close-menu").on('touchstart click', function() {
+	$(".close-menu").on('touchstart click', function(event) {
 		$('body').removeClass("menu-active");
 		event.stopPropagation();
 	});

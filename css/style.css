@@ -760,7 +760,19 @@ visualization styling
   margin-left: 15%;
 }
 
-/* line 29, ../sass/_visualizations.scss */
+/* line 30, ../sass/_visualizations.scss */
+.dashboard_2 #radios {
+  margin-right: 220px;
+}
+/* line 35, ../sass/_visualizations.scss */
+.dashboard_2 #t_trend {
+  position: absolute;
+  top: 2em;
+  right: 250px;
+  width: 20%;
+}
+
+/* line 43, ../sass/_visualizations.scss */
 #dashboard_text {
   position: absolute;
   top: 8em;
@@ -768,17 +780,17 @@ visualization styling
   width: 20%;
 }
 
-/* line 37, ../sass/_visualizations.scss */
+/* line 51, ../sass/_visualizations.scss */
 .spaghetti #filters {
   font-family: "PT Sans", sans-serif;
   margin-left: 1.5em;
 }
-/* line 41, ../sass/_visualizations.scss */
+/* line 55, ../sass/_visualizations.scss */
 .spaghetti #filters li {
   margin: 1.3em 0;
   display: inline-block;
 }
-/* line 46, ../sass/_visualizations.scss */
+/* line 60, ../sass/_visualizations.scss */
 .spaghetti #filters a {
   font-size: 1em;
   width: 100%;
@@ -786,39 +798,39 @@ visualization styling
   color: #f4f4f4;
   border-radius: 3px;
 }
-/* line 53, ../sass/_visualizations.scss */
+/* line 67, ../sass/_visualizations.scss */
 .spaghetti #filters a.FW {
   background: #c0392b;
 }
-/* line 56, ../sass/_visualizations.scss */
+/* line 70, ../sass/_visualizations.scss */
 .spaghetti #filters a.SW {
   background: #d35400;
 }
-/* line 59, ../sass/_visualizations.scss */
+/* line 73, ../sass/_visualizations.scss */
 .spaghetti #filters a.ME {
   background: #f39c12;
 }
-/* line 62, ../sass/_visualizations.scss */
+/* line 76, ../sass/_visualizations.scss */
 .spaghetti #filters a.SE {
   background: #27ae60;
 }
-/* line 65, ../sass/_visualizations.scss */
+/* line 79, ../sass/_visualizations.scss */
 .spaghetti #filters a.MT {
   background: #17a88c;
 }
-/* line 68, ../sass/_visualizations.scss */
+/* line 82, ../sass/_visualizations.scss */
 .spaghetti #filters a.GL {
   background: #2980b9;
 }
-/* line 71, ../sass/_visualizations.scss */
+/* line 85, ../sass/_visualizations.scss */
 .spaghetti #filters a.GP {
   background: #8e44ad;
 }
-/* line 74, ../sass/_visualizations.scss */
+/* line 88, ../sass/_visualizations.scss */
 .spaghetti #filters a.NE {
   background: #34495e;
 }
-/* line 80, ../sass/_visualizations.scss */
+/* line 94, ../sass/_visualizations.scss */
 .spaghetti #blurb {
   margin-top: 3em;
   padding: 1em;
@@ -827,7 +839,7 @@ visualization styling
   position: relative;
   border-radius: 3px;
 }
-/* line 88, ../sass/_visualizations.scss */
+/* line 102, ../sass/_visualizations.scss */
 .spaghetti #blurb:after {
   position: absolute;
   content: "";
@@ -839,24 +851,24 @@ visualization styling
   border-bottom: 30px solid transparent;
   border-left: 50px solid #eeeeee;
 }
-/* line 101, ../sass/_visualizations.scss */
+/* line 115, ../sass/_visualizations.scss */
 .spaghetti .directions {
   color: #888888;
   margin-bottom: 0;
   padding-left: 1.5em;
 }
 
-/* line 108, ../sass/_visualizations.scss */
+/* line 122, ../sass/_visualizations.scss */
 .map-wrap {
   clear: both;
 }
-/* line 111, ../sass/_visualizations.scss */
+/* line 125, ../sass/_visualizations.scss */
 .map-wrap .map {
   width: 80%;
   margin-top: 2em;
   float: left;
 }
-/* line 117, ../sass/_visualizations.scss */
+/* line 131, ../sass/_visualizations.scss */
 .map-wrap .legend {
   position: absolute;
   bottom: 5em;
@@ -864,17 +876,17 @@ visualization styling
   width: 100px;
 }
 
-/* line 125, ../sass/_visualizations.scss */
+/* line 139, ../sass/_visualizations.scss */
 .toggles {
   margin-top: 2em;
   width: 170px;
   float: right;
 }
-/* line 130, ../sass/_visualizations.scss */
+/* line 144, ../sass/_visualizations.scss */
 .toggles .controls {
   padding-bottom: 1em;
 }
-/* line 133, ../sass/_visualizations.scss */
+/* line 147, ../sass/_visualizations.scss */
 .toggles .controls li {
   padding: .5em 1em;
   margin: .5em;
@@ -883,13 +895,13 @@ visualization styling
   text-align: center;
   cursor: pointer;
 }
-/* line 141, ../sass/_visualizations.scss */
+/* line 155, ../sass/_visualizations.scss */
 .toggles .controls li.highlighted {
   background: #a3dce6;
   color: #3b6e8f;
 }
 
-/* line 149, ../sass/_visualizations.scss */
+/* line 163, ../sass/_visualizations.scss */
 #birth-maps {
   height: 700px;
 }
