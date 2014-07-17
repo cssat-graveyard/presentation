@@ -45,3 +45,56 @@ hopeless.plot
 Title: "No" to "When you feel sad or hopeless, are there adults that you can turn to for help?  (I never feel sad or hopeless, yes, no, not sure)
 Source: Healthy Youth Survey 2012, Grade 10 (DOH)
 
+b.feed.ages.plot
+Source: PRAMS Survey, no year given
+Notes: No year noted in the file, if you need more info, DOH has a page on PRAMS:
+http://www.doh.wa.gov/DataandStatisticalReports/HealthBehaviors/PregnancyRiskAssessmentMonitoringSystem.aspx
+
+b.feed.race.plot
+Source: PRAMS Survey, no year given
+Notes: No year noted in the file, if you need more info, DOH has a page on PRAMS:
+http://www.doh.wa.gov/DataandStatisticalReports/HealthBehaviors/PregnancyRiskAssessmentMonitoringSystem.aspx
+
+dropout.race.plot
+Source: WA OSPI, Graduation and Dropout Statisitcs Annual Report, 2012-2013
+Notes: on-Time Graduation Rate by race
+
+dropout.ses.plot
+Source: WA OSPI, Graduation and Dropout Statisitcs Annual Report, 2012-2013
+Notes: on-Time Graduation Rate
+
+preg.stress.age.plot
+Source: PRAMS Survey, no year given
+Notes: In the excel file sent to us, there is a list of questions that Teresa asked if we could include on a technical notes slide at the end.
+
+preg.stress.race.plot
+Source: PRAMS Survey, no year given
+Notes: In the excel file sent to us, there is a list of questions that Teresa asked if we could include on a technical notes slide at the end.
+
+race.parenting.plot
+Source: Washington State data from the 2011-2012 National Survey of Children's Health (NSCH)
+Original Survey Question: Survey Question: Is there someone that you can turn to for day-to-day emotional help with parenthood/raising children?
+
+ses.parenting.plot
+Source: Washington State data from the 2011-2012 National Survey of Children's Health (NSCH) 
+Original Survey Question: Survey Question: Is there someone that you can turn to for day-to-day emotional help with parenthood/raising children?
+
+read.race.plot
+Source: WA OSPI, Washington State Report Card, 2012-2013
+Notes: Met 4th grade reading standard by race
+
+read.ses.plot
+Source: WA OSPI, Washington State Report Card, 2012-2013
+Notes: Met 4th grade reading standard 
+
+teen.birth.age.plot
+Source: Washington State Birht Certificate, WA DOH
+Notes: Teen births by age, no year listed for this data
+
+teen.birth.race.plot
+Source: Washington State Birht Certificate, WA DOH
+Notes: Teen births by race, no year listed for this data
+
+
+
+
