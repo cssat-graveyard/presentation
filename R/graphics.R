@@ -273,20 +273,21 @@ pov$Data <- as.numeric(str_replace_all(pov$Data, "\\*|%", ""))
 pov$Data <- ifelse(pov$Data > 1, pov$Data / 100, pov$Data)
 
 pov.for.plot <- pov %>% filter(!str_detect(Race, "Island|Some|Asian|Total"), Race != "White") %>%
+    mutate(Race = str_replace(Race, "panic Am", "panic\nAm")) %>%
     mutate(Race = factor(Race)) %>%
     mutate(Race = reorder(Race, X = -Data))
 
 pov.plot <- ggplot(pov.for.plot, aes(x = Race, y = Data)) +
     geom_bar(stat = "identity", fill = poc_colors[1]) +
     labs(x = "", y = "") +
-    geom_text(aes(label = percent(Data), y = Data - .02), color = "white", family = sel.font) +
+    geom_text(aes(label = percent(Data), y = .02), color = "white", family = sel.font, size = 8) +
     scale_y_continuous(labels = percent_format()) +
-    theme_bw(base_family = sel.font) +
-    theme(axis.text.x = element_text(angle = -25, hjust = 0),
-          plot.margin = unit(c(1, 3, 1, 1) * 5, "mm"),
+    theme_bw(base_family = sel.font, base_size = 14) +
+    theme(axis.text.x = element_text(angle = -25, hjust = 0, size = rel(1.2)),
+          plot.margin = unit(c(1, 4, 1, 1) * 5, "mm"),
           panel.border = element_rect(size = 1, colour = poc_colors[1]),
+          panel.grid = element_blank(),
           axis.ticks = element_line(size = 1, colour = poc_colors[1]))
-
 
 ggsave("children-under-5-in-poverty.pdf", pov.plot, width = 7, height = 7)
 embed_fonts("children-under-5-in-poverty.pdf")    
@@ -337,13 +338,14 @@ place <- place.raw %>%
 
 ooh.by.race <- ggplot(place, aes(x = race.ethnicity, y = placed)) +
     geom_bar(stat = "identity", fill = poc_colors[1]) +
-    labs(x = "", y = "Rate (per 1,000)") +
-    geom_text(aes(label = round(placed, 1), y = placed - 1), color = "white", family = sel.font) +
+    labs(x = "", y = "Rate (per 1,000 Children Under 5)\n") +
+    geom_text(aes(label = round(placed, 1), y = 1.5), color = "white", family = sel.font, size = 8) +
     #scale_y_continuous(labels = percent_format()) +
-    theme_bw(base_family = sel.font) +
-    theme(axis.text.x = element_text(angle = -25, hjust = 0),
-          plot.margin = unit(c(1, 3, 1, 1) * 5, "mm"),
+    theme_bw(base_family = sel.font, base_size = 14) +
+    theme(axis.text.x = element_text(angle = -25, hjust = 0, size = rel(1.2)),
+          plot.margin = unit(c(1, 4, 2.1, 1) * 5, "mm"),
           panel.border = element_rect(size = 1, colour = poc_colors[1]),
+          panel.grid = element_blank(),
           axis.ticks = element_line(size = 1, colour = poc_colors[1]))
 
 
@@ -405,3 +407,4 @@ mal.plot <- ggplot(mal, aes(x = race.ethnicity, y = rate, fill = fl_all)) +
           panel.grid = element_blank())
 
 ggsave("maltreatment-by-race-wa.pdf", mal.plot, height = 7, width = 7)
+embed_fonts("maltreatment-by-race-wa.pdf")
