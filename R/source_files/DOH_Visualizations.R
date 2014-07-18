@@ -192,10 +192,10 @@ teen.birth.race
 
 teen.birth.race.plot <- ggplot(teen.birth.race, aes(x = raceeth, y = rate))+
   geom_bar(stat = "identity", fill = "#87A318")+
-  labs(x = "Race/Ethnicity", y = "Rate (per 1000 females)", title = "Teen Births (Ages 15-19)\nWashington, 2012")+
+  labs(x = "Race/Ethnicity", y = "Births (per 1000 females)", title = "Teen Births (Ages 15-19)\nWashington, 2012")+
   geom_text(aes(label = rate), y = 1, color = "white", family = sel.font)+
   theme_bw(base_family = sel.font, base_size = 14)+
-  scale_x_discrete(labels=c("American Indian/\nAlaksan Native", "Asian", "Black", "Hispanic", "Multi-\nRacial", "Pacific\nIslander", "White"))+                 
+  scale_x_discrete(labels=c("American Indian/\nAlaska Native", "Asian", "Black", "Hispanic", "Multi-\nRacial", "Pacific\nIslander", "White"))+                 
   theme(axis.text.x = element_text(angle = 0, hjust = .5),
         panel.border = element_rect(size = 2, color = "#37516A"),
         axis.ticks = element_line(size = 1, color = "#37516A"),
@@ -362,7 +362,7 @@ b.feed.race.plot <- ggplot(b.feed.race, aes(x = raceeth, y = percent, fill = myc
   labs(x = "Race/Ethnicity", y = "Percent", title = "Breastfed 8 or more Weeks")+
   geom_text(aes(label = percent(percent)), y = .02, color = "white", family = sel.font)+
   scale_y_continuous(labels = percent_format())+
-  scale_x_discrete(labels=c("All Races\nCombined", "Hispanic", "American\nIndian/\nAlaksan Native", 
+  scale_x_discrete(labels=c("All Races\nCombined", "Hispanic", "American\nIndian/\nAlaska Native", 
     "Asian", "Black", "Pacific\nIslander", "White"))+
   theme_bw(base_family = sel.font, base_size = 14)+
   scale_fill_manual(values = c("#87A318", "#37516A"), guide = F)+
@@ -433,7 +433,7 @@ preg.stress.race.plot <- ggplot(preg.stress.race, aes(x = raceeth, y = percent, 
   labs(x = "Race/Ethnicity", y = "Percent", title = "6+ Stressors Reported During Pregnancy")+
   geom_text(aes(label = percent(percent)), y = .005, color = "white", family = sel.font, size = 5)+
   scale_y_continuous(labels = percent_format())+
-  scale_x_discrete(labels=c("All Races Combined", "Hispanic", "American Indian/\nAlaskan Native", "Black", "White"))+
+  scale_x_discrete(labels=c("All Races Combined", "Hispanic", "American Indian/\nAlaska Native", "Black", "White"))+
   theme_bw(base_family = sel.font, base_size = 12)+
   scale_fill_manual(values = c("#87A318", "#37516A"), guide = F)+
   theme(axis.text.x = element_text(angle = 0, hjust = .5),
