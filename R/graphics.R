@@ -393,10 +393,10 @@ mal <- mal.raw %>% format_sp() %>%
     
 mal.plot <- ggplot(mal, aes(x = race.ethnicity, y = rate, fill = fl_all)) +
     geom_bar(stat = "identity") +
-    geom_text(aes(label = rate, y = 1, color = fl_all), family = sel.font) +
+    geom_text(aes(label = round(rate, 1), y = 1, color = fl_all), family = sel.font, size = 8) +
     scale_color_manual(values = c("white", "black"), guide = F) +
     scale_fill_manual(values = poc_colors[1:2], guide = F) +
-    labs(x = "", y = "Rate (per 1,000)\n") +
+    labs(x = "", y = "Rate (per 1,000 Households with Children)\n") +
     theme_bw(base_family = sel.font, base_size = 16) +
     theme(axis.text.x = element_text(angle = -25, hjust = 0, size = rel(1.2)),
           plot.margin = unit(c(1, 1, 1, 1) * 5, "mm"),
