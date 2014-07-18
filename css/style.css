@@ -654,14 +654,14 @@ individual steps
 #acknowledgements .gallery {
   width: 1180px;
   text-align: center;
-  padding-bottom: 2em;
+  padding-bottom: 4em;
 }
 /* line 137, ../sass/_slides.scss */
 #acknowledgements .gallery .tile {
   width: 25%;
   padding-right: 5%;
   display: inline-block;
-  overflow: hidden;
+  max-height: 100px;
 }
 /* line 143, ../sass/_slides.scss */
 #acknowledgements .gallery .tile img {
@@ -669,118 +669,131 @@ individual steps
   width: 100%;
 }
 
-/* line 153, ../sass/_slides.scss */
+/* line 152, ../sass/_slides.scss */
+#agenda p {
+  font-size: 2em;
+  padding-top: 1em;
+}
+/* line 157, ../sass/_slides.scss */
+#agenda .num {
+  color: #f4f4f4;
+  background: #5b8067;
+  padding: .2em .5em;
+  border-radius: 50%;
+}
+
+/* line 167, ../sass/_slides.scss */
 #questions .questions {
   width: 45%;
   float: left;
   padding-top: 2em;
 }
-/* line 159, ../sass/_slides.scss */
+/* line 173, ../sass/_slides.scss */
 #questions .image {
   width: 50%;
   float: right;
   padding-top: 2em;
 }
-/* line 164, ../sass/_slides.scss */
+/* line 178, ../sass/_slides.scss */
 #questions .image img {
   width: 100%;
 }
-/* line 169, ../sass/_slides.scss */
+/* line 183, ../sass/_slides.scss */
 #questions .question {
   font-size: 2em;
   line-height: 1.2em;
   margin-bottom: 1.5em;
 }
-/* line 174, ../sass/_slides.scss */
+/* line 188, ../sass/_slides.scss */
 #questions .question span {
   font-weight: bold;
   font-size: 1.1em;
 }
 
-/* line 181, ../sass/_slides.scss */
+/* line 195, ../sass/_slides.scss */
 .spaghetti {
   padding-left: 0;
   margin-left: 0;
   overflow: hidden;
 }
-/* line 186, ../sass/_slides.scss */
+/* line 200, ../sass/_slides.scss */
 .spaghetti h1 {
   margin-bottom: .2em;
 }
-/* line 190, ../sass/_slides.scss */
+/* line 204, ../sass/_slides.scss */
 .spaghetti h2 {
   font-size: 2em;
 }
-/* line 192, ../sass/_slides.scss */
+/* line 206, ../sass/_slides.scss */
 .spaghetti .data-contents {
   padding-top: 1em;
   width: 1300px;
 }
-/* line 196, ../sass/_slides.scss */
+/* line 210, ../sass/_slides.scss */
 .spaghetti .description {
   float: left;
   width: 300px;
 }
-/* line 201, ../sass/_slides.scss */
+/* line 215, ../sass/_slides.scss */
 .spaghetti .visualization-right {
   float: right;
   width: 930px;
 }
 
-/* line 207, ../sass/_slides.scss */
+/* line 221, ../sass/_slides.scss */
 #teen-births {
   overflow: hidden;
 }
 
-/* line 211, ../sass/_slides.scss */
+/* line 225, ../sass/_slides.scss */
 #birth-maps {
   overflow: hidden;
   margin-left: -3em;
 }
-/* line 214, ../sass/_slides.scss */
+/* line 228, ../sass/_slides.scss */
 #birth-maps .maps {
   float: left;
   width: 80%;
   overflow: hidden;
   height: 500px;
 }
-/* line 220, ../sass/_slides.scss */
+/* line 234, ../sass/_slides.scss */
 #birth-maps .maps img {
   display: block;
   width: 100%;
   margin-top: -50px;
 }
 
-/* line 230, ../sass/_slides.scss */
+/* line 244, ../sass/_slides.scss */
 #sources ul {
   margin-top: 1em;
   text-align: center;
 }
-/* line 234, ../sass/_slides.scss */
+/* line 248, ../sass/_slides.scss */
 #sources ul li {
   font-size: 1.5em;
   padding: .5em 0;
 }
-/* line 240, ../sass/_slides.scss */
+/* line 254, ../sass/_slides.scss */
 #sources .text-slide {
   margin-top: 10%;
 }
 
-/* line 246, ../sass/_slides.scss */
+/* line 260, ../sass/_slides.scss */
 #credits .text-slide p {
   padding-bottom: 1em;
 }
 
-/* line 252, ../sass/_slides.scss */
+/* line 266, ../sass/_slides.scss */
 #committee h2 {
   padding-top: 1em;
 }
 
-/* line 258, ../sass/_slides.scss */
+/* line 272, ../sass/_slides.scss */
 #notes ul {
   margin-left: 3em;
 }
-/* line 261, ../sass/_slides.scss */
+/* line 275, ../sass/_slides.scss */
 #notes ul li {
   font-size: 1.1em;
   line-height: 1.5em;

@@ -13,7 +13,7 @@
 	    <!-- Fonts and styles -->
 	    <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
 	    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-	    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	    <link href="css/font-awesome.css" rel="stylesheet">
 		
 		<link href="D3/county_dashboard/dashboard.css" rel="stylesheet" type="text/css" />
         <link href="css/maltreatment.css" rel="stylesheet" type="text/css">
@@ -38,7 +38,7 @@
 	<!-- Wrapper for Impress presentation -->
 		<div id="impress" class="presentation">
 
-			<div id="introduction" data-title="Home" class="step image-bg menu-entry" data-x="-7000" data-y="-4000" data-scale="5">
+			<div id="introduction" data-title="Home" class="step image-bg menu-entry" data-x="-7000" data-y="-8000" data-scale="5">
 				<div class="gallery">
 					<div class="tile">
 						<img src="img/woman_and_baby.jpg">
@@ -54,10 +54,9 @@
 					<h1 class="h2">The State of Our Children in Washington and Beyond</h1>
 	            	<h3 class="h3 subtitle">A look at the data</h3>
                 </div>
-                <p>Presentation prepared by <a href="http://partnersforourchildren.org/" target="blank">Partners for Our Children</a>.</p>
 			</div>
 
-			<div id="acknowledgements" class="step slide menu-entry" data-title="Acknowledgements" data-x="-7000" data-y="0" data-scale="5">
+			<div id="acknowledgements" class="step slide menu-entry" data-title="Acknowledgements" data-x="-7000" data-y="-4000" data-scale="5">
 				
 				<div class="text">
 					<h1 class="h2">Acknowledgements</h1>
@@ -91,6 +90,25 @@
 						<img src="img/CensusLogo.jpg" />
 					</div>
 				</div>
+
+				<div class="gallery">
+					<div class="tile">
+						<img src="img/fhg.png" />
+					</div>
+					<div class="tile">
+						<img src="img/ccf.png" />
+					</div>
+				</div>
+			</div>
+
+			<div id="agenda" class="step slide" data-x="-7000" data-y="0" data-scale="5">
+				
+				<h1 class="h3 slide-title">Agenda</h1>
+				<p><span class="num">1</span> Introductions</p>
+				<p><span class="num">2</span> Center for Child and Family Well-Being</p>
+				<p><span class="num">3</span> Foundation for Healthy Generations</p>
+				<p><span class="num">4</span> Washington State Department of Health</p>
+				<p><span class="num">5</span> Partners for Our Children</p>
 			</div>
 
 			<div id="questions" class="step slide" data-x="-7000" data-y="4000" data-scale="5">
@@ -111,7 +129,7 @@
 				
             	<div class="text-slide">
 	            	<h1 class="h2">Washington State Department of Health</h1>
-	            	<p>Always working for a safer and healthier Washington....</p>
+	            	<p>Always working for a safer and healthier Washington</p>
             	</div>
 			</div>
 
@@ -360,12 +378,6 @@
 
 	<!-- Navigation scripts -->
 		<script type="text/javascript" src="js/scripts.js"></script>
-		<script type="text/javascript" src="js/detect-mobile.js"></script>
-		<script type="text/javascript">
-			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-				$(".contents-menu").addClass("mobile");
-			}
-		</script>
 
 <!-- test if jQuery loaded
 	<script type="text/javascript">

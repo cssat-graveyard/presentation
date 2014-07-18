@@ -132,19 +132,33 @@ individual steps
     .gallery {
         width: 1180px;
         text-align: center;
-        padding-bottom: 2em;
+        padding-bottom: 4em;
 
         .tile {
             width: 25%;
             padding-right: 5%;
             display: inline-block;
-            overflow: hidden;
+            max-height: 100px;
 
             img {
                 display: block;
                 width: 100%;
             }
         }
+    }
+}
+
+#agenda {
+    p {
+        font-size: 2em;
+        padding-top: 1em;
+    }
+
+    .num {
+        color: $white;
+        background: $dark-green;
+        padding: .2em .5em;
+        border-radius: 50%;
     }
 }
 
