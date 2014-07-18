@@ -397,7 +397,7 @@ mal.plot <- ggplot(mal, aes(x = race.ethnicity, y = rate, fill = fl_all)) +
     scale_color_manual(values = c("white", "black"), guide = F) +
     scale_fill_manual(values = poc_colors[1:2], guide = F) +
     labs(x = "", y = "Rate (per 1,000)\n") +
-    theme_bw(base_family = sel.font, base_size = 14) +
+    theme_bw(base_family = sel.font, base_size = 16) +
     theme(axis.text.x = element_text(angle = -25, hjust = 0, size = rel(1.2)),
           plot.margin = unit(c(1, 1, 1, 1) * 5, "mm"),
           panel.border = element_rect(size = 1, colour = poc_colors[1]),
