@@ -106,7 +106,88 @@
 				</div>
 			</div>
 
-			<div id="dashboard-1" class="step visualization" data-x="-1000" data-y="7000" data-z="-3000" data-rotate="90" data-scale="1">
+	<!-- DOH presentation -->
+			<div id="dept-health" class="step slide menu-entry" data-title="Health Metrics" data-x="-5000" data-y="4000" data-z="-1000" data-scale="1">
+				
+            	<div class="text-slide">
+	            	<h1 class="h2">DOH Introduction</h1>
+	            	<p>We need a blurb</p>
+            	</div>
+			</div>
+
+			<div id="reading" class="step slide" data-x="-5000" data-y="4000" data-z="-3000" data-scale="1">
+				
+				<h1 class="h3 slide-title">4th Grade Reading Achievement Levels</h1>
+				<p>Percentage of fourth grade public school students reading achievement levels, at or above proficiency, as measured and defined by the National Assessment of Education Progress (NAEP) reading test. Washington ranks 10th highest for reading achievement and is tied with Pennsylvania.</p>
+				<div class="double-wrap">
+					<img src="R/final_images/doh/read.race.plot.png" />
+					<img src="R/final_images/doh/read.ses.plot.png" />
+				</div>
+				<div class="citation">Source: WA OSPI, Washington State Report Card, 2012-2013</div>
+			</div>
+
+			<div id="graduation" class="step slide" data-x="-3000" data-y="4000" data-z="-3000" data-scale="1">
+				
+				<h1 class="h3 slide-title">Graduation Rates</h1>
+				<div class="double-wrap">
+					<img src="R/final_images/doh/dropout.race.plot.png" />
+					<img src="R/final_images/doh/dropout.ses.plot.png" />
+				</div>
+				<div class="citation">Source: WA OSPI, Graduation and Dropout Statisitcs Annual Report, 2012-2013</div>
+			</div>
+
+			<div id="teen-birth" class="step slide" data-x="-1000" data-y="4000" data-z="-3000" data-scale="1">
+				
+                <h1 class="h3 slide-title">Teen Birth</h1>
+				<div class="double-wrap">
+					<img src="R/final_images/doh/teen.birth.race.plot.png" />
+					<img src="R/final_images/doh/teen.birth.age.plot.png" />
+				</div>
+				<div class="citation">Source: Washington State Birht Certificate, WA DOH</div>
+            </div>
+
+            <div id="emotional-support" class="step slide" data-x="1000" data-y="4000" data-z="-3000" data-scale="1">
+            	
+            	<h1 class="h3 slide-title">Emotional Support for Parenting</h1>
+            	<p>Original survey question: Is there someone that you can turn to for day-to-day emotional help with parenthood/raising children?</p>
+            	<div class="image-wrap">
+            		<img src="R/final_images/doh/ses.parenting.plot.png" />
+            	</div>
+            	<div class="citation">Source: Washington State data from the 2011-2012 National Survey of Children's Health (NSCH)</div>
+            </div>
+
+            <div id="breastfeeding" class="step slide" data-x="3000" data-y="4000" data-z="-3000" data-scale="1">
+				
+                <h1 class="h3 slide-title">Breastfeeding</h1>
+				<div class="double-wrap">
+					<img src="R/final_images/doh/b.feed.ages.plot.png" />
+					<img src="R/final_images/doh/b.feed.race.plot.png" />
+				</div>
+				<div class="citation">Source: <a href="http://www.doh.wa.gov/DataandStatisticalReports/HealthBehaviors/PregnancyRiskAssessmentMonitoringSystem.aspx">PRAMS Survey</a></div>
+            </div>
+
+            <div id="stressors" class="step slide" data-x="5000" data-y="4000" data-z="-3000" data-scale="1">
+				
+                <h1 class="h3 slide-title">Stressors During Pregnancy</h1>
+				<div class="double-wrap">
+					<img src="R/final_images/doh/preg.stress.race.plot.png" />
+					<img src="R/final_images/doh/preg.stress.age.plot.png" />
+				</div>
+				<div class="citation">Source: <a href="http://www.doh.wa.gov/DataandStatisticalReports/HealthBehaviors/PregnancyRiskAssessmentMonitoringSystem.aspx">PRAMS Survey</a></div>
+            </div>
+
+     <!-- Begin POC slides -->
+
+			<div id="wa-metrics" class="step slide menu-entry" data-title="Child Welfare in WA" data-x="7000" data-y="5000" data-z="-3000" data-rotate="90" data-scale="1">
+				
+            	<div class="text-slide">
+	            	<h1 class="h2">Washington Child Welfare Metrics</h1>
+	            	<p>The Child Welfare Dashboard provides an at-a-glance view of the child welfare system in Washington State - by county, region, and the entire state. The dashboard allows you to quickly see and compare key measurements across the state. </p>
+            	</div>
+
+			</div>
+
+			<div id="dashboard-1" class="step visualization" data-x="7000" data-y="7000" data-z="-3000" data-rotate="90" data-scale="1">
 				
 				<h1 class="h3 slide-title">Washington County Comparison</h1>
 				<div class="vis-wrap">
@@ -114,7 +195,7 @@
 				</div>
 			</div>
 
-			<div id="dashboard-2" class="step visualization" data-x="-1000" data-y="8000" data-z="-3000" data-rotate="90" data-scale="1">
+			<div id="dashboard-2" class="step visualization" data-x="7000" data-y="9000" data-z="-3000" data-rotate="90" data-scale="1">
 				
 				<h1 class="h3 slide-title">Washington County Comparison</h1>
 				<div class="vis-wrap">
@@ -122,14 +203,22 @@
 				</div>
 			</div>
 
-			<div id="outcomes" class="step slide" data-x="-4000" data-y="9000" data-z="-3000" data-rotate="180" data-scale="1">
+			<div id="age-metrics" class="step menu-entry" data-title="Age and Child Welfare" data-x="6000" data-y="10000" data-z="-3000" data-rotate="180" data-scale="1">
+				
+				<div class="text-slide">
+					<h1 class="h3">Age and Child Welfare</h1>
+					<p>Age is a major factor in the child welfare system. Logically, this makes sense because younger children require far more attention since they cannot care for themselves. So how exactly does age affect the number of foster care entries or permanency outcomes? </p>
+				</div>
+			</div>
+
+			<div id="outcomes" class="step slide" data-x="4000" data-y="10000" data-z="-3000" data-rotate="180" data-scale="1">
 				
 				<h1 class="h3 slide-title">WA Outcomes by Age Entering Care in 2009</h1>
 				<p>Permanency outcomes vary drastically by age. Reunification is always the most common outcome, but while adolescents are quick to reunify, their adoption rate is low. However, young children are adopted quickly--especially infants.</p>
-                <img src="R/outcomes-by-age.svg" />
+                <img src="R/final_images/poc/outcomes-by-age.svg" />
 			</div>
 
-            <div id="race-metrics" data-title="Race, Poverty, and Foster Care" class="step menu-entry" data-x="-3000" data-y="7000" data-z="-3000" data-rotate="270" data-scale="1">
+            <div id="race-metrics" data-title="Race, Poverty, and Foster Care" class="step menu-entry" data-x="3000" data-y="9000" data-z="-3000" data-rotate="270" data-scale="1">
             	<div class="text-slide">
             		
             		<h1 class="h3">Race, Poverty, and Foster Care</h1>
@@ -137,22 +226,60 @@
             	</div>
             </div>
 
-            <div id="poverty-race" class="step slide" data-x="-3000" data-y="5000" data-z="-3000" data-rotate="270" data-scale="1">
+            <div id="poverty-race" class="step slide" data-x="3000" data-y="7000" data-z="-3000" data-rotate="270" data-scale="1">
             	
-            	<h1 class="h3 slide-title">Poverty and Out-of-Home Placement by Race</h1>
+            	<h1 class="h3 slide-title">Poverty and Out-of-Home Placement</h1>
             	<p>The percent of children under five living below the poverty line is especially high for minorities. Black and especially Native American children under age five in Washington are greatly overrepresented in the out-of-home care population. Despite the high poverty rate, young Hispanic children are actually placed at a lower rate than non-Hispanic white children.</p>
             	<div class="chart-titles">
             		<h2 class="h6">Percent of children living below the poverty line, by race</h2>
             		<h2 class="h6">Rate (per 1,000) of children under 5 who were in out-of-home care on April 1, 2014, by race</h2>
             	</div>
             	<div class="double-wrap">
-            		<img src="R/children-under-5-in-poverty.svg" />
-            		<img src="R/children-under-5-ooh.svg" />
+            		<img src="R/final_images/poc/children-under-5-in-poverty.svg" />
+            		<img src="R/final_images/poc/children-under-5-ooh.svg" />
             	</div>
             	<div class="citation">Source: CA, supplemented by US Census, via POC Data Portal.</div>
             </div>
 
-         <div id="credits" class="step" data-x="12000" data-y="3000" data-rotate="270" data-scale="5">
+            <div id="committee" class="step slide menu-entry" data-title="Data Committee" data-x="3000" data-y="7000" data-rotate="270" data-scale="5">
+            	<h1 class="h3 slide-title">Thank You</h1>
+            	<h2 class="h4">Childhood Essentials Data Committee</h2>
+            	<table class="contact-table" width="100%">
+            		<tbody>
+            			<tr>
+            				<td style="width: 33%;">Teresa Vollan</td>
+            				<td style="width: 33%;">Erinn Havig</td>
+            				<td style="width: 33%;">Tory Henderson</td>
+            			</tr>
+            			<tr>
+            				<td style="width: 33%;">Riley Peters</td>
+            				<td style="width: 33%;">Peter Pecora</td>
+            				<td style="width: 33%;">Catherine Roller-White</td>
+            			</tr>
+            			<tr>
+            				<td style="width: 33%;">Laura Porter</td>
+            				<td style="width: 33%;">Katrina Wynkoop Simmons</td>
+            				<td style="width: 33%;">Benjamin Berres</td>
+            			</tr>
+            			<tr>
+            				<td style="width: 33%;">Cindy Ellingson</td>
+            				<td style="width: 33%;">Lillian Bensley</td>
+            				<td style="width: 33%;">Liliana Lengua</td>
+            			</tr>
+            			<tr>
+            				<td style="width: 33%;">Ben deHaan</td>
+            				<td style="width: 33%;">Kathy Chapman</td>
+            				<td style="width: 33%;">Marilyn Gisser</td>
+            			</tr>
+            		</tbody>
+            	</table>
+            </div>
+
+            <div id="notes" class="step slide menu-entry" data-title="Technical Notes" data-x="3000" data-y="3000" data-rotate="270" data-scale="5">
+            	<h1 class="h3 slide-title">Technical Notes</h1>
+            	<p>Add notes here.</p>
+            </div>
+  <!--       <div id="credits" class="step" data-x="12000" data-y="3000" data-rotate="270" data-scale="5">
             	<div class="text-slide">
             		<h1 class="h2">Thank You</h1>
             		<p>To learn more about Partners for Our Children, please visit our <a href="http:/partnersforourchildren.org" target="blank">website</a> or find us on social media.</p>
@@ -162,8 +289,8 @@
             			<li><a href="https://www.linkedin.com/company/2430529?trk=NUS_JOBCHANGE-cmpy" id="linkedin" target="blank"><img src="img/linkedin.svg"/></a></li>
             		</ul>
             	</div>
-            </div>
-		</div>
+            </div>-->
+		</div> 
 
 	<!-- Persistent navigation options -->
 		<button id="prev" class="nav-button"></button>

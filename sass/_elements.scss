@@ -275,6 +275,7 @@ h6, .h6 {
 
 .image-wrap {
 	width: 100%;
+	text-align: center;
 
 	img {
 		max-height: 600px;
@@ -316,5 +317,13 @@ h6, .h6 {
 		img {
 			width: 100%;
 		}
+	}
+}
+
+.contact-table {
+	font-size: 1.5em;
+
+	td {
+		padding: 1em;
 	}
 }

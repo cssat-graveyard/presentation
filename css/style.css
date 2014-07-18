@@ -391,32 +391,33 @@ h6, .h6 {
 /* line 276, ../sass/_elements.scss */
 .image-wrap {
   width: 100%;
+  text-align: center;
 }
-/* line 279, ../sass/_elements.scss */
+/* line 280, ../sass/_elements.scss */
 .image-wrap img {
   max-height: 600px;
 }
 
-/* line 284, ../sass/_elements.scss */
+/* line 285, ../sass/_elements.scss */
 .double-wrap {
   width: 1180px;
 }
 @media screen and (max-width: 800px) {
-  /* line 284, ../sass/_elements.scss */
+  /* line 285, ../sass/_elements.scss */
   .double-wrap {
     width: 800px;
   }
 }
-/* line 291, ../sass/_elements.scss */
+/* line 292, ../sass/_elements.scss */
 .double-wrap img {
   width: 45%;
 }
 
-/* line 298, ../sass/_elements.scss */
+/* line 299, ../sass/_elements.scss */
 .image-and-text img {
   width: 60%;
 }
-/* line 302, ../sass/_elements.scss */
+/* line 303, ../sass/_elements.scss */
 .image-and-text p {
   width: 35%;
   float: right;
@@ -424,15 +425,24 @@ h6, .h6 {
   padding-top: 5em;
 }
 
-/* line 311, ../sass/_elements.scss */
+/* line 312, ../sass/_elements.scss */
 .social-icons li {
   display: inline-block;
   margin-right: 1em;
   width: 3em;
 }
-/* line 316, ../sass/_elements.scss */
+/* line 317, ../sass/_elements.scss */
 .social-icons li img {
   width: 100%;
+}
+
+/* line 323, ../sass/_elements.scss */
+.contact-table {
+  font-size: 1.5em;
+}
+/* line 326, ../sass/_elements.scss */
+.contact-table td {
+  padding: 1em;
 }
 
 /*********************************
@@ -730,6 +740,11 @@ individual steps
 /* line 253, ../sass/_slides.scss */
 #credits .text-slide p {
   padding-bottom: 1em;
+}
+
+/* line 259, ../sass/_slides.scss */
+#committee h2 {
+  padding-top: 1em;
 }
 
 /************************
