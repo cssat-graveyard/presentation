@@ -107,15 +107,15 @@
 			</div>
 
 	<!-- DOH presentation -->
-			<div id="dept-health" class="step slide menu-entry" data-title="Health Metrics" data-x="-5000" data-y="4000" data-z="-1000" data-scale="1">
+			<div id="dept-health" class="step slide menu-entry" data-org="doh" data-title="Health Metrics" data-x="-5000" data-y="4000" data-z="-1000" data-scale="1">
 				
             	<div class="text-slide">
-	            	<h1 class="h2">DOH Introduction</h1>
-	            	<p>We need a blurb</p>
+	            	<h1 class="h2">Washington State Department of Health</h1>
+	            	<p>Always working for a safer and healthier Washington....</p>
             	</div>
 			</div>
 
-			<div id="reading" class="step slide" data-x="-5000" data-y="4000" data-z="-3000" data-scale="1">
+			<div id="reading" class="step slide" data-org="doh" data-x="-5000" data-y="4000" data-z="-3000" data-scale="1">
 				
 				<h1 class="h3 slide-title">4th Grade Reading Achievement Levels</h1>
 				<p>Percentage of fourth grade public school students reading achievement levels, at or above proficiency, as measured and defined by the National Assessment of Education Progress (NAEP) reading test. Washington ranks 10th highest for reading achievement and is tied with Pennsylvania.</p>
@@ -126,7 +126,7 @@
 				<div class="citation">Source: WA OSPI, Washington State Report Card, 2012-2013</div>
 			</div>
 
-			<div id="graduation" class="step slide" data-x="-3000" data-y="4000" data-z="-3000" data-scale="1">
+			<div id="graduation" class="step slide" data-org="doh" data-x="-3000" data-y="4000" data-z="-3000" data-scale="1">
 				
 				<h1 class="h3 slide-title">Graduation Rates</h1>
 				<div class="double-wrap">
@@ -136,7 +136,17 @@
 				<div class="citation">Source: WA OSPI, Graduation and Dropout Statisitcs Annual Report, 2012-2013</div>
 			</div>
 
-			<div id="teen-birth" class="step slide" data-x="-1000" data-y="4000" data-z="-3000" data-scale="1">
+			<div id="mental-health" class="step slide" data-org="doh" data-x="-1000" data-y="4000" data-z="-3000" data-scale="1">
+				
+                <h1 class="h3 slide-title">Mental Health</h1>
+				<div class="double-wrap">
+					<img src="R/final_images/doh/teen.birth.race.plot.png" />
+					<img src="R/final_images/doh/teen.birth.age.plot.png" />
+				</div>
+				<div class="citation">Source: Washington State Birht Certificate, WA DOH</div>
+            </div>
+
+			<div id="teen-birth" class="step slide" data-org="doh" data-x="-1000" data-y="4000" data-z="-3000" data-scale="1">
 				
                 <h1 class="h3 slide-title">Teen Birth</h1>
 				<div class="double-wrap">
@@ -146,17 +156,16 @@
 				<div class="citation">Source: Washington State Birht Certificate, WA DOH</div>
             </div>
 
-            <div id="emotional-support" class="step slide" data-x="1000" data-y="4000" data-z="-3000" data-scale="1">
+            <div id="emotional-support" class="step slide" data-org="doh" data-x="1000" data-y="4000" data-z="-3000" data-scale="1">
             	
-            	<h1 class="h3 slide-title">Emotional Support for Parenting</h1>
-            	<p>Original survey question: Is there someone that you can turn to for day-to-day emotional help with parenthood/raising children?</p>
+            	<h1 class="h3 slide-title">Emotional Support for Parenting <a href="#notes" class="ref">[1]</a></h1>
             	<div class="image-wrap">
             		<img src="R/final_images/doh/ses.parenting.plot.png" />
             	</div>
             	<div class="citation">Source: Washington State data from the 2011-2012 National Survey of Children's Health (NSCH)</div>
             </div>
 
-            <div id="breastfeeding" class="step slide" data-x="3000" data-y="4000" data-z="-3000" data-scale="1">
+            <div id="breastfeeding" class="step slide" data-org="doh" data-x="3000" data-y="4000" data-z="-3000" data-scale="1">
 				
                 <h1 class="h3 slide-title">Breastfeeding</h1>
 				<div class="double-wrap">
@@ -166,9 +175,9 @@
 				<div class="citation">Source: <a href="http://www.doh.wa.gov/DataandStatisticalReports/HealthBehaviors/PregnancyRiskAssessmentMonitoringSystem.aspx">PRAMS Survey</a></div>
             </div>
 
-            <div id="stressors" class="step slide" data-x="5000" data-y="4000" data-z="-3000" data-scale="1">
+            <div id="stressors" class="step slide" data-org="doh" data-x="5000" data-y="4000" data-z="-3000" data-scale="1">
 				
-                <h1 class="h3 slide-title">Stressors During Pregnancy</h1>
+                <h1 class="h3 slide-title">Stressors During Pregnancy <a href="#notes" class="ref">[2]</a></h1>
 				<div class="double-wrap">
 					<img src="R/final_images/doh/preg.stress.race.plot.png" />
 					<img src="R/final_images/doh/preg.stress.age.plot.png" />
@@ -178,7 +187,7 @@
 
      <!-- Begin POC slides -->
 
-			<div id="wa-metrics" class="step slide menu-entry" data-title="Child Welfare in WA" data-x="7000" data-y="5000" data-z="-3000" data-rotate="90" data-scale="1">
+			<div id="wa-metrics" class="step slide menu-entry" data-org="poc" data-title="Child Welfare in WA" data-x="7000" data-y="5000" data-z="-3000" data-rotate="90" data-scale="1">
 				
             	<div class="text-slide">
 	            	<h1 class="h2">Washington Child Welfare Metrics</h1>
@@ -187,7 +196,7 @@
 
 			</div>
 
-			<div id="dashboard-1" class="step visualization" data-x="7000" data-y="7000" data-z="-3000" data-rotate="90" data-scale="1">
+			<div id="dashboard-1" class="step visualization" data-org="poc" data-x="7000" data-y="7000" data-z="-3000" data-rotate="90" data-scale="1">
 				
 				<h1 class="h3 slide-title">Washington County Comparison</h1>
 				<div class="vis-wrap">
@@ -195,7 +204,7 @@
 				</div>
 			</div>
 
-			<div id="dashboard-2" class="step visualization" data-x="7000" data-y="9000" data-z="-3000" data-rotate="90" data-scale="1">
+			<div id="dashboard-2" class="step visualization" data-org="poc" data-x="7000" data-y="9000" data-z="-3000" data-rotate="90" data-scale="1">
 				
 				<h1 class="h3 slide-title">Washington County Comparison</h1>
 				<div class="vis-wrap">
@@ -203,7 +212,7 @@
 				</div>
 			</div>
 
-			<div id="age-metrics" class="step menu-entry" data-title="Age and Child Welfare" data-x="6000" data-y="10000" data-z="-3000" data-rotate="180" data-scale="1">
+			<div id="age-metrics" class="step menu-entry" data-org="poc" data-title="Age and Child Welfare" data-x="6000" data-y="10000" data-z="-3000" data-rotate="180" data-scale="1">
 				
 				<div class="text-slide">
 					<h1 class="h3">Age and Child Welfare</h1>
@@ -211,14 +220,16 @@
 				</div>
 			</div>
 
-			<div id="outcomes" class="step slide" data-x="4000" data-y="10000" data-z="-3000" data-rotate="180" data-scale="1">
+			<div id="outcomes" class="step slide" data-org="poc" data-x="4000" data-y="10000" data-z="-3000" data-rotate="180" data-scale="1">
 				
 				<h1 class="h3 slide-title">WA Outcomes by Age Entering Care in 2009</h1>
-				<p>Permanency outcomes vary drastically by age. Reunification is always the most common outcome, but while adolescents are quick to reunify, their adoption rate is low. However, young children are adopted quickly--especially infants.</p>
-                <img src="R/final_images/poc/outcomes-by-age.svg" />
+				<p>Permanency outcomes vary drastically by age. Reunification is always the most common outcome, but while adolescents are quick to reunify, their adoption rate is low. However, young children are adopted quickly--especially infants. <strong>Please note:</strong> Reunification and adoption are the two most common permanency outcomes and together, the graphs below represent most children who enter the child welfare system. Other outcomes may include guardianship, emancipation, etc.</p>
+				<div class="image-wrap">
+                	<img src="R/final_images/poc/outcomes-by-age.svg" />
+                </div>
 			</div>
 
-            <div id="race-metrics" data-title="Race, Poverty, and Foster Care" class="step menu-entry" data-x="3000" data-y="9000" data-z="-3000" data-rotate="270" data-scale="1">
+            <div id="race-metrics" data-org="poc" data-title="Race, Poverty, and Foster Care" class="step menu-entry" data-x="3000" data-y="9000" data-z="-3000" data-rotate="270" data-scale="1">
             	<div class="text-slide">
             		
             		<h1 class="h3">Race, Poverty, and Foster Care</h1>
@@ -226,7 +237,7 @@
             	</div>
             </div>
 
-            <div id="poverty-race" class="step slide" data-x="3000" data-y="7000" data-z="-3000" data-rotate="270" data-scale="1">
+            <div id="poverty-race" class="step slide" data-org="poc" data-x="3000" data-y="7000" data-z="-3000" data-rotate="270" data-scale="1">
             	
             	<h1 class="h3 slide-title">Poverty and Out-of-Home Placement</h1>
             	<p>The percent of children under five living below the poverty line is especially high for minorities. Black and especially Native American children under age five in Washington are greatly overrepresented in the out-of-home care population. Despite the high poverty rate, young Hispanic children are actually placed at a lower rate than non-Hispanic white children.</p>
@@ -275,9 +286,25 @@
             	</table>
             </div>
 
-            <div id="notes" class="step slide menu-entry" data-title="Technical Notes" data-x="3000" data-y="3000" data-rotate="270" data-scale="5">
+            <div id="notes" class="step slide menu-entry" data-org="none" data-title="Technical Notes" data-x="3000" data-y="3000" data-rotate="270" data-scale="5">
             	<h1 class="h3 slide-title">Technical Notes</h1>
-            	<p>Add notes here.</p>
+            	<p><a href="#emotional-support" class="footnote">[1]</a>NSCH survey question: "Is there someone that you can turn to for day-to-day emotional help with parenthood/raising children?"</p>
+            	<p><a href="#stressors" class="footnote">[2]</a>List of PRAMS stressors:</p>
+            	<ul>
+            		<li>A close family member was very sick and had to go to the hospital</li>		
+					<li>I got separated or divorced from my husband or partner</li>		
+					<li>I moved to a new address	</li>	
+					<li>I was homeless</li>		
+					<li>My husband or partner lost his job</li>		
+					<li>I lost my job even though I wanted to go on working	</li>	
+					<li>I argued with my husband or partner more than usual	</li>	
+					<li>My husband or partner said he didn't want me to be pregnant</li>		
+					<li>I had a lot of bills I couldn't pay</li>		
+					<li>I was in a physical fight</li>		
+					<li>My husband or partner or I went to jail	</li>	
+					<li>Someone very close to me had a problem with drinking or drugs</li>		
+					<li>Someone very close to me died</li>		
+            	</ul>
             </div>
   <!--       <div id="credits" class="step" data-x="12000" data-y="3000" data-rotate="270" data-scale="5">
             	<div class="text-slide">
@@ -310,6 +337,7 @@
 		</div>
 
 		<p class="slide-number"></p>
+		<p class="logo-wrap"></p>
 
 	<!-- Include impress and initialize -->
 		<script src="js/impress.js"></script>

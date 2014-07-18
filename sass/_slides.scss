@@ -38,7 +38,6 @@ individual steps
 
 .impress-enabled .step.active { opacity: 1 }
 
-
 .slide {
     display: block;
     width: 1180px;
@@ -258,5 +257,16 @@ individual steps
 #committee {
     h2 {
         padding-top: 1em;
+    }
+}
+
+#notes {
+    ul {
+        margin-left: 3em;
+
+        li {
+            font-size: 1.1em;
+            line-height: 1.5em;
+        }
     }
 }

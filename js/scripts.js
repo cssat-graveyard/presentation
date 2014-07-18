@@ -74,6 +74,34 @@ $( document ).ready(function() {
 	 });
 });
 
+//Insert organization logos
+$(document).ready(function() {
+
+	//HTML for logo images
+	var doh = '<img src="img/doh_logo.jpg" />';
+	var poc = '<img src="img/POC_logo.png" class="poc_logo" />';
+
+	//Check for data-org attribute on stepenter and create a variable if it exists
+	$(document).on('impress:stepenter', function(event) {
+		var org = $(event.target).attr("data-org");
+
+		//Check value of variable and append the right logo or empty the element if no org
+		if (org == 'doh') {
+			$('.logo-wrap').html(doh);
+		}
+
+		if (org == 'poc') {
+			$('.logo-wrap').html(poc);
+		}
+
+		if (!org) {
+			$('.logo-wrap').empty();
+		}
+		
+	});
+
+});
+
 //Toggles for teen birth maps
 $( document ).ready(function() {
 	$("#active-1999").click(function() {

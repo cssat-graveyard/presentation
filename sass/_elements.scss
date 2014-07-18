@@ -182,9 +182,10 @@ h6, .h6 {
 		color: $dark-blue;
 		text-decoration: none;
 		font-size: .9em;
-		width: 100%;
-		padding: .5em 1em;
+		width: 200px;
+		padding: .2em 1em;
 		line-height: 2.5em;
+		display: block;
 	}
 
 	.h3 {
@@ -199,7 +200,7 @@ h6, .h6 {
 	button.close-menu {
 		position: absolute;
 		top: 4px;
-		left: 170px;
+		left: 190px;
 		width: 35px;
 		height: 30px;
 		cursor: pointer;
@@ -330,4 +331,29 @@ h6, .h6 {
 	td {
 		padding: 1em;
 	}
+}
+
+.logo-wrap {
+	width: 100px;
+	margin-left: 40px;
+
+	img {
+		width: 100%;
+	}
+
+	img.poc_logo {
+		margin-top: 15px;
+		margin-left: 10px;
+	}
+}
+
+.ref {
+	font-size: .5em;
+	vertical-align: top;
+	text-decoration: none;
+}
+
+.footnote {
+	text-decoration: none;
+	padding-right: 5px;
 }

@@ -40,11 +40,20 @@ visualization styling
     }
 }
 
+.dashboard-instructions {
+    position: absolute;
+    margin-top: 5em;
+}
+
 #dashboard_text {
     position: absolute;
-    top: 8em;
+    top: 2em;
     right: 250px;
     width: 20%;
+
+     P {
+        margin-top: 1em;
+     }
 }
 
 .spaghetti {
