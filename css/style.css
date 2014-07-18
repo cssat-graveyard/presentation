@@ -167,24 +167,29 @@ h6, .h6 {
 }
 
 /* line 68, ../sass/_elements.scss */
+.impress-not-supported {
+  display: none;
+}
+
+/* line 72, ../sass/_elements.scss */
 .slide-title {
   margin-bottom: .3em;
   padding-bottom: .3em;
   border-bottom: 1px solid #eeeeee;
 }
 
-/* line 74, ../sass/_elements.scss */
+/* line 78, ../sass/_elements.scss */
 .chart-titles {
   width: 1180px;
   padding-top: 2em;
 }
 @media screen and (max-width: 800px) {
-  /* line 74, ../sass/_elements.scss */
+  /* line 78, ../sass/_elements.scss */
   .chart-titles {
     width: 800px;
   }
 }
-/* line 82, ../sass/_elements.scss */
+/* line 86, ../sass/_elements.scss */
 .chart-titles h2 {
   width: 45%;
   display: inline-block;
@@ -193,7 +198,7 @@ h6, .h6 {
   color: #444444;
 }
 
-/* line 91, ../sass/_elements.scss */
+/* line 95, ../sass/_elements.scss */
 .button {
   background: #3b6e8f;
   border: 0;
@@ -203,7 +208,7 @@ h6, .h6 {
   padding: .3em .5em;
 }
 
-/* line 100, ../sass/_elements.scss */
+/* line 104, ../sass/_elements.scss */
 .image-bg {
   position: absolute;
   left: 0;
@@ -213,7 +218,7 @@ h6, .h6 {
 }
 
 /* Previous and next buttons */
-/* line 110, ../sass/_elements.scss */
+/* line 114, ../sass/_elements.scss */
 .nav-button {
   border: 0;
   width: 60px;
@@ -223,12 +228,12 @@ h6, .h6 {
   opacity: .5;
 }
 
-/* line 119, ../sass/_elements.scss */
+/* line 123, ../sass/_elements.scss */
 .nav-button:hover {
   opacity: 1;
 }
 
-/* line 123, ../sass/_elements.scss */
+/* line 127, ../sass/_elements.scss */
 #prev {
   position: absolute;
   bottom: 10px;
@@ -237,7 +242,7 @@ h6, .h6 {
   background-size: 80px;
 }
 
-/* line 131, ../sass/_elements.scss */
+/* line 135, ../sass/_elements.scss */
 #next {
   position: absolute;
   bottom: 10px;
@@ -247,7 +252,7 @@ h6, .h6 {
 }
 
 /* Slide-out menu */
-/* line 141, ../sass/_elements.scss */
+/* line 145, ../sass/_elements.scss */
 .contents-menu {
   color: #f4f4f4;
   background: #3b6e8f;
@@ -262,12 +267,12 @@ h6, .h6 {
   	}
   */
 }
-/* line 151, ../sass/_elements.scss */
+/* line 155, ../sass/_elements.scss */
 .contents-menu span {
   font-weight: bold;
 }
 
-/* line 161, ../sass/_elements.scss */
+/* line 165, ../sass/_elements.scss */
 .contents {
   background: rgba(244, 244, 244, 0.9);
   line-height: 1.5em;
@@ -284,7 +289,7 @@ h6, .h6 {
   -o-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
-/* line 177, ../sass/_elements.scss */
+/* line 181, ../sass/_elements.scss */
 .contents a {
   color: #3b6e8f;
   text-decoration: none;
@@ -293,7 +298,7 @@ h6, .h6 {
   padding: .5em 1em;
   line-height: 2.5em;
 }
-/* line 186, ../sass/_elements.scss */
+/* line 190, ../sass/_elements.scss */
 .contents .h3 {
   background: #3b6e8f;
   font-size: 1em;
@@ -302,7 +307,7 @@ h6, .h6 {
   padding: .5em;
   margin: 0;
 }
-/* line 195, ../sass/_elements.scss */
+/* line 199, ../sass/_elements.scss */
 .contents button.close-menu {
   position: absolute;
   top: 4px;
@@ -314,7 +319,7 @@ h6, .h6 {
   border: 0;
   overflow: visible;
 }
-/* line 206, ../sass/_elements.scss */
+/* line 210, ../sass/_elements.scss */
 .contents button.close-menu img {
   width: 25px;
   height: 25px;
@@ -326,45 +331,45 @@ h6, .h6 {
   background: #444444;
   z-index: 1000;
 }
-/* line 219, ../sass/_elements.scss */
+/* line 223, ../sass/_elements.scss */
 .contents .navlinks li {
   border-bottom: 1px solid #3b6e8f;
   background: rgba(244, 244, 244, 0.9);
 }
-/* line 223, ../sass/_elements.scss */
+/* line 227, ../sass/_elements.scss */
 .contents .navlinks li:hover {
   background: #4a8ab3;
   cursor: pointer;
 }
-/* line 227, ../sass/_elements.scss */
+/* line 231, ../sass/_elements.scss */
 .contents .navlinks li:hover a {
   color: #f4f4f4;
 }
-/* line 231, ../sass/_elements.scss */
+/* line 235, ../sass/_elements.scss */
 .contents .external-links li {
   border-bottom: 1px solid #3b6e8f;
 }
-/* line 234, ../sass/_elements.scss */
+/* line 238, ../sass/_elements.scss */
 .contents .external-links li:hover {
   background: #4a8ab3;
   cursor: pointer;
 }
-/* line 238, ../sass/_elements.scss */
+/* line 242, ../sass/_elements.scss */
 .contents .external-links li:hover a {
   color: #f4f4f4;
 }
-/* line 241, ../sass/_elements.scss */
+/* line 245, ../sass/_elements.scss */
 .contents .external-links li:last-child {
   border-bottom: 0;
 }
 
-/* line 247, ../sass/_elements.scss */
+/* line 251, ../sass/_elements.scss */
 .menu-active .contents {
   right: 0;
 }
 
 /* Slide numbers */
-/* line 253, ../sass/_elements.scss */
+/* line 257, ../sass/_elements.scss */
 .slide-number {
   position: absolute;
   left: 10px;
@@ -373,7 +378,7 @@ h6, .h6 {
   font-size: 1.5em;
 }
 
-/* line 264, ../sass/_elements.scss */
+/* line 268, ../sass/_elements.scss */
 #introduction .slide-number,
 #acknowledgements .slide-number,
 #credits .slide-number {
@@ -381,43 +386,43 @@ h6, .h6 {
 }
 
 /* Image and citation elements */
-/* line 270, ../sass/_elements.scss */
+/* line 274, ../sass/_elements.scss */
 .citation {
   position: absolute;
   bottom: 0;
   right: 0;
 }
 
-/* line 276, ../sass/_elements.scss */
+/* line 280, ../sass/_elements.scss */
 .image-wrap {
   width: 100%;
   text-align: center;
 }
-/* line 280, ../sass/_elements.scss */
+/* line 284, ../sass/_elements.scss */
 .image-wrap img {
   max-height: 600px;
 }
 
-/* line 285, ../sass/_elements.scss */
+/* line 289, ../sass/_elements.scss */
 .double-wrap {
   width: 1180px;
 }
 @media screen and (max-width: 800px) {
-  /* line 285, ../sass/_elements.scss */
+  /* line 289, ../sass/_elements.scss */
   .double-wrap {
     width: 800px;
   }
 }
-/* line 292, ../sass/_elements.scss */
+/* line 296, ../sass/_elements.scss */
 .double-wrap img {
   width: 45%;
 }
 
-/* line 299, ../sass/_elements.scss */
+/* line 303, ../sass/_elements.scss */
 .image-and-text img {
   width: 60%;
 }
-/* line 303, ../sass/_elements.scss */
+/* line 307, ../sass/_elements.scss */
 .image-and-text p {
   width: 35%;
   float: right;
@@ -425,22 +430,22 @@ h6, .h6 {
   padding-top: 5em;
 }
 
-/* line 312, ../sass/_elements.scss */
+/* line 316, ../sass/_elements.scss */
 .social-icons li {
   display: inline-block;
   margin-right: 1em;
   width: 3em;
 }
-/* line 317, ../sass/_elements.scss */
+/* line 321, ../sass/_elements.scss */
 .social-icons li img {
   width: 100%;
 }
 
-/* line 323, ../sass/_elements.scss */
+/* line 327, ../sass/_elements.scss */
 .contact-table {
   font-size: 1.5em;
 }
-/* line 326, ../sass/_elements.scss */
+/* line 330, ../sass/_elements.scss */
 .contact-table td {
   padding: 1em;
 }
