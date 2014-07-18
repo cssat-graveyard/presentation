@@ -10,6 +10,7 @@ are not specific to a single slide
 		overflow: hidden;
 	}
 }
+
 /* Basic element styles */
 body {
 	font-family: $sans-serif;
@@ -63,10 +64,6 @@ h5, .h5 {
 
 h6, .h6 {
 	font-size: 1.2em;
-}
-
-.impress-not-supported {
-	display: none;
 }
 
 .slide-title {

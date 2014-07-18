@@ -7,24 +7,22 @@ the presentation.
 **********************************/
 
 .fallback-message {
-	text-align: center;
-	width: 1300px;
-	background: rgba($dark-gray, .9);
-	padding: 10em 0 10em 0;
-	height: 1200px;
-	z-index: 5000;
-	position: absolute;
+    font-family: sans-serif;
+    line-height: 1.3;
 
-	p {
-		padding: .5em;
-		font-size: 72px;
-		color: $white;
-	}
+    width: 780px;
+    padding: 10px 10px 0;
+    margin: 20px auto;
+
+    border: 1px solid darken($dark-gray, 10%);
+    border-radius: 10px;
+    background: $light-gray;
+}
+
+.fallback-message p {
+    margin-bottom: 10px;
 }
 
 .impress-supported .fallback-message {
-
-	@media screen and (min-width: 600px){
-		display: none;
-	}
+    display: none;
 }
