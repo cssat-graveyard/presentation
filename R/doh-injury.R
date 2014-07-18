@@ -22,7 +22,7 @@ doh.for.plot <- doh.rates %>%
     mutate(state_label = factor("Washington\nAverage"))
 
 doh.for.plot$state_label <- factor("Washington\nAverage")
-doh.for.plot$county <- reorder(x = doh.for.plot$county, X = doh.for.plot$rate, FUN = function(x) -max(x, na.rm = T))
+doh.for.plot$county <- reorder(x = doh.for.plot$county, X = doh.for.plot$rate, FUN = function(x) -sum(x, na.rm = T))
 
 doh.rates.plot <-  
     ggplot(doh.for.plot, aes(x = age, y = rate, fill = age)) +
@@ -44,4 +44,4 @@ doh.rates.plot <-
           panel.grid.minor = element_blank(),
           panel.grid.major = element_line(color = "gray80"))
 
-ggsave("nonfatal-injuries-by-county.pdf", doh.rates.plot, width = 14, height = 8)
+ggsave("S:/Data Portal/data/doh/nonfatal-injuries-by-county.pdf", doh.rates.plot, width = 14, height = 8)

@@ -1,5 +1,5 @@
 library(pocr)
-require(rCharts)
+#require(rCharts)
 require(ggplot2)
 require(dplyr)
 require(RODBC)
@@ -367,3 +367,41 @@ ooh.pov.plot <- ggplot(ooh.pov, aes(x = race.ethnicity, y = pov.place)) +
 
 ggsave("children-under-5-ooh-poverty.pdf", ooh.pov.plot, width = 7, height = 7)
 embed_fonts("children-under-5-ooh.pdf")
+
+
+## maltreatment rate
+
+mal.raw <- sqlQuery(con_test, 
+                "
+                call test_annie.sp_ia_trends_rates(    ' ',
+    '0',
+    '0,1,8,9,11,12',
+    '0',
+    '0',
+    '0',
+    '0',
+    '4' 
+);  ")
+
+mal <- mal.raw %>% format_sp() %>%
+    filter(qry.type.poc2 == 0, date.type == 2, year(date) == 2013) %>%
+    select(race.ethnicity, opened.screened.in.cases) %>%
+    mutate(fl_all = ifelse(race.ethnicity == "All", 1, 0),
+           rate = opened.screened.in.cases,
+           race.ethnicity = reorder(race.ethnicity, X = fl_all - rate / 1000),
+           fl_all = factor(fl_all))
+    
+mal.plot <- ggplot(mal, aes(x = race.ethnicity, y = rate, fill = fl_all)) +
+    geom_bar(stat = "identity") +
+    geom_text(aes(label = rate, y = 1, color = fl_all), family = sel.font) +
+    scale_color_manual(values = c("white", "black"), guide = F) +
+    scale_fill_manual(values = poc_colors[1:2], guide = F) +
+    labs(x = "", y = "Rate (per 1,000)\n") +
+    theme_bw(base_family = sel.font, base_size = 14) +
+    theme(axis.text.x = element_text(angle = -25, hjust = 0, size = rel(1.2)),
+          plot.margin = unit(c(1, 1, 1, 1) * 5, "mm"),
+          panel.border = element_rect(size = 1, colour = poc_colors[1]),
+          axis.ticks = element_line(size = 1, colour = poc_colors[1]),
+          panel.grid = element_blank())
+
+ggsave("maltreatment-by-race-wa.pdf", mal.plot, height = 7, width = 7)
