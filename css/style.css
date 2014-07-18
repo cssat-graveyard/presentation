@@ -390,7 +390,7 @@ h6, .h6 {
 /* line 275, ../sass/_elements.scss */
 .citation {
   position: absolute;
-  bottom: 0;
+  bottom: -50px;
   right: 0;
 }
 
@@ -751,41 +751,36 @@ individual steps
   margin-top: -50px;
 }
 
-/* line 229, ../sass/_slides.scss */
-#poverty-race .citation {
-  margin-bottom: -50px;
-}
-
-/* line 236, ../sass/_slides.scss */
+/* line 230, ../sass/_slides.scss */
 #sources ul {
   margin-top: 1em;
   text-align: center;
 }
-/* line 240, ../sass/_slides.scss */
+/* line 234, ../sass/_slides.scss */
 #sources ul li {
   font-size: 1.5em;
   padding: .5em 0;
 }
-/* line 246, ../sass/_slides.scss */
+/* line 240, ../sass/_slides.scss */
 #sources .text-slide {
   margin-top: 10%;
 }
 
-/* line 252, ../sass/_slides.scss */
+/* line 246, ../sass/_slides.scss */
 #credits .text-slide p {
   padding-bottom: 1em;
 }
 
-/* line 258, ../sass/_slides.scss */
+/* line 252, ../sass/_slides.scss */
 #committee h2 {
   padding-top: 1em;
 }
 
-/* line 264, ../sass/_slides.scss */
+/* line 258, ../sass/_slides.scss */
 #notes ul {
   margin-left: 3em;
 }
-/* line 267, ../sass/_slides.scss */
+/* line 261, ../sass/_slides.scss */
 #notes ul li {
   font-size: 1.1em;
   line-height: 1.5em;
